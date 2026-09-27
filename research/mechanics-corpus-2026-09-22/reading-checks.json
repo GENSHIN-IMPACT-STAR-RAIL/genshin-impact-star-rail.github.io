@@ -1,0 +1,99 @@
+{
+  "catalogue_records_loaded": 1840,
+  "authored_profiles_used": true,
+  "not_new_full_qp_ms_visual_audit": true,
+  "representative_original_text_rechecks": [
+    {
+      "module": "M",
+      "question_id": "9709-s10-43-Q07",
+      "qp_text_rechecked_this_run": true,
+      "qp_original_page_visually_checked_this_run": false,
+      "page": 4
+    },
+    {
+      "module": "M",
+      "question_id": "9709-w10-41-Q06",
+      "qp_text_rechecked_this_run": true,
+      "qp_original_page_visually_checked_this_run": false,
+      "page": 3
+    },
+    {
+      "module": "M",
+      "question_id": "9709-w22-43-Q03",
+      "qp_text_rechecked_this_run": true,
+      "qp_original_page_visually_checked_this_run": false,
+      "page": 5
+    },
+    {
+      "module": "M",
+      "question_id": "9709-m23-42-Q05",
+      "qp_text_rechecked_this_run": true,
+      "qp_original_page_visually_checked_this_run": false,
+      "page": 6
+    },
+    {
+      "module": "M",
+      "question_id": "9709-s25-42-Q05",
+      "qp_text_rechecked_this_run": true,
+      "qp_original_page_visually_checked_this_run": false,
+      "page": 8
+    },
+    {
+      "module": "M",
+      "question_id": "9709-w25-41-Q08",
+      "qp_text_rechecked_this_run": true,
+      "qp_original_page_visually_checked_this_run": true,
+      "page": 10
+    },
+    {
+      "module": "FM",
+      "question_id": "9231-s10-21-Q11-EITHER",
+      "qp_text_rechecked_this_run": true,
+      "qp_original_page_visually_checked_this_run": true,
+      "page": 5
+    },
+    {
+      "module": "FM",
+      "question_id": "9231-w12-23-Q02",
+      "qp_text_rechecked_this_run": true,
+      "qp_original_page_visually_checked_this_run": false,
+      "page": 2
+    },
+    {
+      "module": "FM",
+      "question_id": "9231-w23-32-Q07",
+      "qp_text_rechecked_this_run": true,
+      "qp_original_page_visually_checked_this_run": false,
+      "page": 12
+    },
+    {
+      "module": "FM",
+      "question_id": "9231-w24-31-Q06",
+      "qp_text_rechecked_this_run": true,
+      "qp_original_page_visually_checked_this_run": true,
+      "page": 10
+    },
+    {
+      "module": "M2",
+      "question_id": "9709-w16-51-Q06",
+      "qp_text_rechecked_this_run": true,
+      "qp_original_page_visually_checked_this_run": true,
+      "page": 3
+    },
+    {
+      "module": "M2",
+      "question_id": "9709-s17-52-Q03",
+      "qp_text_rechecked_this_run": true,
+      "qp_original_page_visually_checked_this_run": false,
+      "page": 6
+    },
+    {
+      "module": "M2",
+      "question_id": "9709-m19-52-Q07",
+      "qp_text_rechecked_this_run": true,
+      "qp_original_page_visually_checked_this_run": false,
+      "page": 12
+    }
+  ],
+  "note": "全量逐题画像阅读与源题文检索；同画像候选不假定图示一致。原图查看工具故障后，通过已批准的只读文件方式成功查看四张原PDF渲染页。"
+}

@@ -1,0 +1,2841 @@
+{
+  "status": "PROPOSED",
+  "tools": {
+    "T01": "数据与统计图",
+    "T02": "计数与排列组合",
+    "T03": "样本空间与条件概率",
+    "T04": "离散随机变量、二项与几何",
+    "T05": "正态、反求与近似",
+    "T06": "泊松过程与计数",
+    "T07": "随机变量变换与组合",
+    "T08": "PDF、CDF与连续变量变换",
+    "T09": "PGF与卷积",
+    "T10": "抽样、估计量与CLT",
+    "T11": "置信区间",
+    "T12": "假设检验、临界域与两类错误",
+    "T13": "正态与t均值推断",
+    "T14": "卡方检验",
+    "T15": "符号与Wilcoxon检验",
+    "T16": "历史相关回归（后置拓展）"
+  },
+  "families": [
+    {
+      "module": "S1",
+      "code": "D01",
+      "name": "原始数据与直接矩",
+      "record_count": 10,
+      "current_core_record_count": 10,
+      "tool_ids": [
+        "T01"
+      ],
+      "source_constraints": "样本量为正整数；方差非负；单位与原数据一致。",
+      "representative": {
+        "question_id": "9709-s22-53-Q02",
+        "question_summary_cn": "树高估计离群19.4使中位数更稳健",
+        "bottleneck_cn": "D01 方差分母为n；Σx²与(Σx)²不同；负值也须平方。\nD05 背靠背左侧叶次序；小数单位；奇偶样本的中位位置；IQR不是极差。\nD08 箱线图丢原始明细；均值对极端值敏感；比较需数值和单位支持。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2022\\9709_s22_qp_53.pdf",
+        "qp_pdf_page_start": 3,
+        "qp_pdf_page_end": 3
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "D02",
+      "name": "分组中点估计",
+      "record_count": 44,
+      "current_core_record_count": 44,
+      "tool_ids": [
+        "T01"
+      ],
+      "source_constraints": "频数为非负整数；总频数吻合；组距和中点按真实组界。",
+      "representative": {
+        "question_id": "9709-m26-52-Q03",
+        "question_summary_cn": "通勤整数时间累计曲线60百分位与均值",
+        "bottleneck_cn": "D07 上p%对应下(1−p)%；累计频数不是各组频数；从图读数为估计。\nD02 频数加权不是平均组中点；结果是估计；组内原始值未知。",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  52.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "D03",
+      "name": "编码统计与逆求摘要",
+      "record_count": 38,
+      "current_core_record_count": 38,
+      "tool_ids": [
+        "T01"
+      ],
+      "source_constraints": "n正整数；平方和满足Σu²≥(Σu)²/n；编码前后单位一致。",
+      "representative": {
+        "question_id": "9709-s26-55-Q01",
+        "question_summary_cn": "60项编码方差与均值反中心c",
+        "bottleneck_cn": "D03 未知中心或n要先解；从平方开根需考虑两支；平移不改标准差。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  55.pdf",
+        "qp_pdf_page_start": 3,
+        "qp_pdf_page_end": 3
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "D04",
+      "name": "数据合并增删订正",
+      "record_count": 23,
+      "current_core_record_count": 23,
+      "tool_ids": [
+        "T01"
+      ],
+      "source_constraints": "新n正确；新方差非负；保留原始值与分组估计的区别。",
+      "representative": {
+        "question_id": "9709-s26-52-Q06",
+        "question_summary_cn": "两橄榄球队身高茎叶IQR，替换184cm使均值增0.5反新人",
+        "bottleneck_cn": "D05 背靠背左侧叶次序；小数单位；奇偶样本的中位位置；IQR不是极差。\nD04 不能平均标准差；合并均值按人数加权；分组内订正可能不改估计。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  52.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "D05",
+      "name": "茎叶图四分位与箱线图",
+      "record_count": 53,
+      "current_core_record_count": 53,
+      "tool_ids": [
+        "T01"
+      ],
+      "source_constraints": "原数据与叶一一对应；钥匙明确；箱线五数非降序。",
+      "representative": {
+        "question_id": "9709-s26-51-Q03",
+        "question_summary_cn": "两滑雪场周降雪背靠背图分位与比较",
+        "bottleneck_cn": "D05 背靠背左侧叶次序；小数单位；奇偶样本的中位位置；IQR不是极差。\nD08 箱线图丢原始明细；均值对极端值敏感；比较需数值和单位支持。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  51.pdf",
+        "qp_pdf_page_start": 5,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "D06",
+      "name": "直方图密度面积及诊断",
+      "record_count": 33,
+      "current_core_record_count": 33,
+      "tool_ids": [
+        "T01"
+      ],
+      "source_constraints": "柱面积与频数成比例；横轴分组完整无重叠；纵轴标频数密度。",
+      "representative": {
+        "question_id": "9709-s26-53-Q03",
+        "question_summary_cn": "游戏时长密度图、均值及40百分位所在组",
+        "bottleneck_cn": "D06 非等组距不能以频数作高度；四舍五入单位决定组界修正大小。\nD02 频数加权不是平均组中点；结果是估计；组内原始值未知。\nD07 上p%对应下(1−p)%；累计频数不是各组频数；从图读数为估计。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  53.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "D07",
+      "name": "累计频数分位与反读",
+      "record_count": 49,
+      "current_core_record_count": 49,
+      "tool_ids": [
+        "T01"
+      ],
+      "source_constraints": "总频数一致、曲线非降；起点与组界正确；不得外推无数据区间。",
+      "representative": {
+        "question_id": "9709-m26-52-Q03",
+        "question_summary_cn": "通勤整数时间累计曲线60百分位与均值",
+        "bottleneck_cn": "D07 上p%对应下(1−p)%；累计频数不是各组频数；从图读数为估计。\nD02 频数加权不是平均组中点；结果是估计；组内原始值未知。",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  52.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "D08",
+      "name": "统计表示与集中散布比较",
+      "record_count": 36,
+      "current_core_record_count": 36,
+      "tool_ids": [
+        "T01"
+      ],
+      "source_constraints": "不从一张摘要图推断未给的分布细节或因果；比较同种统计量。",
+      "representative": {
+        "question_id": "9709-s26-51-Q03",
+        "question_summary_cn": "两滑雪场周降雪背靠背图分位与比较",
+        "bottleneck_cn": "D05 背靠背左侧叶次序；小数单位；奇偶样本的中位位置；IQR不是极差。\nD08 箱线图丢原始明细；均值对极端值敏感；比较需数值和单位支持。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  51.pdf",
+        "qp_pdf_page_start": 5,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "D09",
+      "name": "分位界限缺失值与异常值",
+      "record_count": 13,
+      "current_core_record_count": 13,
+      "tool_ids": [
+        "T01"
+      ],
+      "source_constraints": "上下四分位次序不变；缺叶合法且有序；区分界与可达到的极值。",
+      "representative": {
+        "question_id": "9709-s24-51-Q03",
+        "question_summary_cn": "身高非等组距密度图并证IQR不超过15",
+        "bottleneck_cn": "D06 非等组距不能以频数作高度；四舍五入单位决定组界修正大小。\nD09 组内不确定只给界限；开闭区间影响可取最大值；1.5IQR规则依题给。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2024\\9709_s24_qp_51.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "C01",
+      "name": "乘法原理与部分排列",
+      "record_count": 21,
+      "current_core_record_count": 21,
+      "tool_ids": [
+        "T02"
+      ],
+      "source_constraints": "对象库存与位置数一致；首位零等限制按题面保留。",
+      "representative": {
+        "question_id": "9709-s26-52-Q03",
+        "question_summary_cn": "三位数大于200，可重复5倍数与不重复偶数",
+        "bottleneck_cn": "C05 隔k人对应位置差k+1；空座不是可区分的人；过道和行界不可跨。\nC01 有序与无序不同；允许重复则各步选择数可能不减。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  52.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 4
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "C02",
+      "name": "重复对象全排列",
+      "record_count": 70,
+      "current_core_record_count": 70,
+      "tool_ids": [
+        "T02"
+      ],
+      "source_constraints": "同类对象是否可区分由题意决定；剩余重数之和等于剩余位置数。",
+      "representative": {
+        "question_id": "9709-m25-52-Q06",
+        "question_summary_cn": "十本不同书只按颜色排，选择时又按具体书计，不能沿用重复色去重",
+        "bottleneck_cn": "C02 同字母不可区分；题目有时只看颜色而选择又看实物。\nC03 块内有重复或指定顺序时不能直接乘k!；多块须防重复计数。\nC04 不全相邻弱于任两不邻；选空位后可能还须排不同对象。\nC05 隔k人对应位置差k+1；空座不是可区分的人；过道和行界不可跨。\nC06 最低、最多和比较约束须同时满足；同尺寸无标号组需去重。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 12,
+        "qp_pdf_page_end": 13
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "C03",
+      "name": "捆绑与固定内部顺序",
+      "record_count": 60,
+      "current_core_record_count": 60,
+      "tool_ids": [
+        "T02"
+      ],
+      "source_constraints": "每块占实际长度；块内外限制同时满足。",
+      "representative": {
+        "question_id": "9709-m25-52-Q06",
+        "question_summary_cn": "十本不同书只按颜色排，选择时又按具体书计，不能沿用重复色去重",
+        "bottleneck_cn": "C02 同字母不可区分；题目有时只看颜色而选择又看实物。\nC03 块内有重复或指定顺序时不能直接乘k!；多块须防重复计数。\nC04 不全相邻弱于任两不邻；选空位后可能还须排不同对象。\nC05 隔k人对应位置差k+1；空座不是可区分的人；过道和行界不可跨。\nC06 最低、最多和比较约束须同时满足；同尺寸无标号组需去重。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 12,
+        "qp_pdf_page_end": 13
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "C04",
+      "name": "不相邻与不全相邻",
+      "record_count": 58,
+      "current_core_record_count": 58,
+      "tool_ids": [
+        "T02"
+      ],
+      "source_constraints": "空位容量足够；补集严格对应否定事件。",
+      "representative": {
+        "question_id": "9709-m25-52-Q06",
+        "question_summary_cn": "十本不同书只按颜色排，选择时又按具体书计，不能沿用重复色去重",
+        "bottleneck_cn": "C02 同字母不可区分；题目有时只看颜色而选择又看实物。\nC03 块内有重复或指定顺序时不能直接乘k!；多块须防重复计数。\nC04 不全相邻弱于任两不邻；选空位后可能还须排不同对象。\nC05 隔k人对应位置差k+1；空座不是可区分的人；过道和行界不可跨。\nC06 最低、最多和比较约束须同时满足；同尺寸无标号组需去重。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 12,
+        "qp_pdf_page_end": 13
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "C05",
+      "name": "位置距离端点与多排座位",
+      "record_count": 78,
+      "current_core_record_count": 78,
+      "tool_ids": [
+        "T02"
+      ],
+      "source_constraints": "首末位、行、座位、方向及相邻关系需按原题图保留。",
+      "representative": {
+        "question_id": "9709-m25-52-Q06",
+        "question_summary_cn": "十本不同书只按颜色排，选择时又按具体书计，不能沿用重复色去重",
+        "bottleneck_cn": "C02 同字母不可区分；题目有时只看颜色而选择又看实物。\nC03 块内有重复或指定顺序时不能直接乘k!；多块须防重复计数。\nC04 不全相邻弱于任两不邻；选空位后可能还须排不同对象。\nC05 隔k人对应位置差k+1；空座不是可区分的人；过道和行界不可跨。\nC06 最低、最多和比较约束须同时满足；同尺寸无标号组需去重。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 12,
+        "qp_pdf_page_end": 13
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "C06",
+      "name": "配额选择与分组分配",
+      "record_count": 63,
+      "current_core_record_count": 63,
+      "tool_ids": [
+        "T02"
+      ],
+      "source_constraints": "配额总和正确、库存充足；分组顺序及组标签明确。",
+      "representative": {
+        "question_id": "9709-m25-52-Q06",
+        "question_summary_cn": "十本不同书只按颜色排，选择时又按具体书计，不能沿用重复色去重",
+        "bottleneck_cn": "C02 同字母不可区分；题目有时只看颜色而选择又看实物。\nC03 块内有重复或指定顺序时不能直接乘k!；多块须防重复计数。\nC04 不全相邻弱于任两不邻；选空位后可能还须排不同对象。\nC05 隔k人对应位置差k+1；空座不是可区分的人；过道和行界不可跨。\nC06 最低、最多和比较约束须同时满足；同尺寸无标号组需去重。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 12,
+        "qp_pdf_page_end": 13
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "C07",
+      "name": "指定成员包含排除",
+      "record_count": 27,
+      "current_core_record_count": 27,
+      "tool_ids": [
+        "T02"
+      ],
+      "source_constraints": "总人数和每类库存减去固定对象；分类互斥完整。",
+      "representative": {
+        "question_id": "9709-s23-51-Q02",
+        "question_summary_cn": "男女配额及三兄弟最多两人用排除全入",
+        "bottleneck_cn": "C06 最低、最多和比较约束须同时满足；同尺寸无标号组需去重。\nC07 不能同时选不等于恰选一；指定成员若属于配额组须同步扣人数。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2023\\9709_s23_qp_51.pdf",
+        "qp_pdf_page_start": 3,
+        "qp_pdf_page_end": 3
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "C08",
+      "name": "计数比值与条件样本空间",
+      "record_count": 44,
+      "current_core_record_count": 44,
+      "tool_ids": [
+        "T02",
+        "T03"
+      ],
+      "source_constraints": "分子分母必须采用同一可区分口径；条件事件概率非零。",
+      "representative": {
+        "question_id": "9709-m25-52-Q04",
+        "question_summary_cn": "三玩具车不放回同色及白黑至少各一",
+        "bottleneck_cn": "P05 抽取后总数和颜色数均可能改变；不能直接以恒p二项代替。\nC08 字母种类选择不等概率于实体字母抽取；条件下分母不能仍为原总数。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "C09",
+      "name": "多重集无序选择",
+      "record_count": 26,
+      "current_core_record_count": 26,
+      "tool_ids": [
+        "T02"
+      ],
+      "source_constraints": "各重数在库存内、总选取数固定；每种选择只计一次。",
+      "representative": {
+        "question_id": "9709-s26-53-Q06",
+        "question_summary_cn": "POSSESSION的S块O不邻、P和N端点O间四字及多重选择",
+        "bottleneck_cn": "C02 同字母不可区分；题目有时只看颜色而选择又看实物。\nC03 块内有重复或指定顺序时不能直接乘k!；多块须防重复计数。\nC04 不全相邻弱于任两不邻；选空位后可能还须排不同对象。\nC05 隔k人对应位置差k+1；空座不是可区分的人；过道和行界不可跨。\nC09 数不同字母选择时不乘同字母实体组合数；不同于随机抽字母的概率题。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  53.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "P01",
+      "name": "样本空间枚举与互斥分支",
+      "record_count": 63,
+      "current_core_record_count": 63,
+      "tool_ids": [
+        "T03"
+      ],
+      "source_constraints": "基本结果穷尽互斥；概率非负且总和1；独立条件来自题面。",
+      "representative": {
+        "question_id": "9709-m25-52-Q02",
+        "question_summary_cn": "电脑三品牌全异、12人F品牌精算和140人H品牌近似",
+        "bottleneck_cn": "P01 骰子和积不是等概率；恰好若干不同类别须计顺序重数。\nB01 至少、至多与严格不等式决定整数端点；成功类别可由互斥类别合并。\nN04 不得把0.5加在所有边界同方向；分母为√npq；有时p来自内层实验。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "P02",
+      "name": "树图全概率及逆参数",
+      "record_count": 65,
+      "current_core_record_count": 65,
+      "tool_ids": [
+        "T03"
+      ],
+      "source_constraints": "分支参数0至1；依赖与确定性分支保留；逆解须可行。",
+      "representative": {
+        "question_id": "9709-m26-52-Q05",
+        "question_summary_cn": "理论最多两次后技能最多三次，资格后验初试即过",
+        "bottleneck_cn": "P06 不能在已结束路径后追加试验；有限等待或状态p变化一般不是几何。\nP02 先选来源再抽对象时不能直接合并库存；每个节点分支和为1。\nP03 P(A|B)不等于P(B|A)；补事件和至少事件须正确改分母。",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  52.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "P03",
+      "name": "条件概率与后验反推",
+      "record_count": 101,
+      "current_core_record_count": 101,
+      "tool_ids": [
+        "T03"
+      ],
+      "source_constraints": "P(B)>0；同一抽样机制下计算交集与分母。",
+      "representative": {
+        "question_id": "9709-m26-52-Q05",
+        "question_summary_cn": "理论最多两次后技能最多三次，资格后验初试即过",
+        "bottleneck_cn": "P06 不能在已结束路径后追加试验；有限等待或状态p变化一般不是几何。\nP02 先选来源再抽对象时不能直接合并库存；每个节点分支和为1。\nP03 P(A|B)不等于P(B|A)；补事件和至少事件须正确改分母。",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  52.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "P04",
+      "name": "独立互斥及集合关系",
+      "record_count": 31,
+      "current_core_record_count": 31,
+      "tool_ids": [
+        "T03"
+      ],
+      "source_constraints": "按实际样本空间定义事件；边际和交集使用一致单位。",
+      "representative": {
+        "question_id": "9709-s26-51-Q02",
+        "question_summary_cn": "艺术商务戏剧性别表，集合运算条件和独立性",
+        "bottleneck_cn": "P01 骰子和积不是等概率；恰好若干不同类别须计顺序重数。\nP03 P(A|B)不等于P(B|A)；补事件和至少事件须正确改分母。\nP04 独立不等于互斥；正概率互斥事件不独立；集合符号不可由OCR猜测。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  51.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 4
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "P05",
+      "name": "不放回及条件放回抽样",
+      "record_count": 68,
+      "current_core_record_count": 68,
+      "tool_ids": [
+        "T03"
+      ],
+      "source_constraints": "库存非负；样本数不超容量；转入、丢弃、替换规则逐支执行。",
+      "representative": {
+        "question_id": "9709-m25-52-Q04",
+        "question_summary_cn": "三玩具车不放回同色及白黑至少各一",
+        "bottleneck_cn": "P05 抽取后总数和颜色数均可能改变；不能直接以恒p二项代替。\nC08 字母种类选择不等概率于实体字母抽取；条件下分母不能仍为原总数。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "P06",
+      "name": "停止规则与状态依赖过程",
+      "record_count": 28,
+      "current_core_record_count": 28,
+      "tool_ids": [
+        "T03"
+      ],
+      "source_constraints": "停止条件、次数上限和下一步状态明确；路径互斥且不漏末状态。",
+      "representative": {
+        "question_id": "9709-m26-52-Q04",
+        "question_summary_cn": "放回首黄第二黄与不放回首绿等待的模型对照",
+        "bottleneck_cn": "G01 前k−1次失败且第k次成功；复合一次试验先算成功率。\nP07 最后一次必须成功，组合数是C(k−1,r−1)；不把第二次成功当几何。\nP06 不能在已结束路径后追加试验；有限等待或状态p变化一般不是几何。\nP05 抽取后总数和颜色数均可能改变；不能直接以恒p二项代替。\nR02 最大最小值、差与绝对差、重号和不同p币必须分清；值不同不保证等可能。\nR01 函数中的平方绝对值必须核原式；大于均值的事件要落到实际支持点。",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  52.pdf",
+        "qp_pdf_page_start": 6,
+        "qp_pdf_page_end": 7
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "P07",
+      "name": "第r次成功的位置",
+      "record_count": 14,
+      "current_core_record_count": 14,
+      "tool_ids": [
+        "T03",
+        "T04"
+      ],
+      "source_constraints": "试验独立同p；r、k为整数且k≥r；r次之前的路径不可提前停止。",
+      "representative": {
+        "question_id": "9709-m26-52-Q04",
+        "question_summary_cn": "放回首黄第二黄与不放回首绿等待的模型对照",
+        "bottleneck_cn": "G01 前k−1次失败且第k次成功；复合一次试验先算成功率。\nP07 最后一次必须成功，组合数是C(k−1,r−1)；不把第二次成功当几何。\nP06 不能在已结束路径后追加试验；有限等待或状态p变化一般不是几何。\nP05 抽取后总数和颜色数均可能改变；不能直接以恒p二项代替。\nR02 最大最小值、差与绝对差、重号和不同p币必须分清；值不同不保证等可能。\nR01 函数中的平方绝对值必须核原式；大于均值的事件要落到实际支持点。",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  52.pdf",
+        "qp_pdf_page_start": 6,
+        "qp_pdf_page_end": 7
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "R01",
+      "name": "有限分布归一与期望方差",
+      "record_count": 78,
+      "current_core_record_count": 78,
+      "tool_ids": [
+        "T04"
+      ],
+      "source_constraints": "概率非负且归一；支持完整；方差非负；标准差是方差平方根。",
+      "representative": {
+        "question_id": "9709-m25-52-Q01",
+        "question_summary_cn": "三币正率1/3、1/4、1/5构造正面数分布与方差",
+        "bottleneck_cn": "R02 最大最小值、差与绝对差、重号和不同p币必须分清；值不同不保证等可能。\nR01 函数中的平方绝对值必须核原式；大于均值的事件要落到实际支持点。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 2,
+        "qp_pdf_page_end": 3
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "R02",
+      "name": "情境构造离散分布",
+      "record_count": 70,
+      "current_core_record_count": 70,
+      "tool_ids": [
+        "T04"
+      ],
+      "source_constraints": "随机变量含义、取值和计数起点明确；所有基本结果映射一次。",
+      "representative": {
+        "question_id": "9709-m25-52-Q01",
+        "question_summary_cn": "三币正率1/3、1/4、1/5构造正面数分布与方差",
+        "bottleneck_cn": "R02 最大最小值、差与绝对差、重号和不同p币必须分清；值不同不保证等可能。\nR01 函数中的平方绝对值必须核原式；大于均值的事件要落到实际支持点。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 2,
+        "qp_pdf_page_end": 3
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "R03",
+      "name": "矩或概率约束逆求参数",
+      "record_count": 13,
+      "current_core_record_count": 13,
+      "tool_ids": [
+        "T04"
+      ],
+      "source_constraints": "未知数与独立条件匹配；p∈[0,1]；支持条件和方差合法。",
+      "representative": {
+        "question_id": "9709-s24-51-Q06",
+        "question_summary_cn": "三偏币正面数再加入两个同p币，由全反与全正比例解p",
+        "bottleneck_cn": "R02 最大最小值、差与绝对差、重号和不同p币必须分清；值不同不保证等可能。\nR03 Var须先加E²转二阶矩；方程可能多解；参数比约束可能降自由度。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2024\\9709_s24_qp_51.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "R04",
+      "name": "得分收益与变量变换",
+      "record_count": 7,
+      "current_core_record_count": 7,
+      "tool_ids": [
+        "T04",
+        "T07"
+      ],
+      "source_constraints": "新变量支持与旧实验对应；收益正负及单位明确。",
+      "representative": {
+        "question_id": "9709-w24-52-Q03",
+        "question_summary_cn": "硬币决定骰子翻倍或偶数保留奇数归零，混合计分",
+        "bottleneck_cn": "R02 最大最小值、差与绝对差、重号和不同p币必须分清；值不同不保证等可能。\nR04 非单射映射须并概率；固定成本不能漏扣；非线性变换不能只变均值。\nR01 函数中的平方绝对值必须核原式；大于均值的事件要落到实际支持点。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2024\\9709_w24_qp_52.pdf",
+        "qp_pdf_page_start": 5,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "B01",
+      "name": "二项精确点概率与尾概率",
+      "record_count": 94,
+      "current_core_record_count": 94,
+      "tool_ids": [
+        "T04"
+      ],
+      "source_constraints": "固定次数、独立、同p、二值成败；p∈[0,1]。",
+      "representative": {
+        "question_id": "9709-m25-52-Q02",
+        "question_summary_cn": "电脑三品牌全异、12人F品牌精算和140人H品牌近似",
+        "bottleneck_cn": "P01 骰子和积不是等概率；恰好若干不同类别须计顺序重数。\nB01 至少、至多与严格不等式决定整数端点；成功类别可由互斥类别合并。\nN04 不得把0.5加在所有边界同方向；分母为√npq；有时p来自内层实验。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "B02",
+      "name": "二项矩反参数",
+      "record_count": 10,
+      "current_core_record_count": 10,
+      "tool_ids": [
+        "T04"
+      ],
+      "source_constraints": "0≤Var≤E；反解参数合法且与情境次数一致。",
+      "representative": {
+        "question_id": "9709-s17-61-Q05",
+        "question_summary_cn": "20蛋裂纹均值反p，逐盒至少一裂纹再逆求盒数",
+        "bottleneck_cn": "B02 方差与均值之比是1−p；n须为正整数，不是随意连续解。\nB01 至少、至多与严格不等式决定整数端点；成功类别可由互斥类别合并。\nB05 对数负号反向；严格不等式不能机械四舍五入；众数不是把均值取整。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2017\\2017s\\9709_s17_qp_61.pdf",
+        "qp_pdf_page_start": 6,
+        "qp_pdf_page_end": 7
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "B03",
+      "name": "分布模型条件与适用性",
+      "record_count": 15,
+      "current_core_record_count": 15,
+      "tool_ids": [
+        "T04"
+      ],
+      "source_constraints": "区分题给、假设及需要评价的条件，不能凭关键词宣称独立。",
+      "representative": {
+        "question_id": "9709-w22-52-Q06",
+        "question_summary_cn": "呼叫即时接通12人精算、80人近似及条件",
+        "bottleneck_cn": "B01 至少、至多与严格不等式决定整数端点；成功类别可由互斥类别合并。\nN04 不得把0.5加在所有边界同方向；分母为√npq；有时p来自内层实验。\nB03 互斥类别可定义二值事件；无放回小总体通常不满足同p独立。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2022\\9709_w22_qp_52.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "B04",
+      "name": "嵌套事件再计数",
+      "record_count": 50,
+      "current_core_record_count": 50,
+      "tool_ids": [
+        "T04",
+        "T03",
+        "T05"
+      ],
+      "source_constraints": "外层独立同事件；参数n属于外层；中途保留足够精度。",
+      "representative": {
+        "question_id": "9709-m26-52-Q06",
+        "question_summary_cn": "大意面袋预期数、小袋双分位参数及八袋阈值计数",
+        "bottleneck_cn": "N01 给N(μ,σ²)须取根；人数是预期而非必然；连续等点概率为零。\nN03 两个给定比例可能都为同侧；样本人数先除总数；σ不是方差。\nB04 内层成功次数与外层合格组数不同；前问四舍五入误差会传递。",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  52.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "B05",
+      "name": "次数阈值众数与反向约束",
+      "record_count": 17,
+      "current_core_record_count": 17,
+      "tool_ids": [
+        "T04"
+      ],
+      "source_constraints": "n为整数且满足原不等式；p非退化时才能取对数。",
+      "representative": {
+        "question_id": "9709-m19-62-Q06",
+        "question_summary_cn": "网购六人精算、最小样本量和百人近似",
+        "bottleneck_cn": "B01 至少、至多与严格不等式决定整数端点；成功类别可由互斥类别合并。\nB05 对数负号反向；严格不等式不能机械四舍五入；众数不是把均值取整。\nN04 不得把0.5加在所有边界同方向；分母为√npq；有时p来自内层实验。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2019\\2019 March\\9709_m19_qp_62.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "G01",
+      "name": "几何首次成功定点",
+      "record_count": 33,
+      "current_core_record_count": 33,
+      "tool_ids": [
+        "T04"
+      ],
+      "source_constraints": "独立重复且同p；支持1,2,…；0<p≤1。",
+      "representative": {
+        "question_id": "9709-m25-52-Q05",
+        "question_summary_cn": "桃销量区间，樱桃反标准差及一周内首低销量日",
+        "bottleneck_cn": "N01 给N(μ,σ²)须取根；人数是预期而非必然；连续等点概率为零。\nN02 中央面积须平分两尾；右尾分位z的正负要核；σ必须为正。\nG01 前k−1次失败且第k次成功；复合一次试验先算成功率。\nG02 X≥k与X>k差一个指数；知道已失败后剩余等待从新起点计算。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "G02",
+      "name": "几何区间尾与条件",
+      "record_count": 33,
+      "current_core_record_count": 33,
+      "tool_ids": [
+        "T04"
+      ],
+      "source_constraints": "恒p独立；解释严格端点；截断时不能丢剩余概率。",
+      "representative": {
+        "question_id": "9709-m25-52-Q05",
+        "question_summary_cn": "桃销量区间，樱桃反标准差及一周内首低销量日",
+        "bottleneck_cn": "N01 给N(μ,σ²)须取根；人数是预期而非必然；连续等点概率为零。\nN02 中央面积须平分两尾；右尾分位z的正负要核；σ必须为正。\nG01 前k−1次失败且第k次成功；复合一次试验先算成功率。\nG02 X≥k与X>k差一个指数；知道已失败后剩余等待从新起点计算。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "G03",
+      "name": "几何均值及逆成功率",
+      "record_count": 6,
+      "current_core_record_count": 6,
+      "tool_ids": [
+        "T04"
+      ],
+      "source_constraints": "p>0；均值至少1；时间单位取决于每次试验。",
+      "representative": {
+        "question_id": "9709-s23-53-Q01",
+        "question_summary_cn": "两币双正等待均值、第五轮及少于七轮",
+        "bottleneck_cn": "G03 X计总尝试次数，不是失败次数；当前S1不要求几何方差公式。\nG01 前k−1次失败且第k次成功；复合一次试验先算成功率。\nG02 X≥k与X>k差一个指数；知道已失败后剩余等待从新起点计算。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2023\\9709_s23_qp_53.pdf",
+        "qp_pdf_page_start": 2,
+        "qp_pdf_page_end": 2
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "N01",
+      "name": "正态顺求区间与预期数",
+      "record_count": 97,
+      "current_core_record_count": 97,
+      "tool_ids": [
+        "T05"
+      ],
+      "source_constraints": "σ>0；事件与单位一致；取整描述先转连续区间。",
+      "representative": {
+        "question_id": "9709-m25-52-Q05",
+        "question_summary_cn": "桃销量区间，樱桃反标准差及一周内首低销量日",
+        "bottleneck_cn": "N01 给N(μ,σ²)须取根；人数是预期而非必然；连续等点概率为零。\nN02 中央面积须平分两尾；右尾分位z的正负要核；σ必须为正。\nG01 前k−1次失败且第k次成功；复合一次试验先算成功率。\nG02 X≥k与X>k差一个指数；知道已失败后剩余等待从新起点计算。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "N02",
+      "name": "正态分位与单参数反求",
+      "record_count": 91,
+      "current_core_record_count": 91,
+      "tool_ids": [
+        "T05"
+      ],
+      "source_constraints": "给定概率0至1；区间目标面积可达到；参数具有唯一可行解。",
+      "representative": {
+        "question_id": "9709-m25-52-Q05",
+        "question_summary_cn": "桃销量区间，樱桃反标准差及一周内首低销量日",
+        "bottleneck_cn": "N01 给N(μ,σ²)须取根；人数是预期而非必然；连续等点概率为零。\nN02 中央面积须平分两尾；右尾分位z的正负要核；σ必须为正。\nG01 前k−1次失败且第k次成功；复合一次试验先算成功率。\nG02 X≥k与X>k差一个指数；知道已失败后剩余等待从新起点计算。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "N03",
+      "name": "双分位联立正态参数",
+      "record_count": 25,
+      "current_core_record_count": 25,
+      "tool_ids": [
+        "T05"
+      ],
+      "source_constraints": "两分位须不同且顺序相容；解得σ>0。",
+      "representative": {
+        "question_id": "9709-m26-52-Q06",
+        "question_summary_cn": "大意面袋预期数、小袋双分位参数及八袋阈值计数",
+        "bottleneck_cn": "N01 给N(μ,σ²)须取根；人数是预期而非必然；连续等点概率为零。\nN03 两个给定比例可能都为同侧；样本人数先除总数；σ不是方差。\nB04 内层成功次数与外层合格组数不同；前问四舍五入误差会传递。",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  52.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "N04",
+      "name": "二项正态近似与连续性校正",
+      "record_count": 76,
+      "current_core_record_count": 76,
+      "tool_ids": [
+        "T05"
+      ],
+      "source_constraints": "按现行考纲检查np>5且n(1−p)>5；独立同p假设仍需成立。",
+      "representative": {
+        "question_id": "9709-m25-52-Q02",
+        "question_summary_cn": "电脑三品牌全异、12人F品牌精算和140人H品牌近似",
+        "bottleneck_cn": "P01 骰子和积不是等概率；恰好若干不同类别须计顺序重数。\nB01 至少、至多与严格不等式决定整数端点；成功类别可由互斥类别合并。\nN04 不得把0.5加在所有边界同方向；分母为√npq；有时p来自内层实验。",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_m25_qp_52.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "N05",
+      "name": "正态对称标准差单位与参数消去",
+      "record_count": 32,
+      "current_core_record_count": 32,
+      "tool_ids": [
+        "T05"
+      ],
+      "source_constraints": "单位、正负和参数关系来自题面；变换合法。",
+      "representative": {
+        "question_id": "9709-s26-55-Q06",
+        "question_summary_cn": "糖盒质量三品牌正态：区间、尾频率反标准差、σ=0.25μ时P(X>1.2μ)",
+        "bottleneck_cn": "N01 给N(μ,σ²)须取根；人数是预期而非必然；连续等点概率为零。\nN02 中央面积须平分两尾；右尾分位z的正负要核；σ必须为正。\nN05 比例常数符号由σ>0约束；负均值不可无条件套正均值推导。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  55.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S1",
+      "code": "N06",
+      "name": "正态模型曲线与定性比较",
+      "record_count": 4,
+      "current_core_record_count": 4,
+      "tool_ids": [
+        "T05"
+      ],
+      "source_constraints": "σ>0；模型允许的实际边界需说明；图轴及参数关系清楚。",
+      "representative": {
+        "question_id": "9709-m17-62-Q04",
+        "question_summary_cn": "谷物包重高精度茎叶转箱线，再讨论正态模型",
+        "bottleneck_cn": "D05 背靠背左侧叶次序；小数单位；奇偶样本的中位位置；IQR不是极差。\nN06 曲线面积都是1；较宽曲线峰较低；钟形摘要不能证明严格正态。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2017\\2017m\\9709_m17_qp_62.pdf",
+        "qp_pdf_page_start": 5,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "P01",
+      "name": "泊松建模、率与时间或空间尺度",
+      "record_count": 84,
+      "current_core_record_count": 84,
+      "tool_ids": [
+        "T06"
+      ],
+      "source_constraints": "恒定平均率、独立发生；λ随时长/长度/面积同比改变",
+      "representative": {
+        "question_id": "9709-m26-62-Q03",
+        "question_summary_cn": "两型手机总数与同型5台、六周近似及零次概率关系",
+        "bottleneck_cn": "同型5台拆(5,0)+(0,5)；六周Po36.6；e^(−λ)=2μe^(−μ)得λ=μ−ln(2μ)；参数须使λ>0；本地MS缺失，尚无官方评分核对",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  62.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "P02",
+      "name": "泊松概率关系、参数与整数界反求",
+      "record_count": 38,
+      "current_core_record_count": 38,
+      "tool_ids": [
+        "T06"
+      ],
+      "source_constraints": "参数非负；概率比先消共同指数；连续根需回验整数条件",
+      "representative": {
+        "question_id": "9709-s10-71-Q06",
+        "question_summary_cn": "两餐厅污渍计数合并与至少一次阈值",
+        "bottleneck_cn": "Poisson合并λ=.08n得最小n58；精确两二项零事件给n57，MS明确接受两种；两样本独立；近似与精确模型的整数界不同，改编须声明口径",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2010\\2010s\\9709_s10_qp_71.pdf",
+        "qp_pdf_page_start": 3,
+        "qp_pdf_page_end": 3
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "P03",
+      "name": "二项到泊松的近似与误差",
+      "record_count": 61,
+      "current_core_record_count": 61,
+      "tool_ids": [
+        "T06",
+        "T05"
+      ],
+      "source_constraints": "二项独立同p、n大p小；λ=np；近似与精确答案分开",
+      "representative": {
+        "question_id": "9709-s10-71-Q06",
+        "question_summary_cn": "两餐厅污渍计数合并与至少一次阈值",
+        "bottleneck_cn": "Poisson合并λ=.08n得最小n58；精确两二项零事件给n57，MS明确接受两种；两样本独立；近似与精确模型的整数界不同，改编须声明口径",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2010\\2010s\\9709_s10_qp_71.pdf",
+        "qp_pdf_page_start": 3,
+        "qp_pdf_page_end": 3
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "P04",
+      "name": "泊松到正态近似与连续性校正",
+      "record_count": 72,
+      "current_core_record_count": 72,
+      "tool_ids": [
+        "T06",
+        "T05"
+      ],
+      "source_constraints": "大λ；近似N(λ,λ)，边界由实际离散事件决定",
+      "representative": {
+        "question_id": "9709-m26-62-Q03",
+        "question_summary_cn": "两型手机总数与同型5台、六周近似及零次概率关系",
+        "bottleneck_cn": "同型5台拆(5,0)+(0,5)；六周Po36.6；e^(−λ)=2μe^(−μ)得λ=μ−ln(2μ)；参数须使λ>0；本地MS缺失，尚无官方评分核对",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  62.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "P05",
+      "name": "计数条件概率与多阶段事件",
+      "record_count": 24,
+      "current_core_record_count": 24,
+      "tool_ids": [
+        "T06"
+      ],
+      "source_constraints": "条件概率分子取交集；重复事件先求单次p，独立时再组合",
+      "representative": {
+        "question_id": "9709-m26-62-Q03",
+        "question_summary_cn": "两型手机总数与同型5台、六周近似及零次概率关系",
+        "bottleneck_cn": "同型5台拆(5,0)+(0,5)；六周Po36.6；e^(−λ)=2μe^(−μ)得λ=μ−ln(2μ)；参数须使λ>0；本地MS缺失，尚无官方评分核对",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  62.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "L01",
+      "name": "线性变换的期望与方差",
+      "record_count": 41,
+      "current_core_record_count": 41,
+      "tool_ids": [
+        "T07"
+      ],
+      "source_constraints": "平移不改方差，倍率按平方；只求矩不必假定正态",
+      "representative": {
+        "question_id": "9709-s26-63-Q06",
+        "question_summary_cn": "蛋糕配料体积比较与给总质量概率反密度m",
+        "bottleneck_cn": "先X−Y；质量mX+1.5mY，均值64.5m、标准差.5m，左尾.3反m；m>0才能标准化约去；N第二参数.07/.08为方差",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  63.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "L02",
+      "name": "独立正态线性组合与比较概率",
+      "record_count": 92,
+      "current_core_record_count": 92,
+      "tool_ids": [
+        "T07"
+      ],
+      "source_constraints": "独立时方差项相加，均值保留符号；绝对差需两尾",
+      "representative": {
+        "question_id": "9709-s26-63-Q06",
+        "question_summary_cn": "蛋糕配料体积比较与给总质量概率反密度m",
+        "bottleneck_cn": "先X−Y；质量mX+1.5mY，均值64.5m、标准差.5m，左尾.3反m；m>0才能标准化约去；N第二参数.07/.08为方差",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  63.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "L03",
+      "name": "独立重复之和与同一变量倍数",
+      "record_count": 53,
+      "current_core_record_count": 53,
+      "tool_ids": [
+        "T07"
+      ],
+      "source_constraints": "n个独立观测的方差是nσ²；nX的方差为n²σ²",
+      "representative": {
+        "question_id": "9709-m26-62-Q04",
+        "question_summary_cn": "50奶酪包总利润低于18美元",
+        "bottleneck_cn": "总质量正态均值56、方差50×.15²；乘.32转利润或阈值18/.32；独立包质量；本地MS缺失",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  62.pdf",
+        "qp_pdf_page_start": 6,
+        "qp_pdf_page_end": 6
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "L04",
+      "name": "离散线性组合的支持枚举",
+      "record_count": 4,
+      "current_core_record_count": 4,
+      "tool_ids": [
+        "T07"
+      ],
+      "source_constraints": "先列整数支持，再枚举可行交集；不把差强作泊松",
+      "representative": {
+        "question_id": "9709-m24-62-Q05",
+        "question_summary_cn": "男女迟到合计、截断枚举大小与五日增加检验",
+        "bottleneck_cn": "忽略≥3后G>B枚举(1,0),(2,0),(2,1)；五日总Po1.25观察4上尾；题给小尾可忽略是近似条件；H1总到达率增加，α=.05",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2024\\9709_m24_qp_62.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "L05",
+      "name": "独立泊松变量之和",
+      "record_count": 64,
+      "current_core_record_count": 64,
+      "tool_ids": [
+        "T07",
+        "T06"
+      ],
+      "source_constraints": "独立泊松相加仍泊松；倍数/差通常不再泊松",
+      "representative": {
+        "question_id": "9709-s10-71-Q06",
+        "question_summary_cn": "两餐厅污渍计数合并与至少一次阈值",
+        "bottleneck_cn": "Poisson合并λ=.08n得最小n58；精确两二项零事件给n57，MS明确接受两种；两样本独立；近似与精确模型的整数界不同，改编须声明口径",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2010\\2010s\\9709_s10_qp_71.pdf",
+        "qp_pdf_page_start": 3,
+        "qp_pdf_page_end": 3
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "L06",
+      "name": "混合总体的分情形概率",
+      "record_count": 1,
+      "current_core_record_count": 1,
+      "tool_ids": [
+        "T07"
+      ],
+      "source_constraints": "条件于类型分别建分布，再按类型概率加权",
+      "representative": {
+        "question_id": "9709-m23-62-Q05",
+        "question_summary_cn": "大小谷物包比较和随机箱型的混合超重概率",
+        "bottleneck_cn": "先比较单包差；箱型60%十个大包、40%二十个小包，分别求尾概率再加权；混合总体不直接认作一个正态；包装类型先条件化",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2023\\9709_m23_qp_62.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "D01",
+      "name": "密度合法性、图形、支持与归一",
+      "record_count": 92,
+      "current_core_record_count": 92,
+      "tool_ids": [
+        "T08"
+      ],
+      "source_constraints": "密度非负且总积分1；图象缩放还需保持总面积",
+      "representative": {
+        "question_id": "9709-s26-61-Q06",
+        "question_summary_cn": "截断指数密度定λ与分部积分期望",
+        "bottleneck_cn": "归一使2^(−λ)=1/8得λ3；E=1/3−ln2/7；支持(0,ln2)，不能直接套完整指数分布均值1/λ",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  61.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "D02",
+      "name": "连续变量期望、二阶矩与方差",
+      "record_count": 93,
+      "current_core_record_count": 93,
+      "tool_ids": [
+        "T08"
+      ],
+      "source_constraints": "E(X²)与E(X)²不同；有无穷支持时检验矩存在",
+      "representative": {
+        "question_id": "9709-s26-61-Q06",
+        "question_summary_cn": "截断指数密度定λ与分部积分期望",
+        "bottleneck_cn": "归一使2^(−λ)=1/8得λ3；E=1/3−ln2/7；支持(0,ln2)，不能直接套完整指数分布均值1/λ",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  61.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "D03",
+      "name": "密度概率、对称性与独立重复",
+      "record_count": 62,
+      "current_core_record_count": 62,
+      "tool_ids": [
+        "T08"
+      ],
+      "source_constraints": "积分限截在支持内；重复事件使用独立性；条件概率取交集",
+      "representative": {
+        "question_id": "9709-m23-62-Q03",
+        "question_summary_cn": "对称四次密度的局部概率拼接与方差",
+        "bottleneck_cn": "完整图已核，P(.6<X<1.8)=1−2a−b；kx²(3−x)²归一k10/81，Var9/28；曲线中段已由完整PDF第6页补核，支持[0,3]",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2023\\9709_m23_qp_62.pdf",
+        "qp_pdf_page_start": 6,
+        "qp_pdf_page_end": 7
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "D04",
+      "name": "中位数、百分位与反求密度参数",
+      "record_count": 69,
+      "current_core_record_count": 69,
+      "tool_ids": [
+        "T08"
+      ],
+      "source_constraints": "由指定左/右面积列式；筛支持内根；不把中位数当均值",
+      "representative": {
+        "question_id": "9709-s24-63-Q05",
+        "question_summary_cn": "三次密度归一、中位数选根及精确均值",
+        "bottleneck_cn": "支持至√2，归一a2；分位方程可置u=m²，选支持内根；精确E保留根式；不能把√2上界误读为2",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2024\\9709_s24_qp_63.pdf",
+        "qp_pdf_page_start": 6,
+        "qp_pdf_page_end": 7
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "S01",
+      "name": "抽样设计、随机数与偏差评价",
+      "record_count": 44,
+      "current_core_record_count": 44,
+      "tool_ids": [
+        "T10"
+      ],
+      "source_constraints": "区分总体与样本；抽样框覆盖、等机会、独立/无重复规则",
+      "representative": {
+        "question_id": "9709-m26-62-Q02",
+        "question_summary_cn": "前20位顾客抽样偏差与小样本均值双尾检验",
+        "bottleneck_cn": "早到顾客不代表全天；正态已给，另假设σ6.8保持，8.4对10.5；α=.10，n20；本地MS缺失",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  62.pdf",
+        "qp_pdf_page_start": 3,
+        "qp_pdf_page_end": 3
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "S02",
+      "name": "无偏估计、汇总/频数/编码数据及逆问题",
+      "record_count": 90,
+      "current_core_record_count": 90,
+      "tool_ids": [
+        "T10",
+        "T01"
+      ],
+      "source_constraints": "s²用n−1；频数加权；编码的平移和倍率要还原",
+      "representative": {
+        "question_id": "9709-s22-63-Q06",
+        "question_summary_cn": "给无偏方差反求缺失观测a",
+        "bottleneck_cn": "样本均值(13+a)/5，方差等4化二次式后按a>0选根；原数据2,3,3,5,a；分母4，不能先四舍五入均值",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2022\\9709_s22_qp_63.pdf",
+        "qp_pdf_page_start": 11,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "S03",
+      "name": "样本均值分布、CLT与概率反问题",
+      "record_count": 82,
+      "current_core_record_count": 82,
+      "tool_ids": [
+        "T10"
+      ],
+      "source_constraints": "E均值=μ、Var均值=σ²/n；正态总体精确，其他大样本近似",
+      "representative": {
+        "question_id": "9709-m26-62-Q05",
+        "question_summary_cn": "骰子平均分给定拒绝规则的二类错误",
+        "bottleneck_cn": "实际均值2.5、假定方差35/12，n50算Xbar≥3；观察2.9已拒绝故非Type II；题明确无需连续性校正；本地MS缺失",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  62.pdf",
+        "qp_pdf_page_start": 7,
+        "qp_pdf_page_end": 7
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "C01",
+      "name": "总体均值的正态置信区间",
+      "record_count": 62,
+      "current_core_record_count": 62,
+      "tool_ids": [
+        "T11"
+      ],
+      "source_constraints": "已知σ或大样本估σ；误差限z×标准误，非个体预测区间",
+      "representative": {
+        "question_id": "9709-m26-62-Q01",
+        "question_summary_cn": "八株原始估计后真方差85的99%区间",
+        "bottleneck_cn": "前问用样本无偏方差，后问换已知85且需总体正态；本地MS缺失；不得把后問85当标准差",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  62.pdf",
+        "qp_pdf_page_start": 2,
+        "qp_pdf_page_end": 2
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "C02",
+      "name": "总体比例的近似置信区间",
+      "record_count": 49,
+      "current_core_record_count": 49,
+      "tool_ids": [
+        "T11"
+      ],
+      "source_constraints": "用p帽与n形成标准误；置信水平是中央面积",
+      "representative": {
+        "question_id": "9709-s10-71-Q02",
+        "question_summary_cn": "比例区间反求样本量及置信度",
+        "bottleneck_cn": "区间中点为87/n，半宽除以比例标准误反求z；置信度取中间双尾面积；随机样本；比例正态近似；n需整数",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2010\\2010s\\9709_s10_qp_71.pdf",
+        "qp_pdf_page_start": 2,
+        "qp_pdf_page_end": 2
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "C03",
+      "name": "区间反置信度、反数据及覆盖事件",
+      "record_count": 40,
+      "current_core_record_count": 40,
+      "tool_ids": [
+        "T11"
+      ],
+      "source_constraints": "区间全宽须除2；同样本嵌套与独立样本覆盖不同",
+      "representative": {
+        "question_id": "9709-s10-71-Q02",
+        "question_summary_cn": "比例区间反求样本量及置信度",
+        "bottleneck_cn": "区间中点为87/n，半宽除以比例标准误反求z；置信度取中间双尾面积；随机样本；比例正态近似；n需整数",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2010\\2010s\\9709_s10_qp_71.pdf",
+        "qp_pdf_page_start": 2,
+        "qp_pdf_page_end": 2
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "C04",
+      "name": "区间宽度、样本量与精度约束",
+      "record_count": 11,
+      "current_core_record_count": 11,
+      "tool_ids": [
+        "T11"
+      ],
+      "source_constraints": "固定置信度/方差时宽∝1/√n；严格界回验整数",
+      "representative": {
+        "question_id": "9709-s25-63-Q03",
+        "question_summary_cn": "150咖啡汇总区间与较小样本宽度比较",
+        "bottleneck_cn": "先估s²作95%CI；题明确大样本方差估计近似相同，较小n区间更宽；此题补充方差相近假设，不能推广为任何两个新样本必然关系",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2025\\9709_s25_qp_63.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 4
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "T01",
+      "name": "二项总体比例检验",
+      "record_count": 70,
+      "current_core_record_count": 70,
+      "tool_ids": [
+        "T12"
+      ],
+      "source_constraints": "H0下参数；按H1选尾；精确或题定近似；离散域核相邻整数",
+      "representative": {
+        "question_id": "9709-w23-62-Q03",
+        "question_summary_cn": "颜色偏好检验辨析点概率并求实际α",
+        "bottleneck_cn": "MS确认H0 p=.5、H1 p>.5；P(X≥8)=.0547，不拒绝；真正5%域X≥9给α=11/1024；备择方向由绿色偏好背景确定；点概率P(X=8)不是p值",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2023\\9709_w23_qp_62.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "T02",
+      "name": "泊松均值或发生率检验",
+      "record_count": 42,
+      "current_core_record_count": 42,
+      "tool_ids": [
+        "T12"
+      ],
+      "source_constraints": "H0率先换统计窗口；按H1选尾，近似时按整数事件校正",
+      "representative": {
+        "question_id": "9709-s26-62-Q03",
+        "question_summary_cn": "路口车流上升的最小拒绝计数及实际α",
+        "bottleneck_cn": "Po2.4上尾，找最小k使P(X≥k)≤.05，并核k−1；一类错误是该临界尾概率，不能直接填.05",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  62.pdf",
+        "qp_pdf_page_start": 5,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "T03",
+      "name": "正态/大样本总体均值z检验",
+      "record_count": 104,
+      "current_core_record_count": 104,
+      "tool_ids": [
+        "T12",
+        "T13"
+      ],
+      "source_constraints": "已知σ或大样本估计；H1方向与标准误先确定",
+      "representative": {
+        "question_id": "9709-m26-62-Q02",
+        "question_summary_cn": "前20位顾客抽样偏差与小样本均值双尾检验",
+        "bottleneck_cn": "早到顾客不代表全天；正态已给，另假设σ6.8保持，8.4对10.5；α=.10，n20；本地MS缺失",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics March 2026 Question Paper  62.pdf",
+        "qp_pdf_page_start": 3,
+        "qp_pdf_page_end": 3
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "T04",
+      "name": "由显著性结论反临界值或参数范围",
+      "record_count": 26,
+      "current_core_record_count": 26,
+      "tool_ids": [
+        "T12"
+      ],
+      "source_constraints": "拒绝H0与支持备择相区分；α百分数与p值尺度一致",
+      "representative": {
+        "question_id": "9709-s26-62-Q03",
+        "question_summary_cn": "路口车流上升的最小拒绝计数及实际α",
+        "bottleneck_cn": "Po2.4上尾，找最小k使P(X≥k)≤.05，并核k−1；一类错误是该临界尾概率，不能直接填.05",
+        "evidence_level": "E1_QP_READ",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2026\\9709 Mathematics June 2026 Question Paper  62.pdf",
+        "qp_pdf_page_start": 5,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "T05",
+      "name": "第一类错误与实际显著性水平",
+      "record_count": 74,
+      "current_core_record_count": 74,
+      "tool_ids": [
+        "T12"
+      ],
+      "source_constraints": "在H0为真时算拒绝域概率；离散实际α可小于标称α",
+      "representative": {
+        "question_id": "9709-w23-62-Q03",
+        "question_summary_cn": "颜色偏好检验辨析点概率并求实际α",
+        "bottleneck_cn": "MS确认H0 p=.5、H1 p>.5；P(X≥8)=.0547，不拒绝；真正5%域X≥9给α=11/1024；备择方向由绿色偏好背景确定；点概率P(X=8)不是p值",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2023\\9709_w23_qp_62.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "T06",
+      "name": "第二类错误、备择参数与检验功效",
+      "record_count": 52,
+      "current_core_record_count": 52,
+      "tool_ids": [
+        "T12"
+      ],
+      "source_constraints": "先固定H0构造的域，再用具体备择参数算不拒绝概率",
+      "representative": {
+        "question_id": "9709-s19-73-Q08",
+        "question_summary_cn": "四面转盘偏A检验及真p=.6时二类错误",
+        "bottleneck_cn": "先在B(10,.25)找1%上尾域；Type II在B(10,.6)算非拒绝概率；观察6不自动等于临界；域须重新定位",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2019\\2019 May-June\\9709_s19_qp_73.pdf",
+        "qp_pdf_page_start": 12,
+        "qp_pdf_page_end": 13
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "S2",
+      "code": "T07",
+      "name": "假设、尾部、模型与情境结论辨析",
+      "record_count": 77,
+      "current_core_record_count": 77,
+      "tool_ids": [
+        "T12"
+      ],
+      "source_constraints": "不拒绝不等于证明H0；错误类型取决于决策与真实状态",
+      "representative": {
+        "question_id": "9709-w23-62-Q03",
+        "question_summary_cn": "颜色偏好检验辨析点概率并求实际α",
+        "bottleneck_cn": "MS确认H0 p=.5、H1 p>.5；P(X≥8)=.0547，不拒绝；真正5%域X≥9给α=11/1024；备择方向由绿色偏好背景确定；点概率P(X=8)不是p值",
+        "evidence_level": "E3_SOLVED",
+        "syllabus_status": "CURRENT_S2_CORE",
+        "source_issue_status": "NO_KNOWN_BLOCKING_ISSUE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9709\\2023\\9709_w23_qp_62.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "C01",
+      "name": "PDF归一与CDF累计",
+      "record_count": 90,
+      "current_core_record_count": 90,
+      "tool_ids": [
+        "T08"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q04",
+        "question_summary_cn": "分段CDF前段为−x³/108+x²/12，后段为−x²/32+7x/16+a；验证中位数3，定a及右端b，求完整pdf与E(1/X)。",
+        "bottleneck_cn": "验证已知中位数不能反用尚待证明的a；分段密度与1/x相乘后在零端可积，但右段必须保留对数项。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "C02",
+      "name": "分位数、中位数与分位距",
+      "record_count": 86,
+      "current_core_record_count": 84,
+      "tool_ids": [
+        "T08"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q04",
+        "question_summary_cn": "分段CDF前段为−x³/108+x²/12，后段为−x²/32+7x/16+a；验证中位数3，定a及右端b，求完整pdf与E(1/X)。",
+        "bottleneck_cn": "验证已知中位数不能反用尚待证明的a；分段密度与1/x相乘后在零端可积，但右段必须保留对数项。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "C03",
+      "name": "矩、函数期望与方差",
+      "record_count": 52,
+      "current_core_record_count": 52,
+      "tool_ids": [
+        "T08"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q04",
+        "question_summary_cn": "分段CDF前段为−x³/108+x²/12，后段为−x²/32+7x/16+a；验证中位数3，定a及右端b，求完整pdf与E(1/X)。",
+        "bottleneck_cn": "验证已知中位数不能反用尚待证明的a；分段密度与1/x相乘后在零端可积，但右段必须保留对数项。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "C04",
+      "name": "单调变换与支持集",
+      "record_count": 58,
+      "current_core_record_count": 58,
+      "tool_ids": [
+        "T08"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-44-Q05",
+        "question_summary_cn": "图示密度在1至5线性上升，5至7为向下至零的二次段；上四分位数5确定a,b，求CDF后再求Y=10−X的CDF。",
+        "bottleneck_cn": "第二段CDF不能只从5积到x漏掉前段3/4；递减变换需取补事件且分段顺序反转，原X上四分位点5映成Y下四分位点5。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  44.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "C05",
+      "name": "连续模型的逆向参数",
+      "record_count": 18,
+      "current_core_record_count": 18,
+      "tool_ids": [
+        "T08"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q04",
+        "question_summary_cn": "分段CDF前段为−x³/108+x²/12，后段为−x²/32+7x/16+a；验证中位数3，定a及右端b，求完整pdf与E(1/X)。",
+        "bottleneck_cn": "验证已知中位数不能反用尚待证明的a；分段密度与1/x相乘后在零端可积，但右段必须保留对数项。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "C06",
+      "name": "连续概率、独立重复与分段原像",
+      "record_count": 44,
+      "current_core_record_count": 44,
+      "tool_ids": [
+        "T08"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-w21-41-Q02",
+        "question_summary_cn": "对称三角CDF、中心概率及平方变量方差",
+        "bottleneck_cn": "对称性可简化偶次矩，但Var(X²)需要E(X⁴)而非E(X²)；X²在负正两段不是整体单调变换。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2021\\9231_w21_qp_41.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "C07",
+      "name": "密度草图与连接信息",
+      "record_count": 4,
+      "current_core_record_count": 4,
+      "tool_ids": [
+        "T08"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s14-23-Q09",
+        "question_summary_cn": "X的线性CDF在[2,10]为x/8-1/4，求上尾.6的k；Y=2lnX求CDF、pdf并画图。",
+        "bottleneck_cn": "反变换为X=e^(Y/2)，不是e^(2Y)；截断密度图两侧为0，不能画全实轴指数。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2014\\2014s\\9231_s14_qp_23.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 4
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "P01",
+      "name": "从情境或概率表构造PGF",
+      "record_count": 27,
+      "current_core_record_count": 27,
+      "tool_ids": [
+        "T09"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s25-43-Q06",
+        "question_summary_cn": "7红3蓝不放回取2；X红数，Y颜色种数。求各PGF，解释乘积失效，求Z=X+Y真实PGF与均值。",
+        "bottleneck_cn": "X和Y来自同一次抽取且依赖，不能用边际PGF相乘；不同事件同Z=3须合并概率。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2025\\9231_s25_qp_43.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "P02",
+      "name": "PGF导数与矩",
+      "record_count": 42,
+      "current_core_record_count": 42,
+      "tool_ids": [
+        "T09"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q06",
+        "question_summary_cn": "给出含t^−1的GX(t)=k(at+1)²/t及E(X)=1/3，逆求a,k，求方差，再求三次独立和为0的概率。",
+        "bottleneck_cn": "PGF的负幂表示X可取−1，不是坏概率；独立和的常数项要在分子选t³，不是直接取分子的常数1。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 12,
+        "qp_pdf_page_end": 13
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "P03",
+      "name": "系数、尾概率与众数",
+      "record_count": 18,
+      "current_core_record_count": 18,
+      "tool_ids": [
+        "T09"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q06",
+        "question_summary_cn": "给出含t^−1的GX(t)=k(at+1)²/t及E(X)=1/3，逆求a,k，求方差，再求三次独立和为0的概率。",
+        "bottleneck_cn": "PGF的负幂表示X可取−1，不是坏概率；独立和的常数项要在分子选t³，不是直接取分子的常数1。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 12,
+        "qp_pdf_page_end": 13
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "P04",
+      "name": "独立和与逆开根",
+      "record_count": 36,
+      "current_core_record_count": 36,
+      "tool_ids": [
+        "T09"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q06",
+        "question_summary_cn": "给出含t^−1的GX(t)=k(at+1)²/t及E(X)=1/3，逆求a,k，求方差，再求三次独立和为0的概率。",
+        "bottleneck_cn": "PGF的负幂表示X可取−1，不是坏概率；独立和的常数项要在分子选t³，不是直接取分子的常数1。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 12,
+        "qp_pdf_page_end": 13
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "P05",
+      "name": "依赖关系与PGF乘积禁用",
+      "record_count": 1,
+      "current_core_record_count": 1,
+      "tool_ids": [
+        "T09"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s25-43-Q06",
+        "question_summary_cn": "7红3蓝不放回取2；X红数，Y颜色种数。求各PGF，解释乘积失效，求Z=X+Y真实PGF与均值。",
+        "bottleneck_cn": "X和Y来自同一次抽取且依赖，不能用边际PGF相乘；不同事件同Z=3须合并概率。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2025\\9231_s25_qp_43.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "P06",
+      "name": "PGF参数反求",
+      "record_count": 8,
+      "current_core_record_count": 8,
+      "tool_ids": [
+        "T09"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q06",
+        "question_summary_cn": "给出含t^−1的GX(t)=k(at+1)²/t及E(X)=1/3，逆求a,k，求方差，再求三次独立和为0的概率。",
+        "bottleneck_cn": "PGF的负幂表示X可取−1，不是坏概率；独立和的常数项要在分子选t³，不是直接取分子的常数1。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 12,
+        "qp_pdf_page_end": 13
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "P07",
+      "name": "整数支持、平移与仿射变换",
+      "record_count": 3,
+      "current_core_record_count": 3,
+      "tool_ids": [
+        "T09"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q06",
+        "question_summary_cn": "给出含t^−1的GX(t)=k(at+1)²/t及E(X)=1/3，逆求a,k，求方差，再求三次独立和为0的概率。",
+        "bottleneck_cn": "PGF的负幂表示X可取−1，不是坏概率；独立和的常数项要在分子选t³，不是直接取分子的常数1。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 12,
+        "qp_pdf_page_end": 13
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "E01",
+      "name": "单均值t区间",
+      "record_count": 46,
+      "current_core_record_count": 46,
+      "tool_ids": [
+        "T11",
+        "T13"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-w25-41-Q01",
+        "question_summary_cn": "10名儿童估计锐角角度84/85/77/85/84/87/86/88/83/85；求θ的95%CI并质疑假设。",
+        "bottleneck_cn": "把角度估计总体均值当真实θ还需无系统偏差；接近边界时正态假设应被解释而非机械宣告。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2025\\9231_w25_qp_41.pdf",
+        "qp_pdf_page_start": 2,
+        "qp_pdf_page_end": 2
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "E02",
+      "name": "独立均差或配对差t区间",
+      "record_count": 16,
+      "current_core_record_count": 16,
+      "tool_ids": [
+        "T11",
+        "T13"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q03",
+        "question_summary_cn": "7名人文地理学生和9名自然地理学生的作业用时以四个和式给出，在正态与等总体方差条件下估计均差95%区间。",
+        "bottleneck_cn": "不等样本量的两组必须先中心化并以14合并，不能平均两个方差或因两门课相近而配对。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 6,
+        "qp_pdf_page_end": 6
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "E03",
+      "name": "大样本均差正态区间",
+      "record_count": 26,
+      "current_core_record_count": 26,
+      "tool_ids": [
+        "T11",
+        "T13"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-43-Q05",
+        "question_summary_cn": "两超市香蕉质量，样本44与52且明确不应假定等总体方差；检验X店总体均质量是否较小，再构造均差90%区间。",
+        "bottleneck_cn": "题目明令不等方差，必须分别估方差并相加均值方差；10%单尾检验与90%双侧区间使用不同正态分位数。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  43.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "E04",
+      "name": "从区间/宽度反求统计量",
+      "record_count": 21,
+      "current_core_record_count": 21,
+      "tool_ids": [
+        "T11",
+        "T13"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s24-43-Q02",
+        "question_summary_cn": "n=12的98%脉搏均值CI为(64.22,68.66)，反求Σx与Σx²并写假设。",
+        "bottleneck_cn": "区间半宽不是标准差；用98%双侧t=2.718而非单尾98%或z。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2024\\9231_s24_qp_43.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 4
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "E05",
+      "name": "共同方差pooled估计",
+      "record_count": 4,
+      "current_core_record_count": 4,
+      "tool_ids": [
+        "T11",
+        "T13"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-w25-41-Q03",
+        "question_summary_cn": "男婴n10估计总体标准差.6kg；女婴n5原始质量3.9/3.1/2.9/3.1/3.6；假定共同σ并估σ。",
+        "bottleneck_cn": "pool的是方差对应的离均差平方和，不是平均两个标准差；题目最后要σ需开根。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2025\\9231_w25_qp_41.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 4
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "T01",
+      "name": "单总体均值t检验",
+      "record_count": 43,
+      "current_core_record_count": 43,
+      "tool_ids": [
+        "T13"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-43-Q01",
+        "question_summary_cn": "给9个正态总体原始观测，按已指定H0:μ=20、H1:μ>20，在2.5%水平作单样本t检验。",
+        "bottleneck_cn": "2.5%是指定单尾面积，不能再减半；从原始9值先算无偏方差，不把总体正态误当总体方差已知。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  43.pdf",
+        "qp_pdf_page_start": 3,
+        "qp_pdf_page_end": 3
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "T02",
+      "name": "独立两样本pooled t",
+      "record_count": 35,
+      "current_core_record_count": 35,
+      "tool_ids": [
+        "T13"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-44-Q06",
+        "question_summary_cn": "A城8户、B城9户回收废弃物百分比原始数据，已给等总体方差；双尾10%比较总体平均回收比例，并补总体正态假设。",
+        "bottleneck_cn": "两城市随机抽不同家庭，n8与9不能配对；等方差已给但不足以单独保证小样本t有效，还要各总体正态而非“差值正态”。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  44.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "T03",
+      "name": "配对t与差值总体",
+      "record_count": 33,
+      "current_core_record_count": 27,
+      "tool_ids": [
+        "T13"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q05",
+        "question_summary_cn": "8名学生复习课前后成绩配对；检验平均提高是否超过5分，并明确配对t检验的正态假设。",
+        "bottleneck_cn": "保持学生一一配对，零假设提高量是5不是0；需要正态的是差值总体，而不是总体均值的分布。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "T04",
+      "name": "均值正态检验与CLT",
+      "record_count": 30,
+      "current_core_record_count": 30,
+      "tool_ids": [
+        "T13"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-43-Q05",
+        "question_summary_cn": "两超市香蕉质量，样本44与52且明确不应假定等总体方差；检验X店总体均质量是否较小，再构造均差90%区间。",
+        "bottleneck_cn": "题目明令不等方差，必须分别估方差并相加均值方差；10%单尾检验与90%双侧区间使用不同正态分位数。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  43.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "T05",
+      "name": "逆求零假设参数或显著性",
+      "record_count": 21,
+      "current_core_record_count": 21,
+      "tool_ids": [
+        "T13"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s25-43-Q05",
+        "question_summary_cn": "8位患者干预前后血糖，主张平均下降超过k；5%配对t反求拒绝H0的k范围。",
+        "bottleneck_cn": "未知k在零假设均值，不是在样本方差；差符号与超过方向必须固定。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2025\\9231_s25_qp_43.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "T06",
+      "name": "区间与检验的对应",
+      "record_count": 19,
+      "current_core_record_count": 19,
+      "tool_ids": [
+        "T13"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s25-41-Q04",
+        "question_summary_cn": "两学校英语分数n10/8，正态等方差；95%均差CI并由CI解释5%差异检验。",
+        "bottleneck_cn": "独立样本虽年龄相近也不是配对；用同一模型的双侧区间与双尾检验对应。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2025\\9231_s25_qp_41.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "K01",
+      "name": "指定模型的拟合优度",
+      "record_count": 61,
+      "current_core_record_count": 61,
+      "tool_ids": [
+        "T14"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-43-Q04",
+        "question_summary_cn": "200个连续X的7组频数，以已知pdf f(x)=2/x³(x≥1)拟合；积分补两项期望频数，再合并不足5的类做10%卡方检验。",
+        "bottleneck_cn": "连续密度必须先积分成组概率再乘200；已给pdf参数不扣估计自由度，合并后才数类别。表中2位小数导致b两种容许值，不是模型矛盾。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  43.pdf",
+        "qp_pdf_page_start": 6,
+        "qp_pdf_page_end": 7
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "K02",
+      "name": "同样本估参与自由度扣除",
+      "record_count": 22,
+      "current_core_record_count": 22,
+      "tool_ids": [
+        "T14"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-44-Q03",
+        "question_summary_cn": "120只青蛙质量的7组频数，正态模型均值236.5、方差134.56由同批数据估得；补尾部期望频数，再两端合并检验正态拟合。",
+        "bottleneck_cn": "已给均值方差仍是从同一样本估计，df必须扣2；同时两端都有小E，不能只合并一端就套df2。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  44.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "K03",
+      "name": "列联表独立性",
+      "record_count": 37,
+      "current_core_record_count": 37,
+      "tool_ids": [
+        "T14"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q02",
+        "question_summary_cn": "三家公交公司×准时/迟到/取消的3×3表，检验可靠性独立于公司；再用期望与实测偏差指出可能较不可靠的公司。",
+        "bottleneck_cn": "低期望频数要求合并整行/列，不能只把孤立的3.5格和邻格相加；总体检验不显著与条件式局部诊断不能混为因果断言。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "K04",
+      "name": "合并、尾部与最终自由度",
+      "record_count": 84,
+      "current_core_record_count": 84,
+      "tool_ids": [
+        "T14"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q02",
+        "question_summary_cn": "三家公交公司×准时/迟到/取消的3×3表，检验可靠性独立于公司；再用期望与实测偏差指出可能较不可靠的公司。",
+        "bottleneck_cn": "低期望频数要求合并整行/列，不能只把孤立的3.5格和邻格相加；总体检验不显著与条件式局部诊断不能混为因果断言。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "K05",
+      "name": "由检验逆求样本量或参数",
+      "record_count": 5,
+      "current_core_record_count": 5,
+      "tool_ids": [
+        "T14"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s13-23-Q11-OR",
+        "question_summary_cn": "100大学生60支持某党、45农村童年，未知交叉格A，10%独立检验不拒绝，反求A整数上下界；给A29后求保留结论的最大放大N。",
+        "bottleneck_cn": "边际总量只留一个自由未知格；χ²是该格偏离期望的平方，反求后还要满足频数非负及整数。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2013\\2013s\\9231_s13_qp_23.pdf",
+        "qp_pdf_page_start": 5,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "N01",
+      "name": "符号检验：单样本/配对",
+      "record_count": 10,
+      "current_core_record_count": 10,
+      "tool_ids": [
+        "T15"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q01",
+        "question_summary_cn": "村店15位顾客购物件数以右偏茎叶图给出；先说明符号秩法不合适，再检验总体中位数是否由8增加。",
+        "bottleneck_cn": "从茎叶图辨认非对称并选择只使用正负信息的检验；尾部应累计至3而非只算恰3或误检验均值。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 2,
+        "qp_pdf_page_end": 2
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "N02",
+      "name": "符号秩：单样本/配对",
+      "record_count": 30,
+      "current_core_record_count": 30,
+      "tool_ids": [
+        "T15"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-43-Q02",
+        "question_summary_cn": "两位教师独立批阅同10份英语卷；解释为何配对符号秩可能比paired t合适，并检验评分是否有系统差异。",
+        "bottleneck_cn": "独立批阅不等于独立样本；同一份卷形成一对。Wilcoxon对差的绝对值排名，再把符号带回，检验位置不是总体均值正态性。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  43.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 4
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "N03",
+      "name": "独立样本秩和",
+      "record_count": 9,
+      "current_core_record_count": 9,
+      "tool_ids": [
+        "T15"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s25-43-Q04",
+        "question_summary_cn": "6名50岁以上与8名25岁以下反应时，5%检验年长者更慢。",
+        "bottleneck_cn": "取小样本秩和后还要匹配右侧备择，60不是直接拿去与下侧31比较。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2025\\9231_s25_qp_43.pdf",
+        "qp_pdf_page_start": 6,
+        "qp_pdf_page_end": 6
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "N04",
+      "name": "秩统计量正态近似与CC",
+      "record_count": 12,
+      "current_core_record_count": 12,
+      "tool_ids": [
+        "T15"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-w25-41-Q04",
+        "question_summary_cn": "n28 Wilcoxon符号秩，1%双尾未显著；用正态近似反求小秩和T的最小可能值。",
+        "bottleneck_cn": "逆求非拒绝区域不是拒绝区域；T是整数且取较小秩和，双尾1%对应.005尾。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2025\\9231_w25_qp_41.pdf",
+        "qp_pdf_page_start": 5,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "N05",
+      "name": "秩或中位数阈值反求",
+      "record_count": 7,
+      "current_core_record_count": 7,
+      "tool_ids": [
+        "T15"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-w25-41-Q04",
+        "question_summary_cn": "n28 Wilcoxon符号秩，1%双尾未显著；用正态近似反求小秩和T的最小可能值。",
+        "bottleneck_cn": "逆求非拒绝区域不是拒绝区域；T是整数且取较小秩和，双尾1%对应.005尾。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2025\\9231_w25_qp_41.pdf",
+        "qp_pdf_page_start": 5,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "A01",
+      "name": "模型假设与情境结论",
+      "record_count": 65,
+      "current_core_record_count": 65,
+      "tool_ids": [
+        "T12",
+        "T13",
+        "T14",
+        "T15"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q01",
+        "question_summary_cn": "村店15位顾客购物件数以右偏茎叶图给出；先说明符号秩法不合适，再检验总体中位数是否由8增加。",
+        "bottleneck_cn": "从茎叶图辨认非对称并选择只使用正负信息的检验；尾部应累计至3而非只算恰3或误检验均值。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 2,
+        "qp_pdf_page_end": 2
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "H01",
+      "name": "历史相关、回归与相关检验",
+      "record_count": 65,
+      "current_core_record_count": 0,
+      "tool_ids": [
+        "T16"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s19-21-Q10",
+        "question_summary_cn": "5对x3,4,4,6,8与y5,7,q,6,7，已知x对y回归斜率5/4、q整数；求q、截距c与r。",
+        "bottleneck_cn": "缺失y同时影响中心协方差与y方差，且x对y斜率分母Syy；最后用整数约束排除第二根。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "OUTSIDE_FS",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2019\\9231_s19_qp_21.pdf",
+        "qp_pdf_page_start": 20,
+        "qp_pdf_page_end": 21
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "H02",
+      "name": "历史回归/相关逆向数据与样本量",
+      "record_count": 13,
+      "current_core_record_count": 0,
+      "tool_ids": [
+        "T16"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s14-23-Q11-OR",
+        "question_summary_cn": "n12,r=.6，双回归y=bx+4.5与x=ay+c，先5%正相关检验，再由b-a=.5反求a,b，均x5.5求c并画两线；z=5y时改斜率和r。",
+        "bottleneck_cn": "r为正强制两斜率正，二次负根不能留；x对y在同图上须改写成y形式。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "OUTSIDE_FS",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2014\\2014s\\9231_s14_qp_23.pdf",
+        "qp_pdf_page_start": 5,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "B01",
+      "name": "前置离散分布与重复试验",
+      "record_count": 42,
+      "current_core_record_count": 12,
+      "tool_ids": [
+        "T04",
+        "T05",
+        "T06",
+        "T07",
+        "T10"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s15-21-Q11-OR",
+        "question_summary_cn": "200枚同偏骰各掷至首次偶数，频数126,43,22,3,5,1,0；以几何p=0.6作GOF。另每骰5掷至少一6的成功事件，求10骰中恰4成功。",
+        "bottleneck_cn": "p=0.6是给定而非估计，合并后5类故df4；最后类别≥7是尾概率，不是P(X=7)。第二部分是两层成功事件。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2015\\2015s\\9231_s15_qp_21.pdf",
+        "qp_pdf_page_start": 5,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "B02",
+      "name": "前置正态、线性组合与CLT",
+      "record_count": 3,
+      "current_core_record_count": 0,
+      "tool_ids": [
+        "T04",
+        "T05",
+        "T06",
+        "T07",
+        "T10"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s10-21-Q06",
+        "question_summary_cn": "昆虫寿命的log10 X服从N(1.5,0.2²)，求原尺度中位数和寿命至少50天的概率。",
+        "bottleneck_cn": "中位数可在单调对数变换下还原，原变量均值不能同样还原。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_ASSUMED",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2010\\2010s\\9231_s10_qp_21.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 4
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "B03",
+      "name": "前置概率的逆向参数",
+      "record_count": 20,
+      "current_core_record_count": 0,
+      "tool_ids": [
+        "T04",
+        "T05",
+        "T06",
+        "T07",
+        "T10"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s18-21-Q09",
+        "question_summary_cn": "滑雪季11月1日为第1天，首场雪日期X的方差4/9；求p、首雪3日/不早于4日概率及99.9%界限N。",
+        "bottleneck_cn": "日期按成功次数从1起；不早于4日对应前三天失败。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_ASSUMED",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2018\\2018s\\9231_s18_qp_21.pdf",
+        "qp_pdf_page_start": 14,
+        "qp_pdf_page_end": 15
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "C00",
+      "name": "连续随机变量：完整主题入口",
+      "record_count": 126,
+      "current_core_record_count": 126,
+      "tool_ids": [
+        "T08"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q04",
+        "question_summary_cn": "分段CDF前段为−x³/108+x²/12，后段为−x²/32+7x/16+a；验证中位数3，定a及右端b，求完整pdf与E(1/X)。",
+        "bottleneck_cn": "验证已知中位数不能反用尚待证明的a；分段密度与1/x相乘后在零端可积，但右段必须保留对数项。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 8,
+        "qp_pdf_page_end": 9
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "P00",
+      "name": "概率母函数：完整主题入口",
+      "record_count": 42,
+      "current_core_record_count": 42,
+      "tool_ids": [
+        "T09"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q06",
+        "question_summary_cn": "给出含t^−1的GX(t)=k(at+1)²/t及E(X)=1/3，逆求a,k，求方差，再求三次独立和为0的概率。",
+        "bottleneck_cn": "PGF的负幂表示X可取−1，不是坏概率；独立和的常数项要在分子选t³，不是直接取分子的常数1。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 12,
+        "qp_pdf_page_end": 13
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "E00",
+      "name": "区间估计：完整主题入口",
+      "record_count": 95,
+      "current_core_record_count": 95,
+      "tool_ids": [
+        "T11",
+        "T13"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q03",
+        "question_summary_cn": "7名人文地理学生和9名自然地理学生的作业用时以四个和式给出，在正态与等总体方差条件下估计均差95%区间。",
+        "bottleneck_cn": "不等样本量的两组必须先中心化并以14合并，不能平均两个方差或因两门课相近而配对。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 6,
+        "qp_pdf_page_end": 6
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "T00",
+      "name": "均值检验：完整主题入口",
+      "record_count": 138,
+      "current_core_record_count": 132,
+      "tool_ids": [
+        "T13"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q05",
+        "question_summary_cn": "8名学生复习课前后成绩配对；检验平均提高是否超过5分，并明确配对t检验的正态假设。",
+        "bottleneck_cn": "保持学生一一配对，零假设提高量是5不是0；需要正态的是差值总体，而不是总体均值的分布。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 10,
+        "qp_pdf_page_end": 11
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "K00",
+      "name": "卡方检验：完整主题入口",
+      "record_count": 98,
+      "current_core_record_count": 98,
+      "tool_ids": [
+        "T14"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q02",
+        "question_summary_cn": "三家公交公司×准时/迟到/取消的3×3表，检验可靠性独立于公司；再用期望与实测偏差指出可能较不可靠的公司。",
+        "bottleneck_cn": "低期望频数要求合并整行/列，不能只把孤立的3.5格和邻格相加；总体检验不显著与条件式局部诊断不能混为因果断言。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 4,
+        "qp_pdf_page_end": 5
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "N00",
+      "name": "非参数检验：完整主题入口",
+      "record_count": 44,
+      "current_core_record_count": 44,
+      "tool_ids": [
+        "T15"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s26-41-Q01",
+        "question_summary_cn": "村店15位顾客购物件数以右偏茎叶图给出；先说明符号秩法不合适，再检验总体中位数是否由8增加。",
+        "bottleneck_cn": "从茎叶图辨认非对称并选择只使用正负信息的检验；尾部应累计至3而非只算恰3或误检验均值。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2026\\9231 Mathematics - Further June 2026 Question Paper  41.pdf",
+        "qp_pdf_page_start": 2,
+        "qp_pdf_page_end": 2
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "B00",
+      "name": "统计前置：完整主题入口",
+      "record_count": 37,
+      "current_core_record_count": 4,
+      "tool_ids": [
+        "T04",
+        "T05",
+        "T06",
+        "T07",
+        "T10"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s12-21-Q08",
+        "question_summary_cn": "每100m缎带瑕疵数Poisson均1.6，从无瑕疵事件推出相邻瑕疵距离指数CDF，再求均值、中位数及≥50m概率。",
+        "bottleneck_cn": "计数率按米由1.6/100转换；等待距离超过x对应零事件，不是至少一事件。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "CURRENT_CORE",
+        "source_issue_status": null,
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2012\\2012s\\9231_s12_qp_21.pdf",
+        "qp_pdf_page_start": 3,
+        "qp_pdf_page_end": 3
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    },
+    {
+      "module": "FS",
+      "code": "H00",
+      "name": "历史非现行FS统计：完整主题入口",
+      "record_count": 65,
+      "current_core_record_count": 0,
+      "tool_ids": [
+        "T16"
+      ],
+      "source_constraints": "",
+      "representative": {
+        "question_id": "9231-s19-21-Q10",
+        "question_summary_cn": "5对x3,4,4,6,8与y5,7,q,6,7，已知x对y回归斜率5/4、q整数；求q、截距c与r。",
+        "bottleneck_cn": "缺失y同时影响中心协方差与y方差，且x对y斜率分母Syy；最后用整数约束排除第二根。",
+        "evidence_level": "E2_QP_MS_READ",
+        "syllabus_status": "OUTSIDE_FS",
+        "source_issue_status": "NONE",
+        "qp_path": "E:\\国际学校数学\\Alevel数学\\CIE真题\\9231\\2019\\9231_s19_qp_21.pdf",
+        "qp_pdf_page_start": 20,
+        "qp_pdf_page_end": 21
+      },
+      "representative_status": "设计溯源候选，未在本次逐题复核原卷，不是可直接上线的练习"
+    }
+  ]
+}

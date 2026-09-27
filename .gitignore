@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.local
+
+*.[mM][dD]
+.env
+.env.*
+*.pem
+*.key
+__pycache__/
+*.pyc
+

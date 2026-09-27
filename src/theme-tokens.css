@@ -1,0 +1,122 @@
+/* Quiet paper-and-ink surfaces: hierarchy through spacing and fine rules. */
+:root {
+  color-scheme: light;
+  --font-ui:
+    "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Noto Sans CJK SC", sans-serif;
+  --font-brand: Georgia, "Times New Roman", serif;
+  --font-mono: "Cascadia Mono", Consolas, monospace;
+  --text-body: 13px;
+  --text-label: 12px;
+  --text-caption: 11px;
+  --text-section: 13px;
+  --weight-label: 500;
+  --weight-heading: 600;
+  --radius-control: 6px;
+  --radius-panel: 8px;
+  --control-height: 32px;
+  --field-height: 34px;
+  --workspace-header-height: 64px;
+  --control-motion: 140ms ease;
+  --paper: #fbfaf6;
+  --surface: #f4f4ef;
+  --ink: #293740;
+  --secondary-ink: #607179;
+  --muted-ink: #8b9594;
+  --accent: #4d657a;
+  --accent-soft: #e7ecee;
+  --line: #e0e4dd;
+  --field-line: #cdd5d1;
+  --field-active: #f0f3ed;
+  --hover: #edf1eb;
+  --canvas-bg: #fffefa;
+  --plot-label: #fffefaf2;
+  --danger: #a64448;
+  --success: #337462;
+  --chart-gold: #b08442;
+  --chart-blue: #527a98;
+  --chart-purple: #7b7294;
+  --logo-bg: #46586c;
+  --logo-fg: #fffefa;
+  --overlay: #24333d42;
+  --keyboard-background: #e8ede8;
+  --keyboard-toolbar-background: #e8ede8;
+  --keyboard-toolbar-text: #64747b;
+  --keyboard-toolbar-text-active: #344b5c;
+  --keyboard-toolbar-background-hover: #dce5e2;
+  --keyboard-accent-color: #4d657a;
+  --keycap-background: #fffefa;
+  --keycap-background-hover: #e4ebe6;
+  --keycap-background-pressed: #4d657a;
+  --keycap-text: #344656;
+  --keycap-text-hover: #293740;
+  --keycap-secondary-background: #d5dfdd;
+  --keycap-secondary-background-hover: #c7d4d1;
+  --keycap-secondary-text: #46586c;
+  --keycap-border: #dce3dc;
+  --keycap-border-bottom: #d0d9d2;
+  --keycap-secondary-border: #ccd7d3;
+  --keycap-secondary-border-bottom: #bdccc6;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #1d2934;
+  --surface: #17212b;
+  --ink: #e6e8e5;
+  --secondary-ink: #b1bec5;
+  --muted-ink: #91a1ac;
+  --accent: #b1c3d1;
+  --accent-soft: #2c3d4c;
+  --line: #33434f;
+  --field-line: #465a69;
+  --field-active: #23333f;
+  --hover: #263744;
+  --canvas-bg: #18242e;
+  --plot-label: #18242ef2;
+  --danger: #e69a9d;
+  --success: #88c3ac;
+  --chart-gold: #d7b477;
+  --chart-blue: #a1bed4;
+  --chart-purple: #b6a7cd;
+  --logo-bg: #a9bdcc;
+  --logo-fg: #17212b;
+  --overlay: #060d17aa;
+  --keyboard-background: #1d2934;
+  --keyboard-toolbar-background: #1d2934;
+  --keyboard-toolbar-text: #9fb1be;
+  --keyboard-toolbar-text-active: #d1dce4;
+  --keyboard-toolbar-background-hover: #293c4c;
+  --keyboard-accent-color: #9eb4c5;
+  --keycap-background: #293a48;
+  --keycap-background-hover: #364d60;
+  --keycap-background-pressed: #607f96;
+  --keycap-text: #e0e6e9;
+  --keycap-text-hover: #fff;
+  --keycap-text-pressed: #fff;
+  --keycap-secondary-background: #34495a;
+  --keycap-secondary-background-hover: #426078;
+  --keycap-secondary-text: #d1dce4;
+  --keycap-border: #334855;
+  --keycap-border-bottom: #17222b;
+  --keycap-secondary-border: #3b5264;
+  --keycap-secondary-border-bottom: #202f3a;
+}
+
+/* Shared controls and font for all Mathroom workspaces. */
+.theme-toggle {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--secondary-ink);
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  background: var(--hover);
+  color: var(--ink);
+}

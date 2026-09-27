@@ -1,0 +1,766 @@
+{
+  "scenes": [
+    {
+      "id": "S01",
+      "name": "共点力合成与分解",
+      "mode": "静态分析",
+      "codes": {
+        "M": [
+          "F01"
+        ]
+      },
+      "process": "指定作用方向 → 分解至选定轴 → 合成/求平衡未知量",
+      "requirements": "二维矢量、可选择坐标轴；不要求物体必须运动"
+    },
+    {
+      "id": "S02",
+      "name": "质点平衡与悬挂结点",
+      "mode": "静态平衡",
+      "codes": {
+        "M": [
+          "F02",
+          "F03"
+        ]
+      },
+      "process": "建立绳段/外力几何 → 联立平衡 → 检查张力非负",
+      "requirements": "独立绳与同一穿环绳分开；结点和光滑滑环不同"
+    },
+    {
+      "id": "S03",
+      "name": "静摩擦与临界滑动",
+      "mode": "静态/临界",
+      "codes": {
+        "M": [
+          "F04",
+          "F05",
+          "F06"
+        ]
+      },
+      "process": "平衡 → 计算所需摩擦 → 与μR比较 → 上/下两种临界趋势",
+      "requirements": "静摩擦是范围；R受斜拉/斜推影响，不能一律mg cosθ"
+    },
+    {
+      "id": "S04",
+      "name": "环/珠沿直杆或曲线导线",
+      "mode": "接触/导向",
+      "codes": {},
+      "process": "确定导线法向约束 → 受力/能量 → 沿导线移动或保持平衡",
+      "requirements": "穿在线上的珠允许反力换向，不能当作单面斜坡"
+    },
+    {
+      "id": "S05",
+      "name": "单体直线动力学与平面滑动",
+      "mode": "平移运动",
+      "codes": {
+        "M": [
+          "N01",
+          "N02"
+        ]
+      },
+      "process": "启动/投射 → 沿面加减速 → 停止、反向或进入下一段",
+      "requirements": "不同表面段有独立μ与方向；处理停止后能否继续运动"
+    },
+    {
+      "id": "S06",
+      "name": "绳与滑轮连接体",
+      "mode": "多体约束",
+      "codes": {
+        "M": [
+          "N03"
+        ]
+      },
+      "process": "绷紧同动 → 求各绳张力 → 触地/断绳/卸载 → 新的独立运动",
+      "requirements": "每根绳独立长度和张力；2/3粒子、多固定滑轮、落地松绳"
+    },
+    {
+      "id": "S07",
+      "name": "车辆牵引与刚性拖杆",
+      "mode": "多体约束",
+      "codes": {
+        "M": [
+          "N04"
+        ]
+      },
+      "process": "整体平动 → 子系统求连接力 → 制动/换坡/撤力后重新求解",
+      "requirements": "轻绳只能拉；轻刚杆可拉可推；车轮外观不自动启用转动"
+    },
+    {
+      "id": "S08",
+      "name": "升降机与载物",
+      "mode": "给定/受力运动",
+      "codes": {
+        "M": [
+          "N05"
+        ]
+      },
+      "process": "加速上升/下降 → 匀速 → 制动 → 支持力和缆绳张力变化",
+      "requirements": "载物与电梯分质量；图像规定运动时反求力"
+    },
+    {
+      "id": "S09",
+      "name": "叠放块与相对滑动临界",
+      "mode": "多接触临界",
+      "codes": {},
+      "process": "整体受推 → 上下界面提供静摩擦 → 达到相对滑动阈值",
+      "requirements": "两个接触界面的μ独立；整体/子体切换分析"
+    },
+    {
+      "id": "S10",
+      "name": "直线运动函数、分段图像与匀变速",
+      "mode": "给定运动",
+      "codes": {},
+      "process": "输入s(t)/v(t)/a(t)或图像 → 连续接段 → 零速、转向与累计路程",
+      "requirements": "此类可不含质量/力；分段时间原点与有向面积"
+    },
+    {
+      "id": "S11",
+      "name": "竖直投射与落体",
+      "mode": "平移运动",
+      "codes": {
+        "M": [
+          "K04"
+        ]
+      },
+      "process": "上抛/释放 → 最高点 → 下落 → 指定高度或地面",
+      "requirements": "允许非零起始高度、延迟发射；给定反弹后速度/能损"
+    },
+    {
+      "id": "S12",
+      "name": "追及、会合与目标命中",
+      "mode": "多轨迹/事件",
+      "codes": {
+        "M": [
+          "K03"
+        ],
+        "FM": [
+          "P04"
+        ]
+      },
+      "process": "多对象独立计时 → 比较位置/相对运动 → 首次相遇或判无相遇",
+      "requirements": "多个时钟与延迟开始；同位不一定自动执行碰撞"
+    },
+    {
+      "id": "S13",
+      "name": "动力、阻力与功率",
+      "mode": "受力/瞬态分析",
+      "codes": {
+        "M": [
+          "E05",
+          "E06"
+        ]
+      },
+      "process": "给功率/驱力 → 校准阻力 → 瞬时加速度/稳速 → 换坡或开关机",
+      "requirements": "P=Fv与恒力不能混同；给端态总功不能擅造时间轨迹"
+    },
+    {
+      "id": "S14",
+      "name": "功—能端态与组合路径",
+      "mode": "能量分析",
+      "codes": {
+        "M": [
+          "E01",
+          "E02",
+          "E03",
+          "E04",
+          "E07"
+        ]
+      },
+      "process": "路径端态 → 重力/外力/摩擦做功 → 速度、高差、停点或未知量",
+      "requirements": "缺具体路径或阻力定律时只给能量端态，不伪造完整动画"
+    },
+    {
+      "id": "S15",
+      "name": "直线粒子碰撞与粘合",
+      "mode": "瞬时事件",
+      "codes": {
+        "M": [
+          "M01",
+          "M02",
+          "M03",
+          "M05"
+        ],
+        "FM": [
+          "M01"
+        ]
+      },
+      "process": "接近 → 沿碰撞线动量关系 → 给定碰后条件/恢复系数 → 分离或粘合",
+      "requirements": "M题可直接给碰后速度关系；不强制所有题都输入e"
+    },
+    {
+      "id": "S16",
+      "name": "二维抛体",
+      "mode": "平移运动",
+      "codes": {
+        "FM": [
+          "P01",
+          "P02",
+          "P03",
+          "P05"
+        ],
+        "M2": [
+          "P01",
+          "P02",
+          "P03",
+          "P04"
+        ]
+      },
+      "process": "从指定位置发射 → 飞行与最高点 → 指定目标/障碍/斜面",
+      "requirements": "X/Y分量、完整初态、上/下行分支、目标可达性"
+    },
+    {
+      "id": "S17",
+      "name": "平面/墙壁正碰与斜碰",
+      "mode": "瞬时事件",
+      "codes": {
+        "FM": [
+          "M02"
+        ]
+      },
+      "process": "入射 → 分解法向/切向 → 法向恢复 → 新直线/抛体运动",
+      "requirements": "光滑壁切向速度不变；不同壁可有不同e"
+    },
+    {
+      "id": "S18",
+      "name": "两光滑球斜碰",
+      "mode": "多体瞬时事件",
+      "codes": {
+        "FM": [
+          "M03"
+        ]
+      },
+      "process": "建立连心线 → 法向动量+恢复 → 各球切向不变 → 合成末速度",
+      "requirements": "两个速度矢量及碰撞法线；粒子模型需给连心几何，不能只有一个点"
+    },
+    {
+      "id": "S19",
+      "name": "连续碰撞链",
+      "mode": "多事件组合",
+      "codes": {
+        "M": [
+          "M04"
+        ],
+        "FM": [
+          "M04"
+        ]
+      },
+      "process": "首碰 → 自由/受力移动或撞墙 → 再碰 → 检查是否还有下一碰",
+      "requirements": "事件队列、粘合后质量更新、按相对速度判断再碰"
+    },
+    {
+      "id": "S20",
+      "name": "冲量与穿透/打桩",
+      "mode": "冲量/阻力过程",
+      "codes": {
+        "FM": [
+          "M06",
+          "M07"
+        ]
+      },
+      "process": "冲量改变动量或穿过阻碍 → 碰后/贯入段 → 停止/穿出",
+      "requirements": "区分瞬时碰撞和有限时恒阻过程；冲量不作为有限力读数"
+    },
+    {
+      "id": "S21",
+      "name": "杆/板等刚体平衡",
+      "mode": "刚体静态",
+      "codes": {
+        "FM": [
+          "R01",
+          "R02"
+        ],
+        "M2": [
+          "R01",
+          "R02"
+        ]
+      },
+      "process": "放置支点、绳和载荷 → 力平衡+力矩平衡 → 接触/摩擦检查",
+      "requirements": "力作用点、重心、铰链两分量、多个接触点"
+    },
+    {
+      "id": "S22",
+      "name": "复合重心与挖孔",
+      "mode": "几何/质量分析",
+      "codes": {
+        "FM": [
+          "R03"
+        ],
+        "M2": [
+          "R03"
+        ]
+      },
+      "process": "按长度/面积/体积/壳面积赋质量 → 组合或挖除 → 求重心",
+      "requirements": "线、板、实心体、薄壳分别建模；孔用负贡献而非负物体"
+    },
+    {
+      "id": "S23",
+      "name": "刚体自由悬挂",
+      "mode": "刚体静态",
+      "codes": {
+        "FM": [
+          "R06"
+        ],
+        "M2": [
+          "R06"
+        ]
+      },
+      "process": "选悬点 → 重心在悬点下方 → 定姿态/逆求几何参数",
+      "requirements": "刚体形状与重心；只求最终平衡不必模拟任意摆动"
+    },
+    {
+      "id": "S24",
+      "name": "倾覆与先滑先倒",
+      "mode": "刚体临界",
+      "codes": {
+        "FM": [
+          "R04"
+        ],
+        "M2": [
+          "R04"
+        ]
+      },
+      "process": "改变角/外力/几何 → 接触合力到边缘或μ界 → 比较临界条件",
+      "requirements": "支承区域与边缘；临界倾覆不要求全过程翻滚动画"
+    },
+    {
+      "id": "S25",
+      "name": "水平圆周与转台接触",
+      "mode": "圆周约束",
+      "codes": {
+        "FM": [
+          "C01"
+        ],
+        "M2": [
+          "C01"
+        ]
+      },
+      "process": "指定r、v或ω → 竖直平衡+径向动力学 → 接触/摩擦可行范围",
+      "requirements": "圆周半径、向心方向；可二维截面+俯视图，无须通用3D引擎"
+    },
+    {
+      "id": "S26",
+      "name": "单/多绳圆锥摆",
+      "mode": "圆周约束",
+      "codes": {
+        "FM": [
+          "C02"
+        ],
+        "M2": [
+          "C02"
+        ]
+      },
+      "process": "绳长几何 → 共同角速度 → 张力/反力 → 松绳或断裂边界",
+      "requirements": "不同圆周半径可共享ω；绳穿环同张力与结点独立绳分开"
+    },
+    {
+      "id": "S27",
+      "name": "竖直圆周与绕钉换圆",
+      "mode": "圆周/事件",
+      "codes": {
+        "FM": [
+          "C03"
+        ]
+      },
+      "process": "能量求速度 → 径向方程 → T/R条件 → 整圆、往返或换支点",
+      "requirements": "轻绳、轻杆、导线、内/外曲面约束不同；遇钉改变有效半径"
+    },
+    {
+      "id": "S28",
+      "name": "圆周脱离后抛体",
+      "mode": "混合过程",
+      "codes": {
+        "FM": [
+          "C04"
+        ]
+      },
+      "process": "圆周运动 → T或R达到零/绳断/轨道终点 → 继承切向速度飞行",
+      "requirements": "脱离事件优先于形式能量止点；可能再碰地或曲面"
+    },
+    {
+      "id": "S29",
+      "name": "角运动学与非匀速圆周",
+      "mode": "给定角运动",
+      "codes": {
+        "FM": [
+          "C05"
+        ],
+        "M2": [
+          "C00"
+        ]
+      },
+      "process": "输入θ(t)/ω(t)/v(t) → 径向与切向加速度 → 合加速度",
+      "requirements": "给定运动不是自由动力学；角量与线量转换"
+    },
+    {
+      "id": "S30",
+      "name": "弹性平衡与参数标定",
+      "mode": "弹性静态",
+      "codes": {
+        "FM": [
+          "H01"
+        ],
+        "M2": [
+          "H01"
+        ]
+      },
+      "process": "自然长与伸长 → 胡克定律 → 平衡 → 求模量/长度/载荷",
+      "requirements": "区分弹绳只能拉与弹簧可压；预拉和静平衡位置"
+    },
+    {
+      "id": "S31",
+      "name": "弹性直线运动与松紧切换",
+      "mode": "弹性演化",
+      "codes": {
+        "FM": [
+          "H02"
+        ],
+        "M2": [
+          "H02"
+        ]
+      },
+      "process": "初始伸长/压缩/松弛 → 弹性运动 → 自然长松绳 → 自由段 → 再拉紧",
+      "requirements": "势能只在有效伸长区；支点上下两侧方向切换"
+    },
+    {
+      "id": "S32",
+      "name": "多弹绳/双段弹绳",
+      "mode": "弹性几何约束",
+      "codes": {
+        "FM": [
+          "H03"
+        ],
+        "M2": [
+          "H03"
+        ]
+      },
+      "process": "各段独立自然长与几何 → 平衡或释放 → 有效段逐一切换",
+      "requirements": "整根绳中点与两根不同绳不可混同；各段松弛判定"
+    },
+    {
+      "id": "S33",
+      "name": "弹性圆周/圆锥摆",
+      "mode": "弹性+圆周",
+      "codes": {
+        "FM": [
+          "H04"
+        ],
+        "M2": [
+          "H04"
+        ]
+      },
+      "process": "转动半径与伸长相互决定 → 弹力参与向心 → 可行角速范围",
+      "requirements": "几何、胡克定律与向心方程联立"
+    },
+    {
+      "id": "S34",
+      "name": "随t、v、x变化的直线力",
+      "mode": "变力演化",
+      "codes": {
+        "FM": [
+          "V01",
+          "V02",
+          "V03",
+          "V04",
+          "V05"
+        ],
+        "M2": [
+          "V01",
+          "V02",
+          "V03",
+          "V04"
+        ]
+      },
+      "process": "明确力函数 → 选择dv/dt或v dv/dx → 停止/反向/终速/换力",
+      "requirements": "受限函数输入及参数域；阻力方向随速度而变，转向时重新判断"
+    },
+    {
+      "id": "S35",
+      "name": "简谐运动",
+      "mode": "历史振动",
+      "codes": {
+        "FM": [
+          "L01",
+          "L02"
+        ]
+      },
+      "process": "识别平衡位置与回复加速度 → 振幅/相位 → 首达时间/松绳切换",
+      "requirements": "历史模块；不能把所有弹性运动和大摆角都当SHM"
+    },
+    {
+      "id": "S36",
+      "name": "刚体定轴转动、惯量与转动能",
+      "mode": "历史刚体动力学",
+      "codes": {
+        "FM": [
+          "L03",
+          "L04",
+          "L05"
+        ]
+      },
+      "process": "确定转轴与惯量 → 力矩/转动能 → 角速度 → 脱落、牵引或转向",
+      "requirements": "定轴转动；重物绕盘绳可耦合平移；无需通用自由刚体碰撞"
+    },
+    {
+      "id": "S37",
+      "name": "复摆与小角振动",
+      "mode": "历史刚体振动",
+      "codes": {
+        "FM": [
+          "L06"
+        ]
+      },
+      "process": "求转轴惯量与重心距 → 小角回复力矩 → 周期与相位",
+      "requirements": "明确小角近似与稳定平衡；有限角能量另算"
+    },
+    {
+      "id": "S38",
+      "name": "铰接/接触的多刚体平衡",
+      "mode": "多刚体静态",
+      "codes": {
+        "FM": [
+          "L07"
+        ]
+      },
+      "process": "拆分各刚体 → 作用反作用与力矩 → 接触/摩擦界",
+      "requirements": "不能只求整体平衡漏掉内部作用力"
+    },
+    {
+      "id": "S39",
+      "name": "两转盘接触的无滑动传动",
+      "mode": "给定旋转约束",
+      "codes": {},
+      "process": "接触处切向速度相等 → 转向相反或按几何确定 → 线/角加速度",
+      "requirements": "无滑动接触传动；不据此推导必须做任意滚动碰撞沙盒"
+    }
+  ],
+  "objects": [
+    {
+      "id": "P01",
+      "name": "一般质点/未指定外形",
+      "role": "particle",
+      "pattern": "particle|质点|粒子"
+    },
+    {
+      "id": "P02",
+      "name": "块、箱、载荷、雪橇",
+      "role": "particle",
+      "pattern": "block|box|crate|load|sledge|sled|物块|块|箱|载荷|雪橇|重物"
+    },
+    {
+      "id": "P03",
+      "name": "球/小球",
+      "role": "particle",
+      "pattern": "\\bball\\b|\\bspheres?\\b|小球|悬球|两球|绳球|抛球|球体"
+    },
+    {
+      "id": "P04",
+      "name": "环/珠/套环",
+      "role": "particle",
+      "pattern": "\\bbeads?\\b|\\bsmall (?:smooth )?rings?\\b|小环|滑环|光滑环|粗糙.*环|珠|环套"
+    },
+    {
+      "id": "P05",
+      "name": "车辆/列车/拖车/自行车",
+      "role": "particle",
+      "pattern": "\\bcar\\b|lorry|truck|trailer|train|locomotive|carriage|bicycle|cyclist|汽车|货车|列车|拖车|挂车|骑手|骑车|机车|房车|摩托"
+    },
+    {
+      "id": "P06",
+      "name": "人/运动员/行人",
+      "role": "particle",
+      "pattern": "runner|athlete|\\bman\\b|\\bgirl\\b|\\bboy\\b|child|walker|跑者|运动员|儿童|孩子|女孩|步行者|骑手"
+    },
+    {
+      "id": "P07",
+      "name": "电梯/吊笼",
+      "role": "particle",
+      "pattern": "elevator|\\blift\\b|电梯|升降机|吊笼"
+    },
+    {
+      "id": "P08",
+      "name": "飞机/火箭/降落伞运动者",
+      "role": "particle",
+      "pattern": "aeroplane|aircraft|rocket|parachut|飞机|火箭|降落伞|跳伞"
+    },
+    {
+      "id": "P09",
+      "name": "子弹/锤/钉/桩",
+      "role": "particle",
+      "pattern": "bullet|hammer|\\bnail\\b|\\bpile\\b|子弹|锤|钉入|打桩|桩"
+    },
+    {
+      "id": "B01",
+      "name": "杆/梁/梯",
+      "role": "rigid",
+      "pattern": "\\brods?\\b|\\bbeams?\\b|ladder|杆|梁|梯子"
+    },
+    {
+      "id": "B02",
+      "name": "细线/圆环/线框",
+      "role": "rigid",
+      "pattern": "\\bwires?\\b|\\bframes?\\b|\\brings?\\b|circular arc|线弧|线框|圆环|相框|边条|辐条|弓架|圆弧"
+    },
+    {
+      "id": "B03",
+      "name": "薄板/圆盘",
+      "role": "rigid",
+      "pattern": "lamina|laminae|\\bdis[ck]s?\\b|\\bplate\\b|薄板|圆盘|方板|三角板|玻璃|矩形板"
+    },
+    {
+      "id": "B04",
+      "name": "实心几何体",
+      "role": "rigid",
+      "pattern": "\\bsolid\\b|\\bcone\\b|\\bcylinder\\b|\\bprism\\b|\\bcube\\b|sphere|cuboid|rectangular block|solid block|实心|圆锥|圆柱|棱柱|立方体|方锥|矩形块|柱孔块|方底柱"
+    },
+    {
+      "id": "B05",
+      "name": "薄壳/空心体",
+      "role": "rigid",
+      "pattern": "shell|hollow|薄壳|球壳|空心|薄壁|开口盒|容器"
+    },
+    {
+      "id": "B06",
+      "name": "直接给定惯量的飞轮/刚体",
+      "role": "rigid",
+      "pattern": "flywheel|飞轮"
+    }
+  ],
+  "components": [
+    {
+      "id": "C01",
+      "name": "直平面/路面/地面",
+      "pattern": "inclined plane|horizontal plane|horizontal surface|水平面|水平地|斜面|斜坡|粗糙坡|光滑坡|坡上|坡下|地面"
+    },
+    {
+      "id": "C02",
+      "name": "墙/屏障/障碍碰面",
+      "pattern": "\\bwall|barrier|obstacle|墙|屏障|挡板|障碍"
+    },
+    {
+      "id": "C03",
+      "name": "球/柱/锥等曲面",
+      "pattern": "spherical surface|hemispherical bowl|cylindrical surface|conical surface|球面|球壳内|球顶|半球碗|圆柱内|锥面|内球|外球"
+    },
+    {
+      "id": "C04",
+      "name": "导线/杆/轨道/管",
+      "pattern": "wire|track|rail|tube|导线|刚丝|钢丝|圆管|轨道|滑道|环套|珠.*杆|珠.*圆环"
+    },
+    {
+      "id": "C05",
+      "name": "不可伸长绳/缆/细线",
+      "pattern": "inextensible|light string|light cord|light cable|定长绳|轻绳|绳张力|断绳|绳断|两绳|三绳|同绳|缆绳"
+    },
+    {
+      "id": "C06",
+      "name": "弹性绳/弹性线",
+      "pattern": "elastic string|elastic cord|elastic band|弹绳|弹性绳|弹性环|弹性线"
+    },
+    {
+      "id": "C07",
+      "name": "弹簧",
+      "pattern": "spring|弹簧"
+    },
+    {
+      "id": "C08",
+      "name": "理想固定滑轮",
+      "pattern": "pulley|滑轮"
+    },
+    {
+      "id": "C09",
+      "name": "钉/光滑环/孔的改向",
+      "pattern": "peg|through.*ring|through.*hole|绳过|绕钉|遇.*钉|穿环|桌孔|两.*钉|fixed ring"
+    },
+    {
+      "id": "C10",
+      "name": "铰链/固定转轴/枢轴",
+      "pattern": "hinge|pivot|rotation.*axis|rotate.*axis|铰接|铰链|转轴|绕.*轴"
+    },
+    {
+      "id": "C11",
+      "name": "轻刚杆/撑杆/拖杆",
+      "pattern": "light rod|rigid rod|tow.bar|strut|轻杆|轻刚杆|拖杆|刚杆|斜撑|撑力|coupling"
+    },
+    {
+      "id": "C12",
+      "name": "固定端/悬点/支点",
+      "pattern": "fixed point|fixed end|suspend|悬点|支点|固定点|固定端|悬挂|悬重"
+    },
+    {
+      "id": "C13",
+      "name": "转盘/转台/旋转支撑",
+      "pattern": "turntable|rotating.*(?:table|drum|rod)|转盘|转台|旋转杆|圆筒壁转动"
+    }
+  ],
+  "event_mentions": [
+    {
+      "id": "E01",
+      "name": "到达指定时刻/位置",
+      "pattern": "时刻|经过|到达|reaches|passes|at time"
+    },
+    {
+      "id": "E02",
+      "name": "停止/反向",
+      "pattern": "停下|停车|瞬停|静止时刻|转向|返回|反向|comes to rest|instantaneous rest|revers"
+    },
+    {
+      "id": "E03",
+      "name": "绳断/剪断/撤连接",
+      "pattern": "断绳|绳断|剪断|断裂|string.*(?:breaks|cut)|string is cut|cord.*break"
+    },
+    {
+      "id": "E04",
+      "name": "触地/触障碍",
+      "pattern": "触地|落地|撞墙|撞壁|碰墙|碰地|hits.*(?:ground|wall)|reaches.*ground"
+    },
+    {
+      "id": "E05",
+      "name": "绳松弛",
+      "pattern": "松绳|松弛|string.*slack|cord.*slack"
+    },
+    {
+      "id": "E06",
+      "name": "绳重新绷紧/进入伸长区",
+      "pattern": "再绷紧|再次绷紧|重新绷紧|再拉紧|张紧|becomes taut|taut again"
+    },
+    {
+      "id": "E07",
+      "name": "失去接触/离轨/离面",
+      "pattern": "脱离|离轨|离地|离面|loses contact|leaves.*surface"
+    },
+    {
+      "id": "E08",
+      "name": "碰撞/反弹",
+      "pattern": "碰撞|相撞|撞|反弹|collision|collide|rebound|impact"
+    },
+    {
+      "id": "E09",
+      "name": "粘合/合体",
+      "pattern": "粘合|粘附|粘上|合体|coalesce|stick together|remain in contact"
+    },
+    {
+      "id": "E10",
+      "name": "外力/功率切换",
+      "pattern": "撤力|撤去|移去.*力|熄火|关机|开伞|断燃|功率突|功率改|改驱|switched off|engine is switched|force is removed"
+    },
+    {
+      "id": "E11",
+      "name": "跨表面/介质",
+      "pattern": "进入|入液|入水|地段|光滑.*粗糙|坡.*水平|enters|passes from"
+    },
+    {
+      "id": "E12",
+      "name": "添加/移除质量",
+      "pattern": "脱落|脱离.*质量|撤掉|附加|加2m|换2m|加2M|remove.*particle|particle.*detached"
+    },
+    {
+      "id": "E13",
+      "name": "改变支点/半径",
+      "pattern": "遇.*钉|绕.*钉|换圆|新圆|小圆|string.*peg"
+    },
+    {
+      "id": "E14",
+      "name": "临界滑动/倾覆",
+      "pattern": "临界|极限平衡|倾覆|just about|limiting equilibrium|toppl|sliding"
+    }
+  ]
+}

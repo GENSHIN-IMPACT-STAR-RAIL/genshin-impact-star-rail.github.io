@@ -1,0 +1,342 @@
+.analysis-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.analysis-panel {
+  position: static;
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--ink);
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+.analysis-panel header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 38px;
+  flex-shrink: 0;
+  padding: 3px 0;
+  background: transparent;
+  border: 0;
+}
+.analysis-section {
+  min-width: 0;
+  margin-bottom: 12px;
+}
+.analysis-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  cursor: pointer;
+  color: var(--secondary-ink);
+  font-size: 11px;
+}
+.analysis-toggle strong {
+  flex: 1;
+}
+.analysis-panel .analysis-toggle input[type="checkbox"] {
+  appearance: none;
+  flex-shrink: 0;
+  width: 28px;
+  height: 16px;
+  margin: 0;
+  padding: 2px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--field-line);
+  cursor: pointer;
+}
+.analysis-toggle input::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--paper);
+  transition: transform 0.15s;
+}
+.analysis-panel .analysis-toggle input:checked {
+  background: var(--accent);
+}
+.analysis-toggle input:checked::before {
+  transform: translateX(12px);
+}
+.analysis-panel button {
+  color: var(--secondary-ink);
+  background: transparent;
+  border: 0;
+  border-radius: 3px;
+  padding: 5px 7px;
+}
+.analysis-panel button:hover {
+  background: var(--hover);
+  color: var(--ink);
+}
+.analysis-panel header button {
+  display: flex;
+}
+.analysis-tabs {
+  display: flex;
+  flex-shrink: 0;
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+.analysis-tabs button {
+  flex: 1;
+  border-radius: 0;
+  padding: 8px;
+  border-bottom: 2px solid transparent;
+}
+.analysis-tabs button[aria-pressed="true"] {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.analysis-content {
+  min-width: 0;
+  padding: 10px 0 12px;
+}
+.analysis-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.analysis-panel select,
+.analysis-panel input:not([type="checkbox"]) {
+  min-width: 0;
+  width: 100%;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 6px;
+  font: inherit;
+}
+.analysis-field select {
+  flex: 1;
+}
+.analysis-hint {
+  font-size: 11px;
+  color: var(--secondary-ink);
+  line-height: 1.6;
+  margin: 8px 0;
+}
+.analysis-coordinates {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: end;
+  gap: 8px;
+}
+.analysis-coordinates label,
+.analysis-parameter label {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  min-width: 0;
+}
+.analysis-coordinates button,
+.analysis-parameter button {
+  white-space: nowrap;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 7px 10px;
+}
+.analysis-parameter {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.analysis-parameter label {
+  flex: 1;
+  white-space: nowrap;
+}
+.analysis-points {
+  margin: 10px 0;
+  max-height: 132px;
+  overflow: auto;
+  border-block: 1px solid var(--line);
+  padding-block: 3px;
+}
+.analysis-points > div {
+  display: flex;
+  align-items: center;
+}
+.analysis-points .analysis-point {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  gap: 6px;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+  padding: 7px 5px;
+}
+.analysis-point > .static-math {
+  min-width: 0;
+  overflow-x: auto;
+  padding: 4px 0;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.analysis-point small {
+  flex-shrink: 0;
+  color: var(--secondary-ink);
+  font-size: 10px;
+}
+.analysis-point[aria-pressed="true"] {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+.analysis-result {
+  margin-top: 10px;
+}
+.analysis-result > label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.analysis-result input[type="checkbox"] {
+  accent-color: var(--accent);
+}
+.analysis-result p {
+  margin: 10px 0 6px;
+}
+.analysis-result .static-math {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 6px 0;
+  font-size: 17px;
+}
+.analysis-result small {
+  display: block;
+  color: var(--secondary-ink);
+  font-size: 10px;
+  margin-top: 6px;
+}
+.analysis-bounds {
+  display: flex;
+  gap: 10px;
+  margin: 8px 0 10px;
+}
+.analysis-bounds label {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--secondary-ink);
+}
+.analysis-error {
+  color: var(--danger);
+  line-height: 1.6;
+  font-size: 11px;
+}
+.analysis-panel .analysis-clear {
+  font-size: 11px;
+  padding-left: 0;
+  margin-top: 5px;
+}
+@media (max-width: 640px) {
+  .sidebar-content:not([data-panel="analysis"]) > .analysis-section {
+    display: none;
+  }
+  .sidebar-content[data-panel="analysis"] > :not(.analysis-section) {
+    display: none;
+  }
+  .analysis-points {
+    max-height: 85px;
+  }
+}
+.analysis-tabs {
+  flex-wrap: wrap;
+}
+.analysis-tabs button {
+  flex: 1 0 auto;
+  padding-inline: 5px;
+}
+.cut-options {
+  display: grid;
+  gap: 6px;
+  max-height: 180px;
+  overflow-y: auto;
+  margin: 8px 0;
+}
+.cut-options > div {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 6px;
+}
+.cut-options span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--secondary-ink);
+  font-variant-numeric: tabular-nums;
+}
+.cut-options button[aria-pressed="true"] {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.cut-analysis > label {
+  flex-wrap: wrap;
+}
+.analysis-content > .analysis-field {
+  margin-bottom: 10px;
+}
+.cut-analysis > .analysis-field {
+  margin-bottom: 8px;
+}
+.point-analysis {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+.point-analysis > strong {
+  font-size: 12px;
+}
+.point-tangent {
+  margin: 8px 0;
+  padding: 8px 10px;
+  border-radius: 4px;
+  background: var(--hover);
+}
+.point-tangent > p {
+  margin-top: 0;
+}
+.point-tangent label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 11px;
+}
+.analysis-panel .analysis-next {
+  margin-top: 8px;
+  padding: 8px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  width: 100%;
+}
+.analysis-candidates {
+  border: 1px solid var(--line);
+  padding: 8px;
+  border-radius: 4px;
+}
+.analysis-candidates > button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+.analysis-candidates small {
+  color: var(--secondary-ink);
+}

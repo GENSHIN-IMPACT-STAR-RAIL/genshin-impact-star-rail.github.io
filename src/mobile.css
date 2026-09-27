@@ -1,0 +1,58 @@
+/* Keep the plot visible while students adjust expressions and sliders below it. */
+@media (max-width: 640px) {
+  .workspace {
+    order: -1;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #f5f7fb;
+    padding: 10px 12px 0;
+    border-bottom: 1px solid #e0e5ef;
+    box-shadow: 0 5px 12px #26375a06;
+  }
+  .graph-frame {
+    height: 36dvh;
+    min-height: 220px;
+  }
+  .workspace .insight {
+    display: none;
+  }
+  .workspace-footer {
+    padding: 10px 1px;
+  }
+  .sidebar-heading {
+    display: none;
+  }
+  .sidebar {
+    padding-top: 20px;
+  }
+  .formula-row input {
+    font-size: 16px;
+  }
+  .row-actions button {
+    min-width: 32px;
+    min-height: 32px;
+  }
+  .graph-controls button {
+    width: 36px;
+    height: 36px;
+  }
+  .parameter {
+    padding: 3px 0 10px;
+  }
+  .parameters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 24px;
+  }
+  input[type="range"] {
+    height: 18px;
+  }
+  .gesture-hint {
+    max-width: calc(100% - 16px);
+  }
+}
+@media (max-width: 640px) and (max-height: 500px) {
+  .workspace {
+    position: relative;
+  }
+}

@@ -1,0 +1,13 @@
+.inference-tool { min-width: 0; }
+.inference-tool .inference-check { display:flex; align-items:center; gap:.5rem; line-height:1.6; }
+.inference-tool .inference-check input { accent-color:var(--stats-teal, var(--success)); }
+.inference-tool .inference-svg { width:100%; display:block; min-width:240px; overflow:visible; }
+.inference-tool .inference-svg text { fill:currentColor; font-size:12px; }
+.inference-tool .inference-table-wrap { overflow-x:auto; }
+.inference-tool .inference-heat-cell { min-width:96px; padding:.7rem; text-align:center; border:1px solid var(--line, #8296a344); }
+.inference-tool .inference-heat-cell small { display:block; opacity:.85; margin-top:.3rem; }
+.inference-tool .inference-key { display:flex; gap:1rem; flex-wrap:wrap; font-size:.82rem; }
+.inference-tool .inference-critical { border-left:3px solid var(--danger); padding-left:.8rem; }
+.inference-tool .inference-missing { min-height:140px; display:grid; place-items:center; }
+.inference-tool .inference-pair-list { max-height:340px; overflow:auto; }
+.inference-tool .inference-muted { opacity:.75; font-size:.85rem; }

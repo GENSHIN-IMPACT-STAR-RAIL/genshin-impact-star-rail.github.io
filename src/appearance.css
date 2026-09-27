@@ -1,0 +1,613 @@
+@import "./theme-tokens.css";
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+}
+.brand-sub {
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  color: var(--muted-ink);
+  font-size: 9px;
+}
+.brand-icon {
+  background: var(--logo-bg);
+  color: var(--logo-fg);
+  border-radius: 6px;
+}
+.brand-icon span {
+  color: inherit;
+  opacity: 0.75;
+}
+.brand-actions {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+.help-button,
+.theme-toggle {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 0;
+  background: transparent;
+  border-radius: 4px;
+  color: var(--muted-ink);
+}
+.help-button:hover,
+.theme-toggle:hover {
+  color: var(--ink);
+  background: var(--hover);
+}
+.sidebar-brand {
+  border-color: var(--line);
+}
+.sidebar-content {
+  scrollbar-color: var(--field-line) transparent;
+}
+.section-title,
+.sidebar .section-title {
+  color: var(--secondary-ink);
+  font-size: 11px;
+  letter-spacing: 0.025em;
+}
+.section-title svg {
+  color: var(--muted-ink);
+}
+.counter,
+.small-muted {
+  color: var(--muted-ink);
+  font-size: 9px;
+}
+.section-actions .add-expression {
+  background: transparent;
+  color: var(--secondary-ink);
+  border-radius: 3px;
+}
+.add-expression:hover {
+  background: var(--hover);
+  color: var(--ink);
+}
+.expressions {
+  gap: 0;
+}
+.expression {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  padding: 8px 2px 11px;
+  box-shadow: none;
+}
+.expression:hover {
+  background: var(--hover);
+}
+.expression:focus-within {
+  background: var(--field-active);
+  border-color: var(--curve-color);
+  box-shadow: none;
+}
+.expression.invalid {
+  border-bottom-color: var(--danger);
+}
+.expression-top {
+  padding: 0 3px;
+}
+.function-label {
+  font-size: 13px;
+}
+.row-actions button {
+  color: var(--muted-ink);
+  opacity: 0.75;
+}
+.expression:hover .row-actions button,
+.expression:focus-within .row-actions button {
+  opacity: 1;
+}
+.row-actions button:hover {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+.formula-row {
+  padding: 1px 3px 0;
+  margin-top: 2px;
+}
+.formula-row > span {
+  color: var(--muted-ink);
+}
+math-field {
+  color: var(--ink);
+  --text-color: var(--ink);
+  --caret-color: var(--accent);
+  --selection-background-color: var(--accent-soft);
+  --selection-color: var(--ink);
+  --placeholder-color: var(--muted-ink);
+  --contains-highlight-background-color: var(--accent-soft);
+}
+math-field::part(virtual-keyboard-toggle) {
+  color: var(--muted-ink);
+}
+.polar-equation-left {
+  border-color: var(--field-line);
+}
+.parameter-head label {
+  color: var(--ink);
+}
+.parameter-value {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--field-line);
+  border-radius: 0;
+  color: var(--accent);
+  padding: 3px 2px;
+  text-align: right;
+}
+.parameter {
+  grid-template-columns: 24px minmax(0, 1fr) 74px;
+}
+.parameter-value {
+  width: 74px;
+}
+.parameter-value:hover {
+  border-color: var(--accent);
+}
+.parameter-value:focus {
+  background: var(--field-active);
+  border-color: var(--accent);
+}
+.parameter-value[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+.parameter > input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  height: 20px;
+  cursor: pointer;
+}
+.parameter > input[type="range"]::-webkit-slider-runnable-track {
+  height: 2px;
+  background: var(--field-line);
+  border: 0;
+  border-radius: 0;
+}
+.parameter > input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  margin-top: -5px;
+  background: var(--accent);
+  border: 2px solid var(--paper);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.parameter > input[type="range"]::-moz-range-track {
+  height: 2px;
+  background: var(--field-line);
+  border: 0;
+}
+.parameter > input[type="range"]::-moz-range-thumb {
+  width: 9px;
+  height: 9px;
+  background: var(--accent);
+  border: 2px solid var(--paper);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.parameter > .range-labels,
+.formula-hint,
+.empty-params,
+.numerical-note {
+  color: var(--muted-ink);
+}
+.error {
+  color: var(--danger);
+}
+.examples {
+  border-color: var(--line);
+}
+.examples .section-title {
+  color: var(--muted-ink);
+}
+.sidebar .example-buttons {
+  gap: 3px;
+}
+.example-buttons button {
+  border: 0;
+  background: transparent;
+  color: var(--secondary-ink);
+  border-radius: 3px;
+  padding: 6px 4px;
+}
+.example-buttons button:hover {
+  background: var(--hover);
+  color: var(--ink);
+}
+.polar-settings {
+  padding: 0 0 10px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+}
+.angle-unit-select {
+  border: 0;
+  background: transparent;
+  color: var(--secondary-ink);
+  padding: 4px;
+}
+.angle-unit-select option {
+  background: var(--paper);
+  color: var(--ink);
+}
+.radian-input-mode {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border-bottom: 1px solid var(--line);
+}
+.radian-input-mode button {
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  color: var(--muted-ink);
+}
+.radian-input-mode button[aria-pressed="true"] {
+  border-bottom-color: var(--accent);
+  background: transparent;
+  color: var(--accent);
+  box-shadow: none;
+}
+.angle-inputs label {
+  color: var(--muted-ink);
+}
+.angle-inputs label > div {
+  border: 0;
+  border-bottom: 1px solid var(--field-line);
+  border-radius: 0;
+  background: transparent;
+  padding: 4px 0;
+}
+.angle-inputs label > div:focus-within {
+  border-color: var(--accent);
+}
+.angle-inputs input {
+  color: var(--ink);
+}
+.angle-inputs label > div > span,
+.angle-arrow {
+  color: var(--muted-ink);
+}
+.angle-presets button {
+  border: 0;
+  background: transparent;
+  color: var(--muted-ink);
+  border-radius: 3px;
+}
+.angle-presets button[aria-pressed="true"] {
+  background: var(--hover);
+  color: var(--accent);
+}
+.negative-radius-option {
+  border-color: var(--line);
+}
+.sidebar .negative-radius-option label {
+  color: var(--secondary-ink);
+}
+.negative-radius-option input {
+  accent-color: var(--accent);
+}
+.coordinate-switch {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  border-bottom: 1px solid var(--line);
+}
+.coordinate-switch button {
+  color: var(--muted-ink);
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  padding: 7px 10px;
+}
+.coordinate-switch button[aria-pressed="true"] {
+  border-bottom-color: var(--accent);
+  background: transparent;
+  color: var(--ink);
+  box-shadow: none;
+}
+.export-button {
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  color: var(--secondary-ink);
+}
+.export-button:hover {
+  background: var(--hover);
+  color: var(--ink);
+}
+.app .graph-frame {
+  background: var(--canvas-bg);
+  border-color: var(--line);
+  box-shadow: none;
+  border-radius: 5px;
+}
+/* Edge-to-edge canvas; controls float on its edge rather than consuming rows. */
+.app .workspace {
+  padding: 0;
+}
+.app .graph-frame {
+  border: 0;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+.app .workspace-bar {
+  position: absolute;
+  inset: 12px 14px auto;
+  z-index: 2;
+  height: 32px;
+  margin: 0;
+  pointer-events: none;
+}
+.workspace-bar > .coordinate-switch {
+  pointer-events: auto;
+  background: var(--plot-label);
+}
+.workspace-bar .coordinate-switch {
+  border-bottom-color: var(--line);
+}
+.app .graph-legend {
+  top: 56px;
+  left: 14px;
+  max-width: calc(100% - 80px);
+}
+.app .graph-controls {
+  top: 12px;
+  right: 14px;
+}
+.app .workspace-footer {
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
+  z-index: 1;
+  height: auto;
+  margin: 0;
+  padding: 5px 8px;
+  background: var(--plot-label);
+  border-radius: 3px;
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  .app .workspace-bar {
+    inset: 7px 9px auto;
+    height: 29px;
+  }
+  .app .graph-legend {
+    top: 44px;
+    left: 9px;
+  }
+  .app .graph-controls {
+    top: 7px;
+    right: 9px;
+  }
+  .app .workspace-footer {
+    right: 9px;
+    bottom: 7px;
+    font-size: 8px;
+    padding: 3px 5px;
+  }
+  [data-math-keyboard] .app .workspace-footer {
+    display: flex;
+  }
+}
+.graph-legend > span {
+  background: var(--plot-label);
+  border-color: var(--line);
+  color: var(--secondary-ink);
+}
+.graph-controls {
+  background: var(--paper);
+  border-color: var(--line);
+  box-shadow: none;
+  border-radius: 4px;
+}
+.graph-controls button {
+  color: var(--secondary-ink);
+}
+.graph-controls button:hover {
+  background: var(--hover);
+  color: var(--ink);
+}
+.graph-controls button[aria-pressed="true"] {
+  background: var(--hover);
+  color: var(--ink);
+}
+.graph-controls > span {
+  background: var(--line);
+}
+.gesture-hint {
+  color: var(--muted-ink);
+  background: var(--plot-label);
+}
+.workspace-footer {
+  color: var(--muted-ink);
+}
+.status-dot {
+  background: var(--success);
+}
+.footer-divider {
+  color: var(--field-line);
+}
+.sidebar-divider {
+  background: var(--surface);
+}
+.sidebar-divider::before {
+  background: var(--line);
+}
+.sidebar-divider span {
+  background: var(--field-line);
+}
+.sidebar-divider:hover span,
+.sidebar-divider.dragging span,
+.sidebar-divider:focus-visible span {
+  background: var(--accent);
+}
+.sidebar-divider:hover::before,
+.sidebar-divider.dragging::before,
+.sidebar-divider:focus-visible::before {
+  background: var(--field-line);
+}
+.point-table-panel {
+  background: var(--paper);
+  border-color: var(--line);
+  box-shadow: 0 4px 18px #00000012;
+  border-radius: 6px;
+  max-height: calc(100% - 104px);
+}
+.point-table-header {
+  color: var(--secondary-ink);
+}
+.point-table-header:hover {
+  background: var(--hover);
+  color: var(--ink);
+}
+.point-table-header small {
+  color: var(--muted-ink);
+}
+.point-settings {
+  background: var(--field-active);
+  border-color: var(--line);
+}
+.point-toggle,
+.point-field,
+.point-top-row > .point-toggle {
+  color: var(--secondary-ink);
+}
+.point-toggle input {
+  accent-color: var(--accent);
+}
+.point-field input,
+.point-field select {
+  background: var(--paper);
+  border-color: var(--field-line);
+  color: var(--ink);
+  border-radius: 3px;
+}
+.point-presets button {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--muted-ink);
+  border-radius: 3px;
+}
+.point-presets button[aria-pressed="true"],
+.point-fit {
+  background: var(--accent-soft);
+  border-color: var(--field-line);
+  color: var(--accent);
+}
+.point-table-scroll thead {
+  background: var(--field-active);
+  color: var(--secondary-ink);
+}
+.point-table-scroll tbody {
+  color: var(--secondary-ink);
+}
+.point-table-scroll th,
+.point-table-scroll td {
+  border-color: var(--line);
+}
+.point-table-scroll tbody tr:hover,
+.point-table-scroll tbody tr.selected {
+  background: var(--accent-soft);
+}
+.point-table-scroll td small,
+.point-table-note {
+  color: var(--muted-ink);
+}
+.point-table-error {
+  color: var(--danger);
+}
+.point-table-content {
+  scrollbar-color: var(--field-line) var(--paper);
+}
+.modal-backdrop {
+  background: var(--overlay);
+}
+.help-modal {
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 20px 80px #00000030;
+}
+.help-modal p,
+.help-modal .notice {
+  color: var(--secondary-ink);
+  border-color: var(--line);
+}
+.help-modal code {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+.help-modal .eyebrow,
+.close {
+  color: var(--muted-ink);
+}
+.primary {
+  background: var(--logo-bg);
+  color: var(--logo-fg);
+}
+.primary:hover {
+  background: var(--accent);
+  color: var(--logo-fg);
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline-color: var(--accent);
+}
+@media (max-width: 640px) {
+  .point-table-panel {
+    max-height: calc(100% - 104px);
+  }
+  .sidebar-brand,
+  .sidebar-content {
+    background: var(--paper);
+    border-color: var(--line);
+  }
+  .brand {
+    font-size: 20px;
+  }
+  .brand-actions {
+    gap: 1px;
+  }
+  .mobile-control-tabs {
+    background: var(--surface);
+    border-color: var(--line);
+  }
+  .mobile-control-tabs button {
+    color: var(--muted-ink);
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
+  }
+  .mobile-control-tabs button[aria-pressed="true"] {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--accent);
+    box-shadow: none;
+  }
+  .mobile-control-tabs small {
+    color: var(--muted-ink);
+  }
+  .row-actions button {
+    opacity: 1;
+  }
+  .expression {
+    padding: 6px 2px 9px;
+  }
+}
+

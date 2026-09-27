@@ -1,0 +1,26 @@
+[
+  {
+    "module": "M",
+    "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\M题目分类考点-data\\question_bank.jsonl",
+    "sha256": "add0daa92e94d1e5aad4ada81890aa52448e4f43ad6c53e6037c83516a3265a9",
+    "records": 785,
+    "papers": 113,
+    "source_text_candidate_groups": 778
+  },
+  {
+    "module": "FM",
+    "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FM题目分类考点-data\\question_bank.jsonl",
+    "sha256": "e5872cb4e9cf0d6d139036a8ac96c1e648202864b81764deb185e1f04f680d60",
+    "records": 613,
+    "papers": 97,
+    "source_text_candidate_groups": 397
+  },
+  {
+    "module": "M2",
+    "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\M2题目分类考点-data\\question_bank.jsonl",
+    "sha256": "52a29e8838c375936758958cc17c4cb026a719fddf20cfc1fc1d824656be41c1",
+    "records": 442,
+    "papers": 64,
+    "source_text_candidate_groups": 345
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "title": "统计 JSON 恢复验证",
+  "activeTool": "normal",
+  "states": {},
+  "shared": {"sample": [1, 2, 3, 4, 5], "label": "验证样本", "design": "single"},
+  "display": {"resultsHidden": true}
+}

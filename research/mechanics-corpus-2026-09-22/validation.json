@@ -1,0 +1,13 @@
+{
+  "unique_keys": true,
+  "all_records_mapped": true,
+  "all_qp_paths_exist": true,
+  "source_hashes_unchanged": true,
+  "valid_scene_references": true,
+  "record_counts": {
+    "M": 785,
+    "FM": 613,
+    "M2": 442
+  },
+  "scope": "Catalogue mapping and source integrity only, not independent mathematical or PDF-visual certification"
+}

@@ -1,0 +1,295 @@
+{
+  "date": "2026-09-25",
+  "deliverable": "统计板块详细方案.md",
+  "status": "DESIGN_DOCUMENT_VERIFIED_NOT_IMPLEMENTED",
+  "scope": "Documentation, source consistency, mapping integrity, local links and illustrative arithmetic; no application implementation or full question audit",
+  "counts": {
+    "S1": {
+      "records": 770,
+      "papers": 113,
+      "family_definitions": 43,
+      "evidence": {
+        "E2_QP_MS_READ": 759,
+        "E3_SOLVED": 5,
+        "E1_QP_READ": 6
+      }
+    },
+    "S2": {
+      "records": 764,
+      "papers": 111,
+      "family_definitions": 29,
+      "evidence": {
+        "E3_SOLVED": 17,
+        "E2_QP_MS_READ": 30,
+        "E1_PROFILE_INHERITED": 106,
+        "E1_QP_READ": 611
+      }
+    },
+    "FS": {
+      "records": 579,
+      "papers": 97,
+      "family_definitions": 49,
+      "evidence": {
+        "E2_QP_MS_READ": 579
+      }
+    }
+  },
+  "family_mapping_checks": {
+    "S1": "All definition codes present once; hit counts and tool IDs verified",
+    "S2": "All definition codes present once; hit counts and tool IDs verified",
+    "FS": "All definition codes present once; hit counts and tool IDs verified"
+  },
+  "local_link_failures": [],
+  "pdf_pages": {
+    "S1": 41,
+    "FS_student": 111,
+    "FS_teacher": 106
+  },
+  "source_checks": [
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\question_bank.jsonl",
+      "matches_existing_manifest": true,
+      "current_sha256": "ba643be94bbfe664d262666a2abf672f85735e57a4ada582c43d341fbf8bf900"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\method-families.json",
+      "matches_existing_manifest": true,
+      "current_sha256": "511794c157d97a285cf8795a892d79b499a6d96cda46c3faaa80f4d9fcc85eac"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\statistics.json",
+      "matches_existing_manifest": true,
+      "current_sha256": "548777c255164086506fa40f3519e6352eaf3709369dc860d5dd0e98f0b801ea"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\SCHEMA.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "b8601d007fef46a06aa0a69303be34e54823f046f94278ca18252a0dbbe93ba5"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\README.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "a7932929ac13b7458e5ddbee0589a6cb640c3a38b25255f2f5d49cfc9b669488"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\method-clusters.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "25216d2d06bd3227c01fc2b45602b7be8e330ef87c734e1548f0aae822a6f02d"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\source-cautions.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "126b7dc960ec2eddd53467e222af99d295dd36a7075cb886d79d58592426466e"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-2010至今.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "47d6ac6e751e25afe9cafa9210a8d28f1d890eccdf54ff7f9b990b473e0725a3"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\question_bank.jsonl",
+      "matches_existing_manifest": true,
+      "current_sha256": "bb56e5e18c8cf8f1aa77d613107796f2f850c6bfbf3306e7d232f990f2e57415"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\method-clusters.json",
+      "matches_existing_manifest": true,
+      "current_sha256": "830a0267085328997526baeab68cf194b618fda32ddfc41edc5bca89d6d57257"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\statistics.json",
+      "matches_existing_manifest": true,
+      "current_sha256": "ee9ca79c16624c0c303a93bc399c0fdc39552b67ebdee1362c159a635aab4627"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\SCHEMA.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "04aa8f567665cfac180ec5956ec1d85b267778ce4739fd5a86ffb1febc4369d9"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\README.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "37dcf151e48a8d0bc3fbf84f108463b52e85e4500c28ebd82248208bb98735ed"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\method-clusters.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "41ac83c6349f8e87cdb6609a6ce409fb6d31bc6d994f44af999e158043038b9d"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\source-cautions.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "0c8abbb41da3b532ec2228129b7459ca66710d7f70e66d919ebb358115f85fe7"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-2010至今.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "ad3a137267d7020cee65b0722dbac473f68ceedb1accc35955b8f8fdc13659bf"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\question_bank.jsonl",
+      "matches_existing_manifest": true,
+      "current_sha256": "84220865e554521afb482c00644b747c0deced255118a486ff5858a1031da736"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\method-families.json",
+      "matches_existing_manifest": true,
+      "current_sha256": "49ca0ead41e385ee1fc719d097ff67576808eebbc9ae34498fb895c1721e77ab"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\statistics.json",
+      "matches_existing_manifest": true,
+      "current_sha256": "669acddc413945cc98d7588cb0c6cb72651adf156d60d11bebbc86a656ed985b"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\SCHEMA.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "18813bcf06bdda2c6ce0018a6ff0e87bdd3991ae2ea7cf98c746a27f72df4cd4"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\README.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "6864c1c4d19d2541e9638ecc1f78e69af325f0052792789cc7b9c1285cd618dc"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\method-clusters.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "710294231194121fbeb7e8ae7237ec54161aa1c07e3c8ed17f6e4bfe4dd104f3"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\source-cautions.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "bd4b3f688cd7ee1c9267ce4b90c21c8cf7d8206534270fdf0b653c35641be3ff"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-2010至今.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "255874e60cd1660426589a884d84016380a9d61d2e192ffb6a201243bf9929b9"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\01-poisson-distribution.tex",
+      "matches_existing_manifest": true,
+      "current_sha256": "ebbce0a437b082ceceabd6a5708a906865f535964f0d75e6b2932a9cb089d040"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\02-continuous-random-variables.tex",
+      "matches_existing_manifest": true,
+      "current_sha256": "932cd61ad29468a6e7e44972bb391b6fa7700d30c0cbf110685e84db31ac3134"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\03-probability-generating-functions.tex",
+      "matches_existing_manifest": true,
+      "current_sha256": "703ea68a0949fb0a7902e7e49a496b2bb12b02efe87452575db14786146356c9"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\04-estimation-central-limit-theorem.tex",
+      "matches_existing_manifest": true,
+      "current_sha256": "aa927d1102b5d210e44cd77295e8cbcf4c08b5654d73315860c15bd08a06e72a"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\05-hypothesis-testing.tex",
+      "matches_existing_manifest": true,
+      "current_sha256": "4ee577b3de580137b8e64ab5432aa1196f33fa104020a89f063c30875d28c25c"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\06-mean-test.tex",
+      "matches_existing_manifest": true,
+      "current_sha256": "1ccb9a1ece5687fbef2de5ec096ec27b58c35fb1ca9cd294f5e1c33127e0a70e"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\07-chi-squared-tests.tex",
+      "matches_existing_manifest": true,
+      "current_sha256": "4af60dee1f88daf98f475ae555f9e8018191e02725639def7e635b4a6cbb5904"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\09-wilcoxon-tests.tex",
+      "matches_existing_manifest": true,
+      "current_sha256": "287c72a68ab592c86d2d1b82eeb89138520d9e98aa9c9c52e1b54aac5eeee0aa"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS与S2新旧大纲对照.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "3d134365dc254fab2515bf73578540a8945e95c8755002728d0322e941b3687a"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\teaching-value.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "7d25f23be4d179ccd5649cd2c74a1af7eb0834785bdce44a0aba9a36b8abbfd2"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1导学案\\S1导学案.pdf",
+      "matches_existing_manifest": true,
+      "current_sha256": "3c0b2dc47df36e1d716ea5acc39fe96e001282b96c6549e50cec6e2bac93fd12"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\output\\pdf\\FS\\FS-complete-teacher.pdf",
+      "matches_existing_manifest": true,
+      "current_sha256": "6ff3b1aee5045662487d36dcba2ee7815e161ad5804ec2d1ca16813a12227688"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS导学案\\8. Three important distribution in statistcs.docx",
+      "matches_existing_manifest": true,
+      "current_sha256": "324a9e0c3744f0fd96dc8c5ef11547bd6e65ea6942b30d40c96945352facb7f1"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\reference\\9709-2026-2027-syllabus.pdf",
+      "matches_existing_manifest": true,
+      "current_sha256": "dd0131f3cd8d4e3c270e7936cbb909c15f4cb8053f8337b67c16e8ec0b8bc5e5"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\reference\\9231-2026-2027-syllabus.pdf",
+      "matches_existing_manifest": true,
+      "current_sha256": "02c88d06ada474d94a2124a272ed587b5f7afbb1157aef47eff9674b7375fa78"
+    },
+    {
+      "path": "C:\\Users\\17157\\Alevel math visual tools\\package.json",
+      "matches_existing_manifest": false,
+      "current_sha256": "b898a787928deab4497431d3a63b8a635b94aa1018aef838b9c1fac134630753"
+    },
+    {
+      "path": "C:\\Users\\17157\\Alevel math visual tools\\vite.config.ts",
+      "matches_existing_manifest": false,
+      "current_sha256": "fe585627e9971ba099836efd9eefdd323c94acd9007b439863ccfb424865a504"
+    },
+    {
+      "path": "C:\\Users\\17157\\Alevel math visual tools\\src\\home-main.tsx",
+      "matches_existing_manifest": true,
+      "current_sha256": "52ac1c0d0049ca2f74da60055afa947b129bc531ea9754e16ed7d44dded79758"
+    },
+    {
+      "path": "C:\\Users\\17157\\Alevel math visual tools\\src\\App.tsx",
+      "matches_existing_manifest": false,
+      "current_sha256": "810edfc0241935fa5d77b07a89f1469ba6d287c72b939de466d9d727a56fb842"
+    },
+    {
+      "path": "C:\\Users\\17157\\Alevel math visual tools\\产品方向.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "dbb72490345a2fa9522bc6e5820f8d5c513ec2526746b5fc00d7da968e65241d"
+    },
+    {
+      "path": "C:\\Users\\17157\\Alevel math visual tools\\用户登录与数据系统流程手册.md",
+      "matches_existing_manifest": true,
+      "current_sha256": "c932a41d21c03b73abc13b15e69bedf7ab509637a53c8fc0d9a2ba3f7024808b"
+    }
+  ],
+  "illustrative_calculations": {
+    "binomial_le2": 0.0546875,
+    "binomial_upper9": 0.0107421875,
+    "binomial_upper8": 0.0546875,
+    "normal_z1": 0.8413447460685428,
+    "poisson3_zero": 0.049787068367863944,
+    "poisson3_le1": 0.19914827347145578,
+    "same_die_twice_variance": 11.666666666666666,
+    "independent_two_dice_variance": 5.833333333333333,
+    "squared_uniform_cdf_at_quarter": 0.5,
+    "dice_conditional_a_given_b": 0.5,
+    "dice_conditional_b_given_a": 0.3333333333333333
+  },
+  "source_gaps": [
+    "No standalone S2 worksheet located in the named directory",
+    "Original FS Chapter 8 DOCX has headings/placeholder text and is not sufficient to define a new tool"
+  ],
+  "implementation_tests_run": false,
+  "document_sha256": "d59e1029efb23df6ba45caffd0b05076d54efba50d5ae447cf6de849308fb258",
+  "markdown_tables_checked": 10
+}

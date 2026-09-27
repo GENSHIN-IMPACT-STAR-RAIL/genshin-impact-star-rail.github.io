@@ -1,0 +1,296 @@
+:root {
+  --keyboard-zindex: 100;
+  --keyboard-background: #edf0fa;
+  --keyboard-toolbar-background: #edf0fa;
+  --keyboard-toolbar-text: #687591;
+  --keyboard-toolbar-text-active: #5364ca;
+  --keyboard-toolbar-background-hover: #dfe5f7;
+  --keyboard-accent-color: #5968db;
+  --keycap-background: #fff;
+  --keycap-text: #30394f;
+  --keycap-background-hover: #dfe5ff;
+  --keycap-text-hover: #354575;
+  --keycap-background-pressed: #5968db;
+  --keycap-secondary-background-hover: #cbd4f0;
+  --keycap-secondary-background: #dce2f3;
+  --keycap-secondary-text: #52618b;
+  --keycap-border-radius: 9px;
+  --keycap-height: 46px;
+  --keycap-font-size: 19px;
+  --keycap-small-font-size: 14px;
+  --keycap-gap: 6px;
+  --keyboard-padding-top: 8px;
+  --keyboard-padding-bottom: max(10px, env(safe-area-inset-bottom));
+  scroll-padding-bottom: calc(var(--math-keyboard-height, 0px) + 30px);
+}
+.app {
+  padding-bottom: var(--math-keyboard-height, 0px);
+}
+math-field {
+  display: block;
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+  border: 0;
+  background: transparent;
+  font-size: 22px;
+  color: #34415e;
+  --caret-color: #5968db;
+  --selection-background-color: #e5e9ff;
+  --placeholder-color: #8493bc;
+  --contains-highlight-background-color: #eef0fc;
+}
+math-field:focus-within {
+  outline: 0;
+}
+math-field::part(menu-toggle) {
+  display: none;
+}
+math-field::part(virtual-keyboard-toggle) {
+  color: #8492b1;
+}
+.formula-row {
+  min-height: 55px;
+}
+.expression:focus-within {
+  border-color: #929fe6;
+  box-shadow: 0 0 0 3px #6677dd12;
+}
+.expression {
+  scroll-margin-top: 24px;
+  scroll-margin-bottom: calc(var(--math-keyboard-height, 0px) + 24px);
+}
+.graph-legend .static-math {
+  font-size: 12px;
+}
+.static-math {
+  display: inline-block;
+}
+.formula-hint {
+  color: #969fb3;
+  font-size: 10px;
+  line-height: 1.7;
+  margin: 10px 0 0;
+}
+.numerical-note {
+  color: #8390a7;
+  font-size: 10px;
+  line-height: 1.6;
+  margin-top: 7px;
+}
+@media (max-width: 640px) {
+  :root {
+    --keycap-height: 42px;
+    --keycap-font-size: 17px;
+    --keycap-gap: 4px;
+  }
+  math-field {
+    font-size: 21px;
+  }
+  [data-math-keyboard] .graph-frame {
+    height: 20dvh;
+    min-height: 130px;
+  }
+  [data-math-keyboard] .workspace-footer {
+    display: none;
+  }
+  [data-math-keyboard] .expression {
+    scroll-margin-top: calc(20dvh + 75px);
+  }
+  [data-math-keyboard] {
+    scroll-padding-top: calc(20dvh + 60px);
+  }
+}
+@media (max-height: 550px) {
+  :root {
+    --keycap-height: 32px;
+    --keycap-font-size: 16px;
+  }
+}
+
+/* Desktop drawer is anchored to the plot, leaving the editor at full height. */
+.desktop-math-keyboard {
+  display: none;
+}
+@media (min-width: 641px) {
+  .desktop-math-keyboard {
+    display: block;
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    width: min(var(--math-keyboard-width, 480px), calc(100% - 24px));
+    height: calc(100% - 24px);
+    pointer-events: none;
+    z-index: 8;
+    --keycap-height: 36px;
+    --keycap-max-width: 58px;
+    --keycap-font-size: 17px;
+    --keycap-small-font-size: 12px;
+    --keycap-extra-small-font-size: 10px;
+    --keycap-gap: 5px;
+    --keycap-border-radius: 4px;
+    --keycap-glyph-size: 16px;
+    --keycap-glyph-size-lg: 19px;
+    --keyboard-toolbar-font-size: 13px;
+    --keyboard-padding-top: 6px;
+    --keyboard-padding-bottom: 6px;
+    --keyboard-padding-horizontal: 10px;
+  }
+  .desktop-math-keyboard:has(#mathroom-keys-functions.is-visible),
+  .desktop-math-keyboard:has(#mathroom-keys-greek.is-visible),
+  .desktop-math-keyboard:has(#mathroom-keys-symbols.is-visible) {
+    --math-keyboard-width: 380px;
+  }
+  .desktop-math-keyboard:has(#mathroom-keys-letters.is-visible) {
+    --math-keyboard-width: 560px;
+  }
+  .desktop-math-keyboard .ML__keyboard {
+    overflow: visible;
+  }
+  .desktop-math-keyboard .ML__keyboard > .MLK__backdrop {
+    bottom: 0;
+    height: calc(var(--_keyboard-height) + 12px);
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    box-shadow: 0 5px 24px #00000014;
+    transform: translateX(-22px);
+  }
+  .desktop-math-keyboard .ML__keyboard.is-visible > .MLK__backdrop {
+    transform: translateX(0);
+    animation: math-keyboard-slide-in 180ms ease-out;
+  }
+  .desktop-math-keyboard .MLK__toolbar > div > div {
+    min-height: 27px;
+    min-width: 34px;
+    padding: 4px 8px;
+    margin: 0 2px 5px;
+    border-radius: 3px;
+  }
+  .desktop-math-keyboard .MLK__toolbar > div > div.selected {
+    padding-bottom: 4px;
+    margin-bottom: 5px;
+  }
+  @keyframes math-keyboard-slide-in {
+    from {
+      opacity: 0;
+      transform: translateX(-22px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+/* Size cells by the actual column count instead of MathLive's ten-column default. */
+#mathroom-keys-basic {
+  --math-key-columns: 8;
+}
+#mathroom-keys-functions,
+#mathroom-keys-greek,
+#mathroom-keys-symbols {
+  --math-key-columns: 6;
+}
+#mathroom-keys-letters {
+  --math-key-columns: 10;
+}
+.ML__keyboard [id^="mathroom-keys-"] .MLK__rows {
+  --_keycap-width: calc(
+    (100cqw + var(--_keycap-gap)) / var(--math-key-columns)
+  );
+}
+.ML__keyboard #mathroom-keys-basic .MLK__rows {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 14px;
+  align-items: stretch;
+}
+.ML__keyboard #mathroom-keys-basic .MLK__row:nth-child(-n + 4) {
+  grid-column: 1;
+}
+.ML__keyboard #mathroom-keys-basic .MLK__row:nth-child(n + 5) {
+  grid-column: 2;
+}
+.ML__keyboard #mathroom-keys-basic .MLK__row:nth-child(1),
+.ML__keyboard #mathroom-keys-basic .MLK__row:nth-child(5) {
+  grid-row: 1;
+}
+.ML__keyboard #mathroom-keys-basic .MLK__row:nth-child(2),
+.ML__keyboard #mathroom-keys-basic .MLK__row:nth-child(6) {
+  grid-row: 2;
+}
+.ML__keyboard #mathroom-keys-basic .MLK__row:nth-child(3),
+.ML__keyboard #mathroom-keys-basic .MLK__row:nth-child(7) {
+  grid-row: 3;
+}
+.ML__keyboard #mathroom-keys-basic .MLK__row:nth-child(4),
+.ML__keyboard #mathroom-keys-basic .MLK__row:nth-child(8) {
+  grid-row: 4;
+}
+.ML__keyboard #mathroom-keys-functions .MLK__row:nth-child(3) {
+  padding-top: 9px;
+  border-top: 1px solid var(--line);
+}
+.ML__keyboard [id^="mathroom-keys-"] .MLK__row > div {
+  width: auto;
+  min-width: 0;
+  flex: var(--math-key-weight, 1) 1 0;
+  height: var(--math-key-row-height, var(--_keycap-height));
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--_keycap-font-size);
+  border-radius: 5px;
+}
+.ML__keyboard [id^="mathroom-keys-"] .MLK__row > .math-key-backspace,
+.ML__keyboard [id^="mathroom-keys-"] .MLK__row > .math-key-hide {
+  --math-key-weight: 1.25;
+}
+.ML__keyboard [id^="mathroom-keys-"] .MLK__row > .math-key-next {
+  --math-key-weight: 1.3;
+}
+.ML__keyboard [id^="mathroom-keys-"] .MLK__row > .math-key-arrow,
+.ML__keyboard [id^="mathroom-keys-"] .MLK__row > .math-key-history {
+  --math-key-weight: 0.85;
+}
+.ML__keyboard #mathroom-keys-letters .MLK__row:not(:last-child) > div {
+  flex: 0 0 calc(var(--_keycap-width) - var(--_keycap-gap));
+}
+@media (min-width: 641px) {
+  #mathroom-keys-basic .MLK__row:nth-child(2),
+  #mathroom-keys-basic .MLK__row:nth-child(3) {
+    --math-key-row-height: 40px;
+  }
+  #mathroom-keys-basic .MLK__row:nth-child(2) > div,
+  #mathroom-keys-basic .MLK__row:nth-child(3) > div {
+    font-size: 19px;
+  }
+  #mathroom-keys-functions .MLK__row:nth-child(3) {
+    --math-key-row-height: 48px;
+  }
+  #mathroom-keys-basic .MLK__row:nth-child(4) {
+    --math-key-row-height: 32px;
+  }
+  [id^="mathroom-keys-"] .MLK__row:last-child {
+    --math-key-row-height: 32px;
+  }
+  #mathroom-keys-functions .MLK__row:nth-child(3) > div {
+    font-size: 20px;
+  }
+}
+.ML__keyboard [id^="mathroom-keys-"] .MLK__row > .math-key-next {
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+.ML__keyboard [id^="mathroom-keys-"] .MLK__row > div > svg {
+  margin: 0;
+  width: 17px;
+  height: 17px;
+  min-height: 17px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .desktop-math-keyboard .ML__keyboard.is-visible > .MLK__backdrop {
+    animation: none;
+  }
+}

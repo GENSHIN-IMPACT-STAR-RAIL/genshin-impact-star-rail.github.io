@@ -1,0 +1,80 @@
+{
+  "issues": [],
+  "markdown_questions": 1840,
+  "scene_families": 39,
+  "combinations": 167,
+  "files": [
+    [
+      "01-总报告与自由度建议.md",
+      14641
+    ],
+    [
+      "02-情境与过程词典.md",
+      38064
+    ],
+    [
+      "03-情境组合索引.md",
+      151082
+    ],
+    [
+      "04-变化组合与检验规则.md",
+      6877
+    ],
+    [
+      "05-来源限制与复查记录.md",
+      5522
+    ],
+    [
+      "build_inventory.py",
+      23247
+    ],
+    [
+      "observed-combinations.json",
+      71904
+    ],
+    [
+      "question-model-map.jsonl",
+      3376168
+    ],
+    [
+      "reading-checks.json",
+      2959
+    ],
+    [
+      "README.md",
+      879
+    ],
+    [
+      "source-manifest.json",
+      953
+    ],
+    [
+      "statistics.json",
+      32684
+    ],
+    [
+      "taxonomy.json",
+      23421
+    ],
+    [
+      "validation.json",
+      351
+    ],
+    [
+      "write_reports.py",
+      24689
+    ],
+    [
+      "逐题映射-FM.md",
+      430174
+    ],
+    [
+      "逐题映射-M.md",
+      607592
+    ],
+    [
+      "逐题映射-M2.md",
+      285717
+    ]
+  ]
+}

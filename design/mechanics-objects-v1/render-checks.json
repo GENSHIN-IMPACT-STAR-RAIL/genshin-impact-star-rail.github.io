@@ -1,0 +1,22 @@
+{
+  "groups": {
+    "particle": 9,
+    "rigid": 6,
+    "constraint": 13
+  },
+  "results": [
+    {
+      "theme": "light",
+      "objects": 28,
+      "variants": 61,
+      "rendered": true
+    },
+    {
+      "theme": "dark",
+      "objects": 28,
+      "variants": 61,
+      "rendered": true
+    }
+  ],
+  "note": "SVG rasterization and structural coverage; not browser interaction validation."
+}

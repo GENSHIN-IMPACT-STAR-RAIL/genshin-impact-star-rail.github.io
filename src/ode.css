@@ -1,0 +1,233 @@
+.expression-type-select {
+  max-width: 130px;
+}
+.function-label small {
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--muted-ink);
+}
+.ode-expression {
+  min-width: 0;
+}
+.ode-expression .ode-formula {
+  padding: 4px 0;
+  min-height: 52px;
+}
+.ode-formula math-field {
+  font-size: 20px;
+}
+.ode-solve-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 2px 0 7px;
+}
+.ode-solve-row > span {
+  font-size: 10px;
+  color: var(--muted-ink);
+}
+.ode-expression .ode-solve {
+  min-height: 28px;
+  padding: 5px 18px;
+  border-radius: 4px;
+  color: var(--paper);
+  background: var(--accent);
+  font-size: 11px;
+}
+.ode-expression .ode-solve:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+.ode-answer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  margin: 3px 0 8px;
+  background: var(--accent-soft);
+  border-radius: 4px;
+  min-width: 0;
+  overflow-x: auto;
+}
+.ode-answer > span:first-child {
+  color: var(--secondary-ink);
+  font-size: 10px;
+}
+.ode-answer .static-math {
+  font-size: 16px;
+  white-space: nowrap;
+  color: var(--ink);
+}
+.ode-special {
+  background: var(--field-active);
+  border-left: 2px solid var(--curve-color);
+}
+.ode-initial-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 9px 0 4px;
+  color: var(--secondary-ink);
+  font-size: 10px;
+}
+.ode-initial-title > span {
+  color: var(--muted-ink);
+}
+.ode-initial-slope {
+  grid-column: 1 / -1;
+}
+.ode-initial {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 7px;
+  margin-bottom: 9px;
+}
+.ode-initial > div {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 1px;
+  padding: 3px;
+  border: 1px solid var(--field-line);
+  border-radius: 4px;
+}
+.ode-initial .static-math {
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--secondary-ink);
+}
+.ode-initial math-field {
+  font-size: 17px;
+  min-height: 30px;
+}
+.ode-density {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 7px;
+  margin-top: 8px;
+  font-size: 10px;
+  color: var(--secondary-ink);
+}
+.ode-density > span {
+  flex-shrink: 0;
+}
+.ode-density-presets {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 4px;
+}
+:root .app .ode-density-presets button {
+  padding: 5px 2px;
+  border: 1px solid var(--field-line);
+  border-radius: 4px;
+  color: var(--secondary-ink);
+  background: var(--paper);
+  font-size: 11px;
+}
+:root .app .ode-density-presets button[aria-pressed="true"] {
+  color: var(--ink);
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.ode-family-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--secondary-ink);
+  margin: 9px 0;
+  cursor: pointer;
+}
+.ode-family-toggle input {
+  accent-color: var(--accent);
+}
+.ode-feature-key {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+  color: var(--secondary-ink);
+  font-size: 10px;
+}
+.ode-feature-key span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.ode-feature-key small {
+  color: var(--muted-ink);
+  font-size: 9px;
+}
+.ode-singular-key {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #000;
+  border: 1px solid #e4e9e5;
+  border-radius: 50%;
+}
+.ode-asymptote-key {
+  display: inline-block;
+  width: 17px;
+  border-top: 2px dashed var(--curve-color);
+}
+.ode-note {
+  margin: 6px 0;
+  line-height: 1.65;
+  color: var(--muted-ink);
+  font-size: 10px;
+}
+.ode-details {
+  padding: 6px 0 2px;
+  border-top: 1px solid var(--line);
+}
+.ode-details summary {
+  cursor: pointer;
+  color: var(--secondary-ink);
+  font-size: 10px;
+}
+.ode-details ol {
+  margin: 6px 0;
+  padding-left: 18px;
+  color: var(--muted-ink);
+  font-size: 10px;
+}
+.ode-details li {
+  padding: 7px 0;
+}
+.ode-details li .static-math {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  font-size: 14px;
+  color: var(--ink);
+}
+.ode-equilibrium {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow-x: auto;
+}
+.ode-equilibrium > span:first-child {
+  font-size: 10px;
+  color: var(--secondary-ink);
+}
+.ode-equilibrium .static-math {
+  color: var(--ink);
+  font-size: 14px;
+}
+@media (max-width: 640px) {
+  .ode-expression .ode-solve {
+    min-height: 32px;
+  }
+  :root .app .ode-density-presets button {
+    min-height: 32px;
+  }
+}

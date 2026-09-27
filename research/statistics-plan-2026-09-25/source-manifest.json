@@ -1,0 +1,275 @@
+{
+  "date": "2026-09-25",
+  "sources": [
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\question_bank.jsonl",
+      "bytes": 8434990,
+      "sha256": "ba643be94bbfe664d262666a2abf672f85735e57a4ada582c43d341fbf8bf900",
+      "purpose": "全量结构化记录扫描；计数、考法与代表画像，不等于逐题重读原卷"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\method-families.json",
+      "bytes": 90803,
+      "sha256": "511794c157d97a285cf8795a892d79b499a6d96cda46c3faaa80f4d9fcc85eac",
+      "purpose": "全考法族定义及功能映射"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\statistics.json",
+      "bytes": 1709,
+      "sha256": "548777c255164086506fa40f3519e6352eaf3709369dc860d5dd0e98f0b801ea",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\SCHEMA.md",
+      "bytes": 4655,
+      "sha256": "b8601d007fef46a06aa0a69303be34e54823f046f94278ca18252a0dbbe93ba5",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\README.md",
+      "bytes": 4626,
+      "sha256": "a7932929ac13b7458e5ddbee0589a6cb640c3a38b25255f2f5d49cfc9b669488",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\method-clusters.md",
+      "bytes": 54370,
+      "sha256": "25216d2d06bd3227c01fc2b45602b7be8e330ef87c734e1548f0aae822a6f02d",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\source-cautions.md",
+      "bytes": 1250,
+      "sha256": "126b7dc960ec2eddd53467e222af99d295dd36a7075cb886d79d58592426466e",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-2010至今.md",
+      "bytes": 99872,
+      "sha256": "47d6ac6e751e25afe9cafa9210a8d28f1d890eccdf54ff7f9b990b473e0725a3",
+      "purpose": "分类主入口"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\question_bank.jsonl",
+      "bytes": 5747348,
+      "sha256": "bb56e5e18c8cf8f1aa77d613107796f2f850c6bfbf3306e7d232f990f2e57415",
+      "purpose": "全量结构化记录扫描；计数、考法与代表画像，不等于逐题重读原卷"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\method-clusters.json",
+      "bytes": 57254,
+      "sha256": "830a0267085328997526baeab68cf194b618fda32ddfc41edc5bca89d6d57257",
+      "purpose": "全考法族定义及功能映射"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\statistics.json",
+      "bytes": 6099,
+      "sha256": "ee9ca79c16624c0c303a93bc399c0fdc39552b67ebdee1362c159a635aab4627",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\SCHEMA.md",
+      "bytes": 3974,
+      "sha256": "04aa8f567665cfac180ec5956ec1d85b267778ce4739fd5a86ffb1febc4369d9",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\README.md",
+      "bytes": 4786,
+      "sha256": "37dcf151e48a8d0bc3fbf84f108463b52e85e4500c28ebd82248208bb98735ed",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\method-clusters.md",
+      "bytes": 99214,
+      "sha256": "41ac83c6349f8e87cdb6609a6ce409fb6d31bc6d994f44af999e158043038b9d",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\source-cautions.md",
+      "bytes": 3470,
+      "sha256": "0c8abbb41da3b532ec2228129b7459ca66710d7f70e66d919ebb358115f85fe7",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-2010至今.md",
+      "bytes": 2182,
+      "sha256": "ad3a137267d7020cee65b0722dbac473f68ceedb1accc35955b8f8fdc13659bf",
+      "purpose": "分类主入口"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\question_bank.jsonl",
+      "bytes": 5234773,
+      "sha256": "84220865e554521afb482c00644b747c0deced255118a486ff5858a1031da736",
+      "purpose": "全量结构化记录扫描；计数、考法与代表画像，不等于逐题重读原卷"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\method-families.json",
+      "bytes": 7729,
+      "sha256": "49ca0ead41e385ee1fc719d097ff67576808eebbc9ae34498fb895c1721e77ab",
+      "purpose": "全考法族定义及功能映射"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\statistics.json",
+      "bytes": 1264,
+      "sha256": "669acddc413945cc98d7588cb0c6cb72651adf156d60d11bebbc86a656ed985b",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\SCHEMA.md",
+      "bytes": 10416,
+      "sha256": "18813bcf06bdda2c6ce0018a6ff0e87bdd3991ae2ea7cf98c746a27f72df4cd4",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\README.md",
+      "bytes": 4512,
+      "sha256": "6864c1c4d19d2541e9638ecc1f78e69af325f0052792789cc7b9c1285cd618dc",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\method-clusters.md",
+      "bytes": 42138,
+      "sha256": "710294231194121fbeb7e8ae7237ec54161aa1c07e3c8ed17f6e4bfe4dd104f3",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\source-cautions.md",
+      "bytes": 24747,
+      "sha256": "bd4b3f688cd7ee1c9267ce4b90c21c8cf7d8206534270fdf0b653c35641be3ff",
+      "purpose": "来源口径、方法与证据边界"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-2010至今.md",
+      "bytes": 2105873,
+      "sha256": "255874e60cd1660426589a884d84016380a9d61d2e192ffb6a201243bf9929b9",
+      "purpose": "分类主入口"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\01-poisson-distribution.tex",
+      "bytes": 16353,
+      "sha256": "ebbce0a437b082ceceabd6a5708a906865f535964f0d75e6b2932a9cb089d040",
+      "purpose": "教师导学案对应可编辑章节；教学正文与公式"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\02-continuous-random-variables.tex",
+      "bytes": 27309,
+      "sha256": "932cd61ad29468a6e7e44972bb391b6fa7700d30c0cbf110685e84db31ac3134",
+      "purpose": "教师导学案对应可编辑章节；教学正文与公式"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\03-probability-generating-functions.tex",
+      "bytes": 20863,
+      "sha256": "703ea68a0949fb0a7902e7e49a496b2bb12b02efe87452575db14786146356c9",
+      "purpose": "教师导学案对应可编辑章节；教学正文与公式"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\04-estimation-central-limit-theorem.tex",
+      "bytes": 10837,
+      "sha256": "aa927d1102b5d210e44cd77295e8cbcf4c08b5654d73315860c15bd08a06e72a",
+      "purpose": "教师导学案对应可编辑章节；教学正文与公式"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\05-hypothesis-testing.tex",
+      "bytes": 11770,
+      "sha256": "4ee577b3de580137b8e64ab5432aa1196f33fa104020a89f063c30875d28c25c",
+      "purpose": "教师导学案对应可编辑章节；教学正文与公式"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\06-mean-test.tex",
+      "bytes": 31584,
+      "sha256": "1ccb9a1ece5687fbef2de5ec096ec27b58c35fb1ca9cd294f5e1c33127e0a70e",
+      "purpose": "教师导学案对应可编辑章节；教学正文与公式"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\07-chi-squared-tests.tex",
+      "bytes": 25012,
+      "sha256": "4af60dee1f88daf98f475ae555f9e8018191e02725639def7e635b4a6cbb5904",
+      "purpose": "教师导学案对应可编辑章节；教学正文与公式"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\tex\\FS\\chapters\\09-wilcoxon-tests.tex",
+      "bytes": 22727,
+      "sha256": "287c72a68ab592c86d2d1b82eeb89138520d9e98aa9c9c52e1b54aac5eeee0aa",
+      "purpose": "教师导学案对应可编辑章节；教学正文与公式"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS与S2新旧大纲对照.md",
+      "bytes": 7834,
+      "sha256": "3d134365dc254fab2515bf73578540a8945e95c8755002728d0322e941b3687a",
+      "purpose": "课程边界与历史范围"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S2题目分类考点-data\\teaching-value.md",
+      "bytes": 9664,
+      "sha256": "7d25f23be4d179ccd5649cd2c74a1af7eb0834785bdce44a0aba9a36b8abbfd2",
+      "purpose": "S2到FS教学衔接"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1导学案\\S1导学案.pdf",
+      "bytes": 1555026,
+      "sha256": "3c0b2dc47df36e1d716ea5acc39fe96e001282b96c6549e50cec6e2bac93fd12",
+      "purpose": "导学案/官方课程依据；PDF相关教学内容读取，非整本逐题数学审计"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\output\\pdf\\FS\\FS-complete-teacher.pdf",
+      "bytes": 1466752,
+      "sha256": "6ff3b1aee5045662487d36dcba2ee7815e161ad5804ec2d1ca16813a12227688",
+      "purpose": "导学案/官方课程依据；PDF相关教学内容读取，非整本逐题数学审计"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS导学案\\8. Three important distribution in statistcs.docx",
+      "bytes": 31220,
+      "sha256": "324a9e0c3744f0fd96dc8c5ef11547bd6e65ea6942b30d40c96945352facb7f1",
+      "purpose": "导学案/官方课程依据；PDF相关教学内容读取，非整本逐题数学审计"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\S1题目分类考点-data\\reference\\9709-2026-2027-syllabus.pdf",
+      "bytes": 1201379,
+      "sha256": "dd0131f3cd8d4e3c270e7936cbb909c15f4cb8053f8337b67c16e8ec0b8bc5e5",
+      "purpose": "导学案/官方课程依据；PDF相关教学内容读取，非整本逐题数学审计"
+    },
+    {
+      "path": "E:\\国际学校数学\\【】山实剑桥PPT\\导学案\\FS题目分类考点-data\\reference\\9231-2026-2027-syllabus.pdf",
+      "bytes": 1411904,
+      "sha256": "02c88d06ada474d94a2124a272ed587b5f7afbb1157aef47eff9674b7375fa78",
+      "purpose": "导学案/官方课程依据；PDF相关教学内容读取，非整本逐题数学审计"
+    },
+    {
+      "path": "C:\\Users\\17157\\Alevel math visual tools\\package.json",
+      "bytes": 1397,
+      "sha256": "db0baf6381f8e29895e6a58e2bb566824a978c27be9bc0acb6b026c759e4c8d0",
+      "purpose": "项目当前实现与已有设计边界"
+    },
+    {
+      "path": "C:\\Users\\17157\\Alevel math visual tools\\vite.config.ts",
+      "bytes": 445,
+      "sha256": "11dcce892ded03e9aea8b6266eedce1755224eed9be237958750854f5e16f0ca",
+      "purpose": "项目当前实现与已有设计边界"
+    },
+    {
+      "path": "C:\\Users\\17157\\Alevel math visual tools\\src\\home-main.tsx",
+      "bytes": 4609,
+      "sha256": "52ac1c0d0049ca2f74da60055afa947b129bc531ea9754e16ed7d44dded79758",
+      "purpose": "项目当前实现与已有设计边界"
+    },
+    {
+      "path": "C:\\Users\\17157\\Alevel math visual tools\\src\\App.tsx",
+      "bytes": 48160,
+      "sha256": "67eaf56ded8e247bdb2f7fd2bf65cc5f152091e9cc00e942df4ecd2f592db97d",
+      "purpose": "项目当前实现与已有设计边界"
+    },
+    {
+      "path": "C:\\Users\\17157\\Alevel math visual tools\\产品方向.md",
+      "bytes": 2123,
+      "sha256": "dbb72490345a2fa9522bc6e5820f8d5c513ec2526746b5fc00d7da968e65241d",
+      "purpose": "项目当前实现与已有设计边界"
+    },
+    {
+      "path": "C:\\Users\\17157\\Alevel math visual tools\\用户登录与数据系统流程手册.md",
+      "bytes": 48193,
+      "sha256": "c932a41d21c03b73abc13b15e69bedf7ab509637a53c8fc0d9a2ba3f7024808b",
+      "purpose": "项目当前实现与已有设计边界"
+    }
+  ]
+}

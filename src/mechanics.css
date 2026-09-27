@@ -1,0 +1,867 @@
+@import "./theme-tokens.css";
+:root {
+  font-family: "DM Sans", "Segoe UI", "Microsoft YaHei", sans-serif;
+  color: var(--ink);
+  background: var(--surface);
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #75aba1;
+  outline-offset: 3px;
+}
+.mech-header {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 32px;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+.mech-header a {
+  color: var(--secondary-ink);
+  display: flex;
+  margin-right: 7px;
+}
+.mech-header strong {
+  display: block;
+  font-size: 19px;
+  letter-spacing: 2px;
+}
+.mech-header div span {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 5px;
+  color: var(--secondary-ink);
+}
+.mech-badge {
+  margin-left: auto;
+  font-size: 12px;
+  border: 1px solid #d3ded6;
+  border-radius: 20px;
+  padding: 7px 13px;
+  color: var(--secondary-ink);
+}
+.mech-layout {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  max-width: 1600px;
+  margin: auto;
+  min-height: calc(100vh - 82px);
+}
+.mech-sidebar {
+  padding: 25px 25px 35px;
+  border-right: 1px solid var(--line);
+  background: var(--paper);
+}
+.mech-steps {
+  display: flex;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+.mech-steps button {
+  padding: 12px 4px;
+  flex: 1;
+  background: none;
+  border: 0;
+  color: var(--secondary-ink);
+  font-size: 12px;
+}
+.mech-steps button.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  font-weight: 700;
+}
+h1 {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0 0 9px;
+}
+h2 {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 650;
+}
+.mech-muted {
+  font-size: 12px;
+  color: var(--secondary-ink);
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+.mech-sidebar section {
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+}
+.mech-sidebar h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.mech-sidebar h2 span {
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  color: var(--secondary-ink);
+  font-weight: 400;
+}
+.mech-field {
+  display: block;
+  margin: 14px 0;
+}
+.mech-field > span {
+  font-size: 12px;
+  color: var(--secondary-ink);
+  display: block;
+  margin-bottom: 8px;
+}
+.mech-field > div {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--field-line);
+  border-radius: 7px;
+  background: var(--canvas-bg);
+  height: 41px;
+  overflow: hidden;
+}
+.mech-field input {
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  padding: 9px 12px;
+  background: transparent;
+  color: var(--ink);
+  outline-offset: -3px;
+}
+.mech-field small {
+  padding: 0 12px;
+  color: var(--secondary-ink);
+  font-size: 12px;
+  white-space: nowrap;
+}
+.mech-range,
+.mech-timeline {
+  accent-color: var(--accent);
+  width: 100%;
+  cursor: pointer;
+}
+.mech-attach {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--secondary-ink);
+  padding: 9px 0;
+}
+.mech-attach.attached {
+  color: var(--success);
+}
+.mech-primary,
+.mech-secondary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 7px;
+  padding: 11px 17px;
+  font-size: 13px;
+  border: 1px solid transparent;
+  min-height: 42px;
+}
+.mech-primary {
+  background: var(--logo-bg);
+  color: #fff;
+}
+.mech-primary:hover:not(:disabled) {
+  background: var(--accent);
+}
+.mech-secondary {
+  background: var(--accent-soft);
+  border-color: #d6e2d8;
+  color: var(--secondary-ink);
+}
+.full {
+  width: 100%;
+  margin-top: 10px;
+}
+.mech-report {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 5px 0 20px;
+}
+.mech-report strong {
+  color: var(--success);
+}
+.mech-report p {
+  margin: 8px 0 0;
+}
+.mech-report.error {
+  background: var(--surface);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+.mech-report.error strong {
+  color: var(--danger);
+}
+.mech-assumptions {
+  font-size: 11px;
+  color: var(--secondary-ink);
+  line-height: 1.9;
+  margin-top: 10px;
+}
+.mech-assumptions summary {
+  cursor: pointer;
+  color: var(--secondary-ink);
+}
+.mech-workspace {
+  padding: 26px 30px;
+  min-width: 0;
+}
+.mech-scene {
+  background: var(--canvas-bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.mech-scene-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 25px 0;
+}
+.mech-eyebrow {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--secondary-ink);
+}
+.mech-scene-heading h2 {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.mech-status {
+  font-size: 11px;
+  background: var(--accent-soft);
+  border-radius: 20px;
+  padding: 7px 11px;
+  color: var(--secondary-ink);
+}
+.mech-status.live {
+  background: var(--accent-soft);
+  color: var(--success);
+}
+.mech-scene > svg {
+  display: block;
+  width: 100%;
+  max-height: 510px;
+  touch-action: none;
+  user-select: none;
+}
+.mech-svg-note {
+  font-size: 12px;
+  fill: var(--secondary-ink);
+}
+.mech-draggable {
+  cursor: grab;
+}
+.mech-draggable:active {
+  cursor: grabbing;
+}
+.mech-playback {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 13px 24px 10px;
+  border-top: 1px solid var(--line);
+}
+.mech-icon {
+  border: 0;
+  background: transparent;
+  color: var(--secondary-ink);
+  display: flex;
+  padding: 10px;
+}
+.mech-clock {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  font-variant-numeric: tabular-nums;
+}
+.mech-clock strong {
+  font-size: 20px;
+  font-weight: 500;
+}
+.mech-clock span {
+  font-size: 11px;
+  color: var(--secondary-ink);
+}
+.mech-speed {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--secondary-ink);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.mech-speed select {
+  background: var(--surface);
+  color: var(--secondary-ink);
+  border: 1px solid var(--line);
+  padding: 6px;
+  border-radius: 5px;
+}
+.mech-timeline {
+  display: block;
+  width: calc(100% - 48px);
+  margin: 0 24px 18px;
+  height: 5px;
+}
+.mech-readings {
+  margin-top: 24px;
+}
+.mech-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.mech-section-title > span {
+  font-size: 11px;
+  color: var(--secondary-ink);
+}
+.mech-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+}
+.mech-metric {
+  background: var(--paper);
+  padding: 17px 18px;
+  min-width: 0;
+}
+.mech-metric > span {
+  display: block;
+  color: var(--secondary-ink);
+  font-size: 11px;
+  margin-bottom: 9px;
+}
+.mech-metric strong {
+  font-size: 21px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.mech-metric small {
+  font-size: 10px;
+  margin-left: 6px;
+  color: var(--secondary-ink);
+  font-weight: 400;
+}
+.mech-footnote {
+  font-size: 10px;
+  color: var(--secondary-ink);
+  line-height: 1.8;
+}
+.mech-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 22px;
+}
+.mech-equation,
+.mech-chart {
+  padding: 20px;
+  background: var(--surface);
+  border-radius: 9px;
+  min-width: 0;
+}
+.mech-equation > p {
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  margin: 15px 0;
+  font-family: Georgia, "Times New Roman", serif;
+}
+.mech-equation > span {
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--secondary-ink);
+}
+.mech-equation .mech-substitution {
+  font-family: inherit;
+  font-size: 11px;
+  color: var(--secondary-ink);
+  line-height: 1.7;
+}
+.mech-chart {
+  background: var(--surface);
+}
+.mech-chart h2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.mech-chart h2 small {
+  font-size: 10px;
+  color: var(--secondary-ink);
+  font-weight: 400;
+}
+.mech-chart svg {
+  width: 100%;
+  display: block;
+  margin-top: 8px;
+}
+.mech-chart text {
+  font-size: 10px;
+  fill: var(--secondary-ink);
+}
+.mech-chart-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 130px;
+  color: var(--secondary-ink);
+  font-size: 12px;
+}
+@media (min-width: 1450px) {
+  .mech-workspace {
+    padding: 32px 45px;
+  }
+  .mech-layout {
+    grid-template-columns: 340px minmax(0, 1fr);
+  }
+}
+@media (max-width: 950px) {
+  .mech-layout {
+    grid-template-columns: 275px minmax(0, 1fr);
+  }
+  .mech-workspace {
+    padding: 18px;
+  }
+  .mech-sidebar {
+    padding: 20px 18px;
+  }
+  .mech-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .mech-bottom {
+    grid-template-columns: 1fr;
+  }
+  .mech-playback {
+    gap: 6px;
+    padding: 12px;
+  }
+  .mech-clock strong {
+    font-size: 16px;
+  }
+  .mech-clock span {
+    font-size: 9px;
+  }
+}
+@media (max-width: 650px) {
+  .mech-header {
+    padding: 0 16px;
+    height: 68px;
+    gap: 9px;
+  }
+  .mech-badge {
+    font-size: 9px;
+    padding: 5px 8px;
+  }
+  .mech-header strong {
+    font-size: 16px;
+  }
+  .mech-header div span {
+    font-size: 7px;
+  }
+  .mech-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .mech-sidebar {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 15px 20px;
+  }
+  .mech-sidebar section {
+    padding: 13px 0;
+  }
+  .mech-sidebar h1 {
+    font-size: 18px;
+  }
+  .mech-steps {
+    margin-bottom: 16px;
+  }
+  .mech-muted {
+    margin-bottom: 16px;
+  }
+  .mech-workspace {
+    padding: 14px;
+  }
+  .mech-scene-heading {
+    padding: 18px 15px 0;
+  }
+  .mech-scene-heading h2 {
+    font-size: 17px;
+  }
+  .mech-playback {
+    flex-wrap: wrap;
+  }
+  .mech-speed {
+    margin-left: auto;
+  }
+  .mech-clock {
+    gap: 4px;
+  }
+  .mech-metric strong {
+    font-size: 20px;
+  }
+  .mech-bottom {
+    gap: 12px;
+  }
+  .mech-assumptions {
+    margin-top: 0;
+  }
+  .mech-scene > svg {
+    min-height: 235px;
+  }
+}
+
+/* Shared Mathroom paper / ink treatment. */
+.mech-header strong {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.mech-header div span {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 1px;
+}
+.mech-scene,
+.mech-metrics,
+.mech-equation,
+.mech-chart {
+  border-radius: 4px;
+}
+.mech-field > div {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--field-line);
+  border-radius: 0;
+}
+.mech-field input {
+  color: var(--ink);
+}
+.mech-primary {
+  color: var(--logo-fg);
+}
+.mech-primary:hover:not(:disabled) {
+  background: var(--logo-bg);
+  filter: brightness(1.1);
+}
+.mech-steps button.active {
+  border-color: var(--accent);
+}
+.mech-secondary {
+  border-color: var(--line);
+}
+.mechanics-app svg [fill="#d7dfdc"] {
+  fill: var(--line);
+}
+.mechanics-app svg [fill="#e4ebe6"] {
+  fill: var(--accent-soft);
+}
+.mechanics-app svg [stroke="#c7d1cd"],
+.mechanics-app svg [stroke="#b9c9c3"] {
+  stroke: var(--field-line);
+}
+.mechanics-app svg [stroke="#526c64"] {
+  stroke: var(--secondary-ink);
+}
+.mechanics-app svg [fill="#346eae"] {
+  fill: var(--logo-bg);
+}
+.mechanics-app svg [stroke="#24588e"] {
+  stroke: var(--accent);
+}
+.mechanics-app svg [fill="white"] {
+  fill: var(--logo-fg);
+}
+.mechanics-app svg [stroke="#346eae"],
+.mechanics-app svg [stroke="#adc7c0"] {
+  stroke: var(--accent);
+}
+:root[data-theme="dark"] .mechanics-app svg [stroke="#ce7853"] {
+  stroke: #d7b477;
+}
+:root[data-theme="dark"] .mechanics-app svg [fill="#ce7853"] {
+  fill: #d7b477;
+}
+:root[data-theme="dark"] .mechanics-app svg [stroke="#2b847a"] {
+  stroke: #88c3ac;
+}
+:root[data-theme="dark"] .mechanics-app svg [fill="#2b847a"] {
+  fill: #88c3ac;
+}
+:root[data-theme="dark"] .mechanics-app svg [stroke="#8270b0"] {
+  stroke: #b6a7cd;
+}
+:root[data-theme="dark"] .mechanics-app svg [fill="#8270b0"] {
+  fill: #b6a7cd;
+}
+
+/* MathLive uses the same locally bundled TeX fonts as pure maths. */
+.mechanics-app .static-math {
+  display: inline-block;
+  color: inherit;
+  line-height: 1.4;
+  vertical-align: baseline;
+  letter-spacing: normal;
+}
+.mech-equation > p {
+  font-family: inherit;
+  letter-spacing: normal;
+  overflow-x: auto;
+  padding: 3px 0;
+}
+.mech-equation > span {
+  display: block;
+  line-height: 2;
+}
+.mech-equation > span .static-math {
+  max-width: 100%;
+  overflow-x: auto;
+  vertical-align: middle;
+}
+.mech-equation .mech-substitution {
+  font-size: 14px;
+}
+.mech-field > span .static-math,
+.mech-metric > span .static-math {
+  font-size: 1.15em;
+}
+.mech-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 18px;
+}
+.mech-presets button,
+.mech-input-mode button {
+  background: var(--accent-soft);
+  color: var(--secondary-ink);
+  border: 1px solid var(--line);
+  padding: 7px 9px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.mech-input-mode {
+  display: flex;
+  gap: 5px;
+  margin-top: 24px;
+}
+.mech-input-mode button[aria-pressed="true"] {
+  background: var(--logo-bg);
+  color: var(--logo-fg);
+  border-color: var(--logo-bg);
+}
+.mech-field-hint {
+  font-size: 11px;
+  line-height: 1.85;
+  color: var(--secondary-ink);
+  margin: 8px 0 14px;
+}
+.mech-end-note {
+  margin: 0;
+  padding: 0 24px 16px;
+  font-size: 12px;
+  color: var(--secondary-ink);
+}
+.mech-events {
+  margin-top: 24px;
+}
+.mech-events ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-height: 290px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+}
+.mech-events li {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+}
+.mech-events li:last-child {
+  border: 0;
+}
+.mech-events li button {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: var(--ink);
+}
+.mech-events time {
+  color: var(--accent);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  min-width: 76px;
+}
+.mech-events strong {
+  font-size: 12px;
+  font-weight: 500;
+}
+.mech-events button > span {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--secondary-ink);
+  white-space: nowrap;
+}
+.mech-events li p {
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--secondary-ink);
+  margin: 6px 0 0;
+}
+.mech-events .occurred {
+  border-left: 3px solid var(--success);
+}
+.mech-events .future {
+  border-left: 3px solid transparent;
+}
+.mech-energy {
+  font-size: 12px;
+  color: var(--ink);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  line-height: 1.8;
+}
+.mech-energy > span:last-child {
+  font-size: 11px;
+  color: var(--secondary-ink);
+  margin-left: auto;
+}
+.mech-chart-legend {
+  display: flex;
+  gap: 15px;
+  font-size: 11px;
+  color: var(--accent);
+  align-items: center;
+  flex-wrap: wrap;
+}
+.mech-chart-legend > span:nth-child(2) {
+  color: var(--success);
+}
+.mech-chart-legend small {
+  margin-left: auto;
+  color: var(--secondary-ink);
+}
+.mech-collision-title {
+  margin-top: 28px;
+}
+.mech-metrics {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.mech-scene-heading {
+  gap: 12px;
+}
+.mech-scene-heading h2 {
+  font-size: 18px;
+}
+.mech-status {
+  white-space: nowrap;
+}
+.mech-equation p:has(.static-math) {
+  overflow-x: auto;
+}
+.mechanics-app svg [stroke="#346eae"] {
+  stroke: var(--accent);
+}
+@media (max-width: 1050px) {
+  .mech-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .mech-scene-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 650px) {
+  .mech-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .mech-events li {
+    padding: 10px;
+  }
+  .mech-events li button {
+    gap: 7px;
+  }
+  .mech-header .mech-badge {
+    font-size: 8px;
+    padding: 5px;
+  }
+  .mech-energy > span:last-child {
+    margin-left: 0;
+  }
+  .mech-section-title > span {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mechanics-app button {
+    transition: none;
+  }
+}
+
+.mech-library-link{font-size:12px;color:var(--secondary-ink);white-space:nowrap;border-bottom:1px solid var(--field-line);padding:5px 0}@media(max-width:650px){.mech-header .mech-badge{display:none}.mech-library-link{margin-left:auto;font-size:11px}}
+
+@media(max-width:650px){.mech-header>svg{display:none}.mech-header>div{min-width:0;flex:1}.mech-header>div span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.3px}}
+
+.mech-results{margin-top:24px;border-top:1px solid var(--line);padding-top:17px}.mech-results>summary{font-size:13px;color:var(--accent);cursor:pointer}.mech-results .mech-readings{margin-top:18px}
+
+.mech-answer-control{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:24px 0 0;padding:18px 0;border-top:1px solid var(--line)}.mech-answer-control h2,.mech-results>h2{font-size:14px;font-weight:500;margin:0}.mech-answer-control p{font-size:11px;color:var(--secondary-ink);line-height:1.8;margin:7px 0 0}.mech-answer-control button{flex-shrink:0}.mech-solved-summary{background:var(--accent-soft);padding:12px 16px;border-radius:4px;margin-top:8px;font-size:12px;line-height:1.9;color:var(--secondary-ink)}.mech-solved-summary p{margin:5px 0}@media(max-width:650px){.mech-answer-control{gap:10px}.mech-answer-control button{padding:9px 12px;font-size:12px}}
+
+.mech-answer-detail{margin-top:18px;border-top:1px solid var(--line);padding-top:16px}.mech-answer-detail>summary{font-size:13px;color:var(--accent);cursor:pointer}.mech-answer-detail .mech-events{margin-top:14px}

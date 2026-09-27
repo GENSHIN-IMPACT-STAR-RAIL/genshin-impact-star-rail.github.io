@@ -1,0 +1,30 @@
+.distributions-mobile-panes {
+  display: none;
+}
+@media (max-width: 760px) {
+  .distributions-mobile-panes {
+    display: flex;
+    grid-column: 1/-1;
+    gap: 8px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background: var(--canvas-bg);
+    padding: 8px 0;
+  }
+  .distributions-mobile-panes .stats-button {
+    flex: 1;
+    min-height: 40px;
+  }
+  .distributions-mobile-panes .stats-button[aria-pressed="true"] {
+    color: var(--stats-teal);
+    border-color: var(--stats-teal);
+    background: var(--stats-soft);
+  }
+  .distributions-view-input > .stats-tool-results {
+    display: none;
+  }
+  .distributions-view-results > .stats-panel {
+    display: none;
+  }
+}

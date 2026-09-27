@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-25",
+  "scope": "Binomial and normal approximation prototype, not the complete statistics plan",
+  "entry": "/statistics.html",
+  "automated": {
+    "statistics_tests": 6,
+    "statistics_tests_passed": 6,
+    "project_tests": 90,
+    "project_tests_passed": 90,
+    "coverage": [
+      "PMF normalisation and moments",
+      "open and closed integer events",
+      "four continuity correction directions",
+      "normal tails including z=8 and z=20",
+      "degenerate distributions",
+      "saved state validation"
+    ],
+    "production_build": "PASS"
+  },
+  "browser": {
+    "desktop": "Checked dark and light themes; no warning or error console logs at check time",
+    "mobile_viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "mobile_layout": "No horizontal overflow; plot remains at top while parameter section scrolls",
+    "checks": [
+      "Correction updates 0.864231 to 0.815156 for default event",
+      "Strict lower bound updates selected integers and area",
+      "Pointer drag updates upper bound from 19 to 22",
+      "Keyboard arrow moves boundary by one",
+      "Hidden results replace all three probability summaries",
+      "Uncorrected normal point probability is zero",
+      "p=0 disables normal approximation",
+      "Saved model survives reload",
+      "PNG downloaded and visually inspected",
+      "Homepage statistics card opens the prototype"
+    ],
+    "real_touch_devices": "Not tested"
+  },
+  "known_limits": [
+    "n from 1 to 200",
+    "Floating-point probabilities",
+    "Single binomial model",
+    "No sampling, confidence intervals or hypothesis tests"
+  ]
+}

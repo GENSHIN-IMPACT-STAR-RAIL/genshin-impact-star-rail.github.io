@@ -1,0 +1,545 @@
+@import "./theme-tokens.css";
+
+/* Shared UI contract. The :root specificity keeps these rules authoritative
+   even when Vite extracts shared CSS before the workspace layout chunks.
+   MathLive, formula labels and plot geometry keep their mathematical typography. */
+:root:root {
+  font-family: var(--font-ui);
+  font-size: var(--text-body);
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--surface);
+  font-synthesis: none;
+}
+
+:root
+  :is(.app, .wb-app, .stats-suite, .home-shell)
+  :is(button, input, select, textarea) {
+  font-family: var(--font-ui);
+  letter-spacing: normal;
+}
+
+:root :is(.app, .wb-app, .stats-suite, .home-shell) button {
+  font-size: var(--text-label);
+  font-weight: var(--weight-label);
+  line-height: 1.5;
+  border-radius: var(--radius-control);
+  transition:
+    background-color var(--control-motion),
+    border-color var(--control-motion),
+    color var(--control-motion);
+}
+
+:root :is(.app, .wb-app, .stats-suite, .home-shell) button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+:root
+  :is(.app, .wb-app, .stats-suite, .home-shell)
+  :is(button, a, input, select, textarea, summary):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+:root
+  :is(.app, .wb-app, .stats-suite)
+  :is(input[type="checkbox"], input[type="range"]) {
+  accent-color: var(--accent);
+}
+
+/* Brand: the same proportions and Chinese subtitle on all three workspaces. */
+:root a.mathroom-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex-shrink: 0;
+  color: var(--ink);
+  text-decoration: none;
+  border-radius: var(--radius-control);
+}
+
+:root .mathroom-brand > .mathroom-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  padding-right: 3px;
+  border-radius: var(--radius-control);
+  background: var(--logo-bg);
+  color: var(--logo-fg);
+  font: italic 28px/1 var(--font-brand);
+  letter-spacing: -3px;
+}
+
+:root .mathroom-mark > span {
+  opacity: 0.75;
+}
+
+:root .mathroom-brand > .mathroom-wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--font-ui);
+  letter-spacing: normal;
+}
+
+:root .mathroom-wordmark strong {
+  font: 600 22px/1.05 var(--font-brand);
+  letter-spacing: -0.6px;
+}
+
+:root .mathroom-wordmark small {
+  color: var(--secondary-ink);
+  font: 400 var(--text-caption)/1.4 var(--font-ui);
+  letter-spacing: 0.04em;
+}
+
+:root :is(.sidebar-brand, .wb-header, .stats-suite-header) {
+  height: var(--workspace-header-height);
+  flex-basis: var(--workspace-header-height);
+  flex-shrink: 0;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+:root .stats-suite-layout {
+  height: calc(100dvh - var(--workspace-header-height));
+}
+
+/* Section titles, field labels and secondary annotations share one scale. */
+:root .sidebar .section-title,
+:root .analysis-toggle,
+:root .wb-panel-heading h2,
+:root .stats-panel > h2,
+:root .stats-suite-nav section h2 {
+  font-family: var(--font-ui);
+  font-size: var(--text-section);
+  font-weight: var(--weight-heading);
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: var(--ink);
+}
+
+:root .analysis-toggle strong {
+  font-weight: var(--weight-heading);
+}
+
+:root .wb-field > span,
+:root .wb-switch,
+:root .wb-property-section summary,
+:root .wb-endpoint-coordinates > summary,
+:root .stats-field > span,
+:root .stats-result > span,
+:root .stats-table th,
+:root .data-advanced > summary,
+:root .point-field,
+:root .point-toggle,
+:root .angle-inputs label,
+:root .sidebar .negative-radius-option label,
+:root .analysis-content label,
+:root .ode-initial-title,
+:root .ode-density,
+:root .data-check,
+:root .inference-check {
+  font-family: var(--font-ui);
+  font-size: var(--text-label);
+  font-weight: var(--weight-label);
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: var(--secondary-ink);
+}
+
+:root .wb-tiles button > span,
+:root .wb-header-links,
+:root .wb-object-list summary,
+:root .stats-nav-item {
+  font-size: var(--text-label);
+  font-weight: var(--weight-label);
+  line-height: 1.5;
+}
+
+:root .counter,
+:root .small-muted,
+:root .formula-hint,
+:root .empty-params,
+:root .analysis-hint,
+:root .analysis-result small,
+:root .analysis-point small,
+:root .ode-note,
+:root .ode-details summary,
+:root .ode-solve-row > span,
+:root .function-label small,
+:root .wb-subtitle,
+:root .wb-help,
+:root .wb-panel-intro,
+:root .wb-field small,
+:root .stats-field > small,
+:root .stats-result > small,
+:root .stats-suite-header > small,
+:root .stats-tool-heading small,
+:root .stats-nav-footer {
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--secondary-ink);
+}
+
+:root .stats-nav-item small,
+:root .home-tags span {
+  font: 400 var(--text-caption)/1.5 var(--font-ui);
+  border-radius: var(--radius-control);
+}
+
+:root .stats-tool-heading h1,
+:root .wb-empty-state h2 {
+  font-family: var(--font-ui);
+  font-weight: var(--weight-heading);
+  letter-spacing: normal;
+}
+
+/* Standard buttons: quiet outline; primary actions use solid blue-grey ink. */
+:root
+  .app
+  :is(
+    .example-buttons button,
+    .angle-presets button,
+    .point-presets button,
+    .point-fit,
+    .export-button
+  ),
+:root .analysis-panel button,
+:root .wb-app :is(.wb-clear, .wb-object-actions button),
+:root .stats-suite :is(.stats-button, .data-event-button) {
+  min-height: var(--control-height);
+  padding: 6px 10px;
+  border: 1px solid var(--field-line);
+  border-radius: var(--radius-control);
+  background: var(--paper);
+  color: var(--secondary-ink);
+  box-shadow: none;
+}
+
+:root :is(.app, .wb-app, .stats-suite) :is(.primary, .ode-solve) {
+  min-height: var(--control-height);
+  padding: 6px 14px;
+  border: 1px solid var(--logo-bg);
+  background: var(--logo-bg);
+  color: var(--logo-fg);
+}
+
+:root
+  :is(.app, .wb-app, .stats-suite)
+  :is(.primary, .ode-solve):hover:not(:disabled) {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+:root .wb-app .wb-object-actions button:last-child {
+  color: var(--danger);
+}
+
+/* Ghost tools retain compact hit areas and use the same hover/selected colors. */
+:root .app :is(.add-expression, .row-actions button),
+:root
+  .wb-app
+  :is(.wb-tool, .wb-stage-footer button, .wb-endpoint-heading button),
+:root .stats-suite .stats-icon,
+:root .theme-toggle,
+:root .help-button {
+  min-height: var(--control-height);
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--secondary-ink);
+}
+
+:root .theme-toggle,
+:root .app .help-button,
+:root .wb-app .wb-icon,
+:root .stats-suite .stats-icon,
+:root .app .graph-controls button {
+  width: var(--control-height);
+  height: var(--control-height);
+  min-width: var(--control-height);
+  padding: 6px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-control);
+  color: var(--secondary-ink);
+}
+
+:root .app .row-actions button {
+  min-height: 28px;
+  width: 28px;
+  padding: 4px;
+}
+
+:root
+  :is(.app, .wb-app, .stats-suite, .home-shell)
+  button:where(:hover:not(:disabled):not(.primary):not(.ode-solve)) {
+  background-color: var(--hover);
+  color: var(--ink);
+}
+
+/* Tabs and mode selectors: one filled selected state, without mixed underlines. */
+:root
+  .app
+  :is(
+    .coordinate-switch,
+    .analysis-tabs,
+    .radian-input-mode,
+    .mobile-control-tabs
+  ),
+:root .wb-categories,
+:root .stats-course-tabs {
+  gap: 4px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: var(--paper);
+}
+
+:root .wb-categories {
+  margin: 0 14px 14px;
+}
+
+:root
+  .app
+  :is(
+    .coordinate-switch,
+    .analysis-tabs,
+    .radian-input-mode,
+    .mobile-control-tabs
+  )
+  button,
+:root .wb-categories button,
+:root .stats-suite :is(.stats-course-tabs, .stats-tabs) button {
+  min-height: var(--control-height);
+  padding: 5px 9px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--secondary-ink);
+  box-shadow: none;
+}
+
+:root .stats-suite .stats-tabs button {
+  border-color: var(--line);
+}
+
+:root
+  .app
+  :is(
+    .coordinate-switch,
+    .analysis-tabs,
+    .radian-input-mode,
+    .mobile-control-tabs,
+    .angle-presets,
+    .point-presets
+  )
+  button[aria-pressed="true"],
+:root .analysis-panel button[aria-pressed="true"],
+:root
+  .wb-app
+  :is(
+    .wb-categories button[aria-pressed="true"],
+    .wb-tool.active,
+    .wb-icon.active,
+    .wb-endpoint-heading button.active
+  ),
+:root
+  .stats-suite
+  :is(
+    .stats-tabs button.active,
+    .stats-tabs button[aria-pressed="true"],
+    .stats-course-tabs button[aria-pressed="true"],
+    .stats-button[aria-pressed="true"],
+    .stats-icon[aria-pressed="true"],
+    .data-event-button[aria-pressed="true"],
+    .stats-nav-item.active
+  ) {
+  border-color: var(--field-line);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: var(--weight-heading);
+  box-shadow: none;
+}
+
+:root .stats-suite .stats-nav-item.active {
+  box-shadow: inset 3px 0 var(--accent);
+}
+
+/* Inputs and unit wrappers have the same paper fill, fine border and radius. */
+:root
+  .app
+  :is(
+    .expression-type-select,
+    .cartesian-mode-select,
+    .angle-unit-select,
+    .parameter-value,
+    .expression-t-range input,
+    .point-field input,
+    .point-field select
+  ),
+:root .analysis-panel :is(select, input:not([type="checkbox"])),
+:root .wb-app :is(.wb-field select, .wb-endpoint-card > select),
+:root .stats-suite :is(.stats-input, .stats-textarea) {
+  min-height: var(--field-height);
+  border: 1px solid var(--field-line);
+  border-radius: var(--radius-control);
+  background: var(--paper);
+  color: var(--ink);
+  padding: 6px 8px;
+  font-size: var(--text-label);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+:root .app .expression-type-select {
+  max-width: 110px;
+}
+:root .app .parameter-value {
+  text-align: right;
+}
+:root .stats-suite .stats-textarea {
+  font-family: var(--font-mono);
+}
+
+:root .wb-search,
+:root .wb-field > div,
+:root .angle-inputs label > div {
+  border: 1px solid var(--field-line);
+  border-radius: var(--radius-control);
+  background: var(--paper);
+  padding: 6px 8px;
+  min-height: var(--field-height);
+}
+
+:root .wb-field > div:focus-within,
+:root .wb-search:focus-within,
+:root .angle-inputs label > div:focus-within {
+  border-color: var(--accent);
+  background: var(--field-active);
+}
+
+:root
+  :is(.app, .wb-app, .stats-suite)
+  :is(input, select, textarea)[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+
+/* Cards, popovers and tags use the same border language. */
+:root .app :is(.point-table-panel, .graph-controls),
+:root
+  .wb-app
+  :is(.wb-view-tools, .wb-tiles button, .wb-endpoint-card, .wb-validation),
+:root
+  .stats-suite
+  :is(.stats-panel, .data-advanced, .stats-activity-cards > button) {
+  border-color: var(--line);
+  border-radius: var(--radius-panel);
+}
+
+:root .wb-tiles button.active,
+:root .stats-activity-cards button[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+:root .stats-suite .stats-result > strong {
+  font-family: var(--font-ui);
+  font-size: 24px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+
+:root .stats-suite .stats-activity-cards small {
+  font: 500 18px/1.5 var(--font-ui);
+}
+
+:root .home-card {
+  border-radius: var(--radius-panel);
+}
+:root .probability-card {
+  background: var(--paper);
+}
+:root .probability-card .home-card-bottom > svg {
+  opacity: 1;
+}
+:root .home-card:is(a):hover {
+  border-color: var(--field-line);
+}
+:root .home-tags span {
+  background: var(--accent-soft);
+  color: var(--secondary-ink);
+}
+
+@media (max-width: 760px) {
+  :root:root {
+    --workspace-header-height: 60px;
+  }
+  :root .stats-suite-nav {
+    top: var(--workspace-header-height);
+  }
+  :root .stats-menu-scrim {
+    inset: var(--workspace-header-height) 0 0;
+  }
+  :root .mathroom-wordmark strong {
+    font-size: 20px;
+  }
+  :root .wb-header {
+    gap: 10px;
+    padding-inline: 12px;
+  }
+  :root .wb-header-links {
+    gap: 10px;
+    font-size: var(--text-caption);
+  }
+  :root
+    :is(.app, .wb-app, .stats-suite)
+    input:not([type="range"]):not([type="checkbox"]),
+  :root :is(.app, .wb-app, .stats-suite) :is(select, textarea) {
+    font-size: 16px;
+  }
+  :root .app .expression-type-select {
+    max-width: 132px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root .app main {
+    grid-template-rows:
+      var(--workspace-header-height) minmax(120px, 0.46fr)
+      calc(var(--control-height) + 20px) minmax(0, 0.54fr);
+  }
+  :root .app .graph-legend {
+    top: 53px;
+  }
+  :root .app .graph-controls {
+    top: 7px;
+  }
+  :root .app .row-actions button {
+    min-width: 32px;
+    min-height: 32px;
+  }
+  :root .app .mobile-control-tabs {
+    margin: 6px 12px;
+  }
+  :root .app .angle-presets {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root :is(.app, .wb-app, .stats-suite, .home-shell) button {
+    transition: none;
+  }
+}

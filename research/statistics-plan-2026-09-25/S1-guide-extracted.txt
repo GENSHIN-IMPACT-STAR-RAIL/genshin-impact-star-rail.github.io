@@ -1,0 +1,2171 @@
+
+=== PDF PAGE 1 ===
+Analysis of data(1) | Lars Qiu 
+ 
+Representation of data 数据的表示方法 
+Key words: discrete data; continuous data; stem-and-leaf diagram 
+ Types of data 数据类型 
+在统计当中，数据可大体分为两种： 【定性(qualitative)数据和定量(quantitative)数据】 。比如对于一个班的同学
+来讲，性别、肤色可以看作是定性数据，而年龄、身高等则是定量数据。 
+在定量数据当中，又分为两种： 【离散(discrete)】数据和【连续(continuous)】数据。这两种数据的分类依据是
+【数据取值的范围是一些离散的点还是某个区间的所有实数】 。例如，还是刚才那些同学，他们的鞋码数和年龄就
+是离散数据，因为鞋码只能是有限的一些正整数(即使有半码，也不会出现 38.4783 这种码数)，但是身高不一样，
+严格的说，只要测量精度足够高，一个人的身高是可以取到范围内任何一个实数的。这就是离散型和连续性变量
+最本质的区别。 
+数据的呈现，大体课分为 ungrouped 和 grouped 两种。 
+【ungrouped data 非成组数据】非成组数据又称为“生数据(raw data)” ，就是把所有的数据放在一起，比如10
+个同学的鞋码：36,40,41,37,39,40,41,36,41,43。十个同学的身高：177.4, 181.4, 180.2, 165.3, 173.3, 163.2, 
+189.1, 186.7, 166.4, 171.9。ungrouped data 的好处是可以清楚的看到每个数据具体是多少，但缺点也显而易
+见：没有进行任何处理，无法充分的得到整体信息。以及当数据量大的时候更加难以分析。 
+【grouped data 成组数据(分组数据)】成组数据又称分组数据，是将 ungrouped data 初步整理分组，得到一些统
+计信息的数据。通常是先【根据数据的取值】分组做表(table)，后根据表格做图(diagram)。所以统计表和统计图
+一般是对 grouped data 才有意义。 
+ 
+ 
+Table and diagram of discrete data 离散型数据的表格，茎叶图 
+上述十个同学的鞋码：36,40,41,37,39,40,41,36,41,43。我们按照鞋码号分组做表 
+鞋码 shoe size 36 37 38 39 40 41 42 43 
+人数 frequency 2 1 0 1 2 3 0 1 
+首先鞋码按照从低到高列出， 每个鞋码分为一组， 下面是每组的人数。 而frequency 一词含义是 “频率” ， 所以下面
+的数字也称之为每组的频数(在统计学中频率仅仅指出现的次数)。 
+【茎叶图 stem-and-leaf diagram】表格有时候并不直观，茎叶图可以某种程度弥补这一点。 
+十个人鞋码的茎叶图 
+                                 3   6 6 7 9                  Key：3  6 
+                                 4   0 0 1 1 1 3                   represents a shoe size 36 
+茎叶图一定要指明“茎”与“叶”所表示的含义，在右侧用Key 说明，这一点非常重要，因为茎叶图上无法反应数
+据实际的位数，比如上述茎叶图完全可以表示几个学生的绩点，此时Key 应该调整为 3  6 represents GPA 3.6，
+也可以是一个公司职员的月收入，此时 Key 应该调整为 3  6 represents salary 3600 dollars  
+【双边茎叶图 back-to-back stem-and-leaf diagram】 双边茎叶图可以表示两拨同学的鞋码， 同样Key 也要对两组
+分别说明 
+ 
+ Table and diagram of continuous data 连续型数据的表和图 
+十个同学的身高：177.4, 181.4, 180.2, 165.3, 173.3, 163.2, 189.1, 186.7, 169.3, 171.9。如果再按照身高的具体
+数值分组，是不合适的。因为身高的取值可以是区间内的任意实数，两个人的身高即使非常接近，比如172.1 和
+172.2 但是并不是相同的，所以如果按照【身高的具体数值】分组，这两个要各自分一组。如此接近的两个数据都
+要分成两组，那么其他的数据自然也只能各自一组，分组就毫无意义。 
+所以连续数据分组，分组要按照数据的取值范围分组。换句话说，就是原先数据取自一个区间，那么分组就是将
+这个区间分为一些子区间，分组后的区间通常是半开半闭的。 
+身高 Height(ℎ cm) 160 ≤ ℎ < 170 170 ≤ ℎ < 180 180 ≤ ℎ < 190 
+人数 frequency 3 3 4 
+
+=== PDF PAGE 2 ===
+Analysis of data(1) | Lars Qiu 
+ 
+这引出了一些相关的概念： 
+【组界 class boundary】即每组的上界和下界，比如在 160-170 一组中，160 和 170 就是这个组的界，并分别是
+下界和上界(lower and upper boundary) 
+【中点值 mid-value】即每个组的中点值，比如 160-170 这组的中点值是
+160+170
+2 = 165，这个值会作为每组的代
+表值参与一些计算，比如平均数。 
+【组距 class width】即每组上界与下界的差值，这个值并不一定总是固定的。在上面这组数据中，组距为10，是
+固定的。 
+【频率密度 frequency density】频率密度 =
+频率
+组距，这个值在组距一定的情况下与频率成正比，意义不大。但是在
+组距不一定的情况下，它就可以体现出数据在某一个局部分布的密度，直方图会很好的说明这件事情。 
+ 
+下面对于连续变量的一种处理方式非常重要。 
+【gap data】gap data 顾名思义，即组与组之间存在 gap 的数据，如果将之前十个同学的身高编为有gap 的
+grouped data，下面则是其中一种可能 
+身高 Height(ℎ cm) 160 − 169 170 − 179 180 − 189 
+人数 frequency 3 3 4 
+注意此时每组将不再用区间表示，而是笼统的一个范围，并且这个范围表示的组与组之间存在间隙(gap)。这是因
+为在实际操作当中，统计人员通常会将原始数据先做一次近似再记录。本例中，这个近似是将每位同学的身高近
+似到整厘米之后，再进行统计。其中身高为 169.3 就会近似到 169 计入第一组，但如果是 169.8，则会近似到
+170 近似到第二组，而如果不先进行近似，169.8 也会计入第一组160 ≤ ℎ < 170. 
+【gap data 的组界，组距，中点】gap 数据的组界要填补 gap：160 − 169的下界是 159.5，上界是 169.5；而
+170 − 179这一组下界是169.5，上界是179.5。组距则是填补之后的组界的差值：169.5 − 159.5 = 10。中点则同
+样：
+159.5+169.5
+2 = 165，只不过中点与填补之前的结果没有差异。 
+ 
+ Histogram 直方图 
+直方图全称是频率分布直方图，是我们要重点掌握的一种统计图。在初中我们学过用条形图表示分组数据的数
+量，好处是直观反映数量的多少。现在频率分布直方图不仅能反映数量多少，还能反映数据分布的情况。 
+【频率分布直方图的纵轴是 
+频率
+组距 】因为纵轴是频率密度 =
+频率
+组距
+，横轴是数据的取值，所以直方图当中每个方块的
+宽度是该组的组距，高度是该组的频率密度，这样【每个方块的面积就是
+频率
+组距
+× 组距 = 频率】 ，也就是说每个方块
+的面积才是该组数据的个数。 
+我们通过一个例子说明为什么频率密度作为直方图的纵轴更合适。同样还是考虑一组同学的身高。 
+【eg】这是某班50名同学的身高分布，将下组数据用频率分布直方图表示。 
+身高 Height(ℎ cm) 150 ≤ ℎ < 160 160 ≤ ℎ < 170 170 ≤ ℎ < 175 175 ≤ ℎ < 185 185 ≤ ℎ < 200 
+人数 frequency 3 17 10 17 3 
+组距 class width 10 10 5 10 15 
+频率密度 frequency 
+density 
+0.3 1.7 2 1.7 0.2 
+ 
+ 
+ 
+
+=== PDF PAGE 3 ===
+Analysis of data(1) | Lars Qiu 
+ 
+【直方图的插值】有时候需要某一个数值之上(或之下)的数据量，这个数值通常并不是某一个组的组界，所以需要
+估计。此时我们假设在同一组内数据分布是【均匀的】 。 
+【eg】估计这个班身高在182cm 以上的同学的人数。 
+ 
+ 
+【Page9 1.3】(gap data 画直方图的时候同样要注意填补 gap) 
+Time taken (min) 13 14 − 15 16 − 18 
+No. of athletes (𝑓𝑓) 4 14 18 
+Use the histogram of race times shown previously to estimate:  
+a. the number of athletes who took less than 13.0 minutes, 
+b. the number of athletes who took between 14.5 and 17.5 minutes, 
+c. the time taken to run the race by the slowest three athletes. 
+ 
+ 
+ 
+ 
+ 
+ 
+在考试当中，画直方图是重要的考点。真题一般都会给网格，数准格子提前规划好空间是做好这个题的核心。 
+【步骤】计算每组的 class width 和 frequency density 并写出；数好格子做好规划；在网格的边缘画出坐标轴并
+标记坐标轴的名称、坐标；根据计算出的 cw 和 fd，用铅笔画条形图。 
+【53/O/N/21】The times taken, in minutes, by 360 employees at a large company to travel from home to 
+work are summarized in the following table. 
+Time, 𝑡𝑡 minutes 0 ≤  𝑡𝑡 <  5 5 ≤  𝑡𝑡 <  10 10 ≤  𝑡𝑡 <  20 20 ≤  𝑡𝑡 <  30 30 ≤  𝑡𝑡 <  50 
+Frequency 23 102 135 76 24 
+Draw a histogram to represent this information. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+=== PDF PAGE 4 ===
+Analysis of data(1) | Lars Qiu 
+ 
+ Cumulative frequency graph 累积频率图 
+累积频率图是一种曲线(curve)或者折线(polygon)图，用于表示该组及其之前的频率和的变化。横轴为数据分组，
+纵轴为频率。因为曲线上的每个点表示小于该数据点之前的频率和，这个和随着数据的增大是递增的，所以累积
+频率图永远是递增的，并且最大值是整个的数据量。另外，如果用折线图做估计，需要【用虚线在图上卡一下】 
+【Page14 1.4】The following table show the lengths of 80 leaves from a particular tree, given to the 
+nearest centimeter. 
+Lengths (cm) 1 − 2 3 − 4 5 − 7 8 − 9 10 − 11 
+No. leaves (𝑓𝑓) 8 20 38 10 4 
+Draw a cumulative frequency curve and a cumulative frequency polygon. Use each of these to estimate: 
+a. The number of leaves that are less than 3.7cm long 
+b. The lower boundary of the lengths of the longest 22 leaves. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 5 ===
+Analysis of data(1) | Lars Qiu 
+ 
+在正式考试画累积频率图，尽量用曲线连接，方法类似：先计算数格子做好规划，然后标记好横纵坐标轴，注意
+此时纵坐标是频率而不再是频率密度，再描点作图【一定要用铅笔】。如果需要用曲线估计，评分标准会留一部分
+误差范围。 
+【52/O/N/21】The distances, 𝑥𝑥m, travelled to school by 140 children were recorded. The results are 
+summarized in the table below. 
+Distance, 𝑥𝑥m 𝑥𝑥≤ 200 𝑥𝑥≤ 300 𝑥𝑥≤ 500 𝑥𝑥≤ 900 𝑥𝑥≤ 1200 𝑥𝑥≤ 1600 
+Cumulative frequency 16 46 88 122 134 140 
+On the grid, draw a cumulative frequency graph to represent these results. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Homework】Page5 4.5. Page11 5.6.10.12.13.     Page16 2.3.5.8.11.  
+
+
+=== PDF PAGE 6 ===
+Central tendency | Lars Qiu 
+ 
+Mode, mean, median 众数，平均数，中位数  
+上一节我们已经知道数据的两种类型——离散和连续数据；以及整理数据的两种方式——原始数据和分组数据。
+本节我们将通过一些量来分析数据的集中趋势(central tendency)，他们是：众数(mode)，平均数(mean)与中位数
+(median)。这三个量在离散型和连续型的数据当中定义稍有不同，需要分开学习。 
+ Central tendency of discrete data 离散数据的集中趋势 
+先讲离散型数据的集中趋势。 
+【mode 众数】一组数据当中数量频率最高的数据即为众数。众可能多于一个，也可能不存在。 
+【mean 平均数】所有数据之和除以数据的个数，如果是分组数据注意加权 
+【median 中位数】将所有数据从小到大排列后。如果是奇数个数据，中位数就是中间的那个；如果是偶数个即为
+中间两个的平均值。 
+【eg】计算下列数据的众数平均数和中位数。 
+鞋码 shoe size (𝑥𝑥) 36 37 38 39 40 41 42 43 
+人数 frequency (𝑓𝑓) 2 1 0 1 2 3 0 1 
+ 
+ 
+ 
+ 
+【求和号𝚺𝚺】求和号是数学当中非常常用的一个记号，用来简写一个连加长式子。比如现在有一个100 项的连加式 
+𝑥𝑥
+1 + 𝑥𝑥2 + ⋯ + 𝑥𝑥100 
+用求和号可以简写为 
+� 𝑥𝑥𝑖𝑖
+100
+𝑖𝑖=1
+ 
+𝑖𝑖是求和指标，被求和的𝑥𝑥1到𝑥𝑥100统称为𝑥𝑥𝑖𝑖，范围是1 ≤ 𝑖𝑖 ≤100, 将其写在求和号Σ的下方和上方，作为求和的上下
+限。求和指标𝑖𝑖可以用其他字母代替。在不引起歧义的情况下，求和号也可以将求和上下限省略写为 
+� 𝑎𝑎𝑖𝑖
+𝑖𝑖
+    � 𝑎𝑎𝑖𝑖 
+甚至已经明确知道被求和项𝑥𝑥的全部信息，求和也可以简写为∑ 𝑥𝑥，表示对所有的𝑥𝑥进行求和。特别的如果对一个常
+数求和，比如Σ3，则往往提前知道求和的个数𝑛𝑛，所以就是Σ3 = 3 𝑛𝑛. 
+【eg】数列𝑎𝑎𝑛𝑛的前𝑛𝑛项和𝑆𝑆𝑛𝑛= ∑ 𝑎𝑎𝑘𝑘
+𝑛𝑛
+𝑘𝑘=1 。 
+【eg】𝑛𝑛个原始数据的平均数 𝑥𝑥̅=
+∑ 𝑥𝑥
+𝑛𝑛, 分组数据的平均数 𝑥𝑥̅=
+∑ 𝑓𝑓 𝑥𝑥
+∑ 𝑓𝑓, 其中𝑓𝑓是𝑥𝑥的频率。 
+【Page31 2.4】Find the mean of the 𝟒𝟒𝟒𝟒 values of 𝒙𝒙, given in the following table. 
+𝑥𝑥 31 32 33 34 35 
+𝑓𝑓 5 7 9 8 11 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 7 ===
+Central tendency | Lars Qiu 
+ 
+ Central tendency of continuous data 连续数据的集中趋势 
+连续变量如果已经分组，那么原始数据是看不到的，所以只能通过组的数据来计算。 
+【modal class 众组】频率密度最高的组即为众组，注意并不是频率最高的组，因为如果组距很大则并不会体现数
+据在某个局部的集中。在频率分布直方图中，众组就是最高的那个条。 
+【Page28 2.1】Find the modal class of the 270 pencil lengths, given to the nearest centimeter in the following 
+table. 
+Length 𝑥𝑥cm    4 -7  8 -10  11- 12 
+No. pencil(𝑓𝑓)   100   90    80 
+ 
+ 
+ 
+ 
+ 
+【mean of continuous data平均数】 首先连续数据图标大多为分组数据(grouped data), 所以平均数也是
+𝑥𝑥̅=
+∑ 𝑓𝑓 𝑥𝑥
+∑ 𝑓𝑓，
+但是每个𝒙𝒙是每个组的中点。 
+【page33 2.8】calculate an estimate of the mean age of a grouped of 50 students, where there are sixteen 
+18-year-olds, twenty 19-year-olds and fourteen who are either 20 or 21 years old. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Page35 13.】The following table summaries the number of tomatoes produced by the plants in the plots on 
+a farm. 
+No. tomatoes 20 − 29 30 − 49 50 − 79 80 − 100 
+No. plots(𝑓𝑓) 329 413 704 258 
+a. Calculate an estimate of the mean number of tomatoes produced by these plots. 
+b. The tomatoes are weighed accurately and their mean mass is found to be 156.50 grams. At market they 
+are sold for $3.20 per kilogram and the total revenue is $50530. Find the actual mean number of 
+tomatoes produced per plot. 
+c. Why should your answer in part b be inaccurate?  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 8 ===
+Central tendency | Lars Qiu 
+ 
+【median of continuous data 中位数】连续数据计算中位数需要累积频率折线图，并且用【虚线在中间频率卡一
+下】 
+【Page43】Consider the masses of 300 museum artefacts, which are represented in the following cumulative 
+frequency graph. 
+ 
+对连续数据来说， 如果题目给的是累积频率折线图， 那么估计某个位置的量的时候， 是用 【卡一下】 ， 如果给的是频
+率分布直方图，那么需要默认组内分布均匀，插值计算(后面学习四分位点的时候会知道)。 
+ Coded data“编码”数据 
+原始数据可能数值会比较大，比较难处理，利用一些变量替换可以简单处理。绝大多数情形，变量替换是线性的
+替换。计算这些 coding 前后的数据关系的题目实际上也是求和号的应用。 
+【Page38 2.9】Σ(𝑏𝑏 −5) = 127.0 𝑛𝑛
+𝑏𝑏= 10,   Σ(𝑔𝑔+ 5) = 351.0 𝑛𝑛𝑔𝑔= 15,  find  𝑏𝑏�, 𝑔𝑔̅. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【eg】
+If 𝑦𝑦=
+𝑥𝑥−𝑎𝑎
+𝑏𝑏 , show that 
+𝑦𝑦 �= 𝑥𝑥̅ − 𝑎𝑎
+𝑏𝑏 . 
+也就是说变量替换之后的平均数，可通过之前的平均数，遵循相同的变量替换计算得来。 
+ 
+ 
+ 
+ 
+ 
+【Homework】Page29 6.7.  Page39 2.3.8.    Page47 4.7.  
+
+
+=== PDF PAGE 9 ===
+Variation | Lars Qiu 
+ 
+Measures of variation 分散性的量度 
+上节介绍的【众数】 【中位数】和【平均数】 ，是刻画数据集中趋势的量。换句话说，通过这三个量可以大体知道数
+据“集中”在什么取值范围中。而本节要介绍的量，则是用来刻画数据的分散程度，从而更好的了解数据的全貌。 
+ Range, interquartile range and percentiles 极差，四分位差与百分位差 
+【离散数据四分位点】还是通过之前的例子来讲解，仍然首先看离散数据： 
+ 
+ 
+ 
+【range 极差】数据当中最大值与最小值之差，此例当中即为43 − 36 = 7 
+【quartile 四分位点】即一组数据当中处于前 
+1
+4 位置【𝑄𝑄1】与后 
+1
+4
+ 位置【𝑄𝑄3】的数据。如何体现
+1
+4
+的位置呢？方法是
+【一半数据的中位数】 。按照数据个数的奇偶， 分为两种情况： 如果数据个数是偶数，比如上述数据当中， 数据量是
+10，
+10
+2 = 5，那么【𝑄𝑄1为前5个数据的中位数】 ，𝑄𝑄1 = 37。同理，𝑄𝑄3是后5个数据的平均数，𝑄𝑄3 = 41。如果数据个数
+是奇数，那么先去掉原先的中位数，这样就变成偶数个，在取其前半部分的中位数即为𝑄𝑄1。 
+【interquartile range(IQR)四分位差】IQR=𝑄𝑄3 − 𝑄𝑄1，所以 IQR 是一个刻画数据中间50%部分的量。 上例中 IQR=
+41 − 37 = 4。 
+【Page57 3.2】Find the interquartile range of the eight ordered values 2, 5, 9, 13, 29, 49, 55. 
+ 
+ 
+【Page57 3.3】Find the interquartile range of the seven values 69, 17, 43, 6,73, 77, 39. 
+ 
+【连续数据的四分位点】连续数据的四分位点方法跟上一节求中位数一样， 【利用累积数据折线图找准 
+1
+4 的位置卡一
+下】 ，同样的原理也可以任意的percentile 百分位点。 
+【Page59 3.5】The following graph illustrates the times, in minutes, taken by 500 people to complete a task. 
+Use the graph to find an estimate of: 
+a. the greatest possible range. 
+b. the interquartile range   
+c. the 95th percentile 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+鞋码 shoe size (𝑥𝑥) 36 37 38 39 40 41 42 43 
+人数 frequency (𝑓𝑓) 2 1 0 1 2 3 0 1 
+
+
+=== PDF PAGE 10 ===
+Variation | Lars Qiu 
+ 
+ Box and whisker diagram 盒方图 
+盒方图是一个很好的刻画数据分布的范围的统计图，因为明确地将数据的最大值、最小值、𝑄𝑄1,中位数和𝑄𝑄3标记了
+出来。 
+ 
+【skewness 偏态】因为盒方图标记出来𝑄𝑄1,𝑄𝑄2,𝑄𝑄3， 最小值和最大值， 所以容易看出数据的对称性。 其中一个衡量对
+称性的概念是 skewness(偏态)。如果一组数据中，𝑄𝑄3 − 𝑄𝑄2 > 𝑄𝑄2 − 𝑄𝑄1(以及大数值的尾端更长)，则为 positively 
+skewness(正偏)，如果𝑄𝑄3 − 𝑄𝑄2 < 𝑄𝑄2 − 𝑄𝑄1(以及小数值的尾端更长)，则为 negatively skewness(负偏)。 
+所以如果𝑄𝑄3 − 𝑄𝑄2 ≈ 𝑄𝑄2 − 𝑄𝑄1，则可认为是对称的。 
+ 
+ Variance and standard deviation 方差和标准差 
+方差与平均数一样，是我们很早就知道的概念。它用作衡量数据的离散程度，标准差的作用与方差一样，两个量
+各自都有合适的应用场景。 
+【variance 方差】下面假设一组离散数据是𝑥𝑥1, 𝑥𝑥2, … , 𝑥𝑥𝑛𝑛。则个数为𝑛𝑛，平均数为 𝑥𝑥̅ =
+Σ𝑥𝑥
+𝑛𝑛。 
+𝑉𝑉(𝑥𝑥) = 𝜎𝜎2 = Σ(𝑥𝑥− 𝑥𝑥̅)2
+𝑛𝑛 = 𝑆𝑆𝑥𝑥𝑥𝑥
+𝑛𝑛= Σ𝑥𝑥2
+𝑛𝑛− �Σ𝑥𝑥
+𝑛𝑛�
+2
+= Σ𝑥𝑥2
+𝑛𝑛− (𝑥𝑥̅)2. 
+从方差的概念可以推出来它的另一种形式，看出它是【平方的平均数减去平均数的平方】。后面的这种形式在题目
+当中比较好用，因为题干经常给Σ𝑥𝑥2与Σ𝑥𝑥。 
+【standard deviation 标准差】𝜎𝜎= �𝑉𝑉𝑉𝑉𝑉𝑉(𝑥𝑥)，也就是方差的算数平方根。 
+【grouped data 的方差和标准差】grouped data：𝑥𝑥1, … 𝑥𝑥𝑛𝑛的频率分别是𝑓𝑓1, … , 𝑓𝑓𝑛𝑛，则方差 
+𝑉𝑉(𝑥𝑥) = Σ𝑥𝑥2𝑓𝑓
+Σ𝑓𝑓− �Σ𝑥𝑥𝑓𝑓
+Σ𝑓𝑓�
+2
+， 
+标准差𝜎𝜎= �𝑉𝑉(𝑥𝑥)。如果是连续数据，则把每个𝑥𝑥改为分组的中点即可，计算方式仍然相同。 
+【Page66 3.6】For the set of five numbers 3,9,15,24,29. Find the standard deviation and then find which of 
+the five numbers are more than one standard deviation from the mean. 
+ 
+ 
+【Page67 3.7】Find the standard deviation of the values of 𝑥𝑥 given in the following table, correct to 3s.f.. 
+𝑥𝑥 12 14 16 
+𝑓𝑓 13 28 10 
+ 
+ 
+ 
+【page68 3.8】Calculate an estimate of the standard deviation of the heights of the 20 children given in the 
+following table. 
+Height(meters) 1.2 − 1.4 − 1.5 − 1.7 
+No. children(𝑓𝑓) 2 12 6 
+ 
+ 
+
+
+=== PDF PAGE 11 ===
+Variation | Lars Qiu 
+ 
+方差的公式需要熟练运用，正用反用以及多组数据的方差。 
+【Page72 3.9】Given that 𝑛𝑛= 25, Σ𝑥𝑥= 275 and 𝑉𝑉𝑉𝑉𝑉𝑉(𝑥𝑥) = 7, find Σ𝑥𝑥2. 
+ 
+ 
+ 
+【Page72 3.10】The heights, 𝑥𝑥cm, of 10 boys are summarized by Σ𝑥𝑥= 1650 and Σ𝑥𝑥2 = 275490. 
+The heights, 𝑦𝑦cm, of 15 girls are summarized by Σ𝑦𝑦= 2370 and Σ𝑥𝑥2 = 377835.  
+Calculate, to 3s.f. the standard deviation of the heights of all 25 children together. 
+ 
+ 
+ 
+ 
+【Page73 3.11】In an examination, the percentage marks of the 120 boys are denoted by 𝑥𝑥, and the 
+percentage marks of the 80 girls are denoted by 𝑦𝑦. 
+The marks are summarized by the totals Σ𝑥𝑥= 7020, Σ𝑥𝑥2 = 424320 and Σ𝑦𝑦2 = 352130.  
+Calculate the girl’s mean mark, given that the standard deviation for all these students is 10.  
+ 
+ 
+ 
+ 
+【coded data 的方差和标准差】如果𝑦𝑦=
+𝑥𝑥−𝑎𝑎
+𝑏𝑏, 那么𝑉𝑉𝑉𝑉𝑉𝑉(𝑦𝑦) =
+1
+𝑏𝑏2 𝑉𝑉𝑉𝑉𝑉𝑉(𝑥𝑥)，𝜎𝜎(𝑥𝑥) =
+1
+𝑏𝑏𝜎𝜎(𝑦𝑦)。因为方差是一个衡量波动
+性的量，所以平移量𝑉𝑉是不参与方差的变化的，但是倍数𝑏𝑏就会起作用。而因方差是二次齐次的，所以是平方倍。 
+【page76 3.12】Eight values of 𝑥𝑥 are summarized by the totals Σ(𝑥𝑥− 10)2 = 1490 and Σ(𝑥𝑥− 10) = 100.  
+Twelve values of 𝑦𝑦 are summarized by the totals Σ(𝑦𝑦+ 5)2 = 5139 and Σ(𝑦𝑦+ 5) = 234.  
+Find the variance of the 20 values of 𝑥𝑥 and 𝑦𝑦 together. 
+ 
+ 
+ 
+ 
+【Page79 3.14】The standard deviation of the prices of a selection of brand-name products is $24. 
+Imitations of these products are all sold at 25% of the brand-name price. Find the variance of the prices of 
+the imitations. 
+ 
+ 
+ 
+ 
+【Page80 3.15】Given that Σ(3𝑥𝑥− 1)
+2 = 9136, Σ(3𝑥𝑥− 1) = 53 and 𝑛𝑛= 10, find the value of Σ𝑥𝑥2. 
+ 
+ 
+ 
+ 
+【Homework】Page61 1.de 6.8.9.10.  Page70 6.7.8.11.  Page73 1.de 4.5.6.   
+Page77 8.10.11.12. 
+
+=== PDF PAGE 12 ===
+Probability(1) | Lars Qiu 
+ 
+Introduction of probability, Classical model 概率入门，古典概型 
+ How to understand probability?如何理解概率？ 
+概率这个词在生活中很常见，并且各位同学从直观上也能很好的理解它。但是为了日后深入的学习，有一些基本
+的概念和想法需要在第一次课说清楚。 
+【随机事件 random event】确切的讲，概率问题的研究对象是随机事件，也就是发生与否不确定的事件。与之相
+对的是【确定事件】 ，比如10 + 5 = 15这就是一个确定事件，而“明天的天气是晴天” ，则是一个随机事件。随机
+事件用大写字母表示，比如𝐴𝐴：明天下雨。 
+【事件域 sample space】事件域就是所研究问题当中所有随机事件的全体，这是一个由随机事件构成的集合，并
+且是全集。比如“明天的天气是晴天”这个随机事件，它如果不发生，那么必然有其他天气取而代之，可能是雨
+天，也可能是阴天。那么可能发生的所有天气就构成了“明天天气如何？”这个问题的事件域。 
+【基本事件 elementary event/outcome】即事件域当中最小的、不可分割的事件。需要明确一点是有些随机事件
+可以是若干个随机事件的组合或叠加。比如“明天不下雨”这个随机事件，它可以看成是“明天晴天”和“明天
+阴天”两个随机事件的叠加，并且这两个随机事件如果无特殊说明，则看成是不可再分割的，此时称为基本事
+件。容易看成， 【两个不同的基本事件，是不可能同时发生的】 ，这种现象称为【互斥mutually exclusive】。 
+【事件与集合】用集合类比事件是学习概率常用方法。通常来讲， 【基本事件是集合中的元素】 ， 【事件看成是元素
+的集合】 ， 【事件域可以看成全集】 。 
+【概率 probability】按照概率论的讲法，概率是一个函数，定义域是随机事件的全体，值域是[0,1]。因为任何随
+机事件是基本事件的集合，所以概率是一个定义在集合上的函数，简称为集函数。事实上这个函数在某种程度上
+体现了集合的大小，所以又称为【测度】 。如果一个事件概率为1，那么称为【必然事件】 ；如果一个事件概率为
+0，称为【不可能事件】 。概率用字母𝑝𝑝来表示(大小写看情况而定)，比如事件𝐵𝐵：明天太阳从西边出来，则𝑃𝑃(𝐵𝐵) =
+0。 
+【概率的数值如何确定】一个具体问题当中的随机事件的概率是多少，则需要具体问题具体分析。通常来讲，确
+定概率的数值的方法就是做随机试验(random trial)，并且统计并分析随机试验的结果，随机试验的结果称为【频
+率】 ，可以通过频率来相应的估计概率。但这并不意味着概率是随机试验“统计出来的结果” ，它是先验的，它由
+随机事件本身决定。 
+ 
+ 
+ 
+Classical model of probability 古典概型 
+掷一枚均匀的(fair)硬币，正面朝上的概率是 
+1
+2 ；掷一枚均匀的骰子(dice)，6 点朝上的概率是 
+1
+6
+ ……这种看起来十
+分简单的概率计算， 实际上是概率当中最经典最基本的一类模型： 古典概型。 古典概型的定义是： 【事件域只包含有
+限个基本事件】 ， 并且 【每个基本事件发生的概率是相等的】 。 那么如果假设事件域所包含所有基本事件的个数为𝑛𝑛，
+那么每个基本事件发生的概率就是 
+1
+𝑛𝑛 。而这些基本事件可以进行组合构成其他基本事件，那么就有 
+随机事件的概率 = 构成随机事件的基本事件的个数
+事件域所含基本事件的总个数
+ 
+【eg】Two 6-sided fair dices are rolled, calculate the probability that the sum of two numbers of the dices is 
+8. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 13 ===
+Probability(1) | Lars Qiu 
+ 
+可以看成在某些复杂的场景计算基本事件的个数可能会变的异常困难，这就是下一章着重讲的内容：计数原理。 
+ The intersection, union and complement of events, Venn diagram 
+前面提到，随机事件可以用集合来类比，那么集合的各种运算也代表了随机事件间的各种关系。 
+概率语言 集合语言 
+交事件：𝐴𝐴, 𝐵𝐵同时发生；𝐴𝐴 and 𝐵𝐵 𝐴𝐴 ∩ 𝐵𝐵 
+并事件：𝐴𝐴, 𝐵𝐵发生一件；𝐴𝐴 or 𝐵𝐵 𝐴𝐴 ∪ 𝐵𝐵 
+对立(补)事件：𝐴𝐴不发生；not 𝐴𝐴 𝐴𝐴′ = 𝐶𝐶𝑈𝑈𝐴𝐴 
+请同学们将三种集合运算用 Venn 图表示。 
+ 
+ 
+ 
+ 
+我们仍然以投掷两个均匀六面骰子为例。 
+【eg】Two 6-sided fair dices are rolled, decide the relation of the following events group. 
+a. Event A: The first dice shows number 6; Event B: The second dice shows number 6; Event C: The sum 
+of two number is 12. 
+b. Event D: The two dices both show odd numbers; Event E: The two dices both show even number; Event 
+F: The sum of two dices’ number is even. 
+c. Event G: The sum of two number is less than 9, Event H: the sum of two number is more than 8. 
+ 
+ 
+ 
+ 
+【Venn 图表示复杂事件】Venn 图是可以清楚表示事件之间的重叠关系， 每一个区域或者填写概率， 或者填写概率
+期望(即概率乘总数)。 
+ 
+Mutually exclusive events 互斥事件 
+两个事件𝐴𝐴, 𝐵𝐵如果不可能同时发生，或它们的交事件的概率为0，那么称𝐴𝐴，𝐵𝐵为互斥事件。显然，对立事件𝐴𝐴与𝐴𝐴′
+是一组互斥事件。 
+【eg】用 Venn 图来表示事件𝐴𝐴, 𝐵𝐵互斥，并且理解𝑃𝑃(𝐴𝐴 ∪ 𝐵𝐵) = 𝑃𝑃(𝐴𝐴) + 𝑃𝑃(𝐵𝐵). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【eg】如果𝐴𝐴, 𝐵𝐵不互斥，那么用 Venn 图来表示它们，并且理解掌握【概率加法公式】 ： 
+𝑃𝑃(𝐴𝐴 ∪ 𝐵𝐵) = 𝑃𝑃(𝐴𝐴) + 𝑃𝑃(𝐵𝐵) − 𝑃𝑃(𝐴𝐴 ∩ 𝐵𝐵). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 14 ===
+Probability(1) | Lars Qiu 
+ 
+【Page95 4.2】One digit is randomly selected from 1, 2, 3, 4, 5, 6, 7,8 and 9. Three possible events are:  
+𝐴𝐴: a multiple of 3 is selected. 𝐵𝐵: a factor of 8 is selected. 𝐶𝐶: a prime number is selected. 
+a. Show that the only pair of mutually exclusive events from 𝐴𝐴, 𝐵𝐵 and 𝐶𝐶 is 𝐴𝐴 and 𝐵𝐵, and find 𝑃𝑃(𝐴𝐴∪ 𝐵𝐵). 
+b. Find:  i 𝑃𝑃(𝐴𝐴∪ 𝐶𝐶)   ii  𝑃𝑃(𝐵𝐵∪ 𝐶𝐶). 
+ 
+ 
+ 
+ 
+【Page97 4.3】In a survey, 50% of the participants own a desktop (𝐷𝐷) , 60% own a laptop (𝐿𝐿) and 15% 
+own both. What percentage of the participants owns neither a desktop nor a laptop? 
+ 
+ 
+ 
+ 
+【Page97 4.4】Forty children were each asked which fruits they like 
+from apples(𝐴𝐴) , bananas(𝐵𝐵) and cherries(𝐶𝐶). The following Venn 
+diagram shows the number of children that like each type of fruit. 
+Find the probability that a randomly selected child likes apples or 
+bananas. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Page100 15.】Each of 27 tourists was asked which of the countries Angola(𝐴𝐴), Burundi(𝐵𝐵) and 
+Cameroon(𝐶𝐶) they had visited.
+ Of the group, 15 had visited Angola; 8 had visited Burundi; 12 had 
+visited Cameroon; 2 had visited all three countries; and 21 had visited only one. Of those who had visited 
+Angola, 4 had visited only one other country. Of those who had not visited Angola, 5 had visited Burundi 
+only. All of the tourists had visited at least one of these countries. 
+a. Draw a fully labelled Venn diagram to illustrate this information. 
+b. Find the number of tourists in set 𝐵𝐵′ and describe them. 
+c. Describe the tourists in set (𝐴𝐴∪ 𝐵𝐵) ∩ 𝐶𝐶′ and state how many there are. 
+d. Find the probability that a randomly selected tourist from this group had visited at least two of these 
+three countries. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Homework】Page99 7.8.9.10.11.12. 
+
+
+=== PDF PAGE 15 ===
+Probability(2) | Lars Qiu 
+ 
+Conditional probability and independence 条件概率与独立性 
+ Conditional probability 条件概率 
+在研究一个具体的概率问题时，常常会出现某一个随机事件的概率大小依赖于另一个随机事件发生与否，用天气
+在此举例再好不过。 
+【eg】已知明天晴天的概率是0.6，阴天的概率是0.4；又已知如果阴天，下雨的概率是0.5，晴天下雨的概率是
+0.1。用树状图(tree diagram)表示上述事件族，并且求明天既阴天又下雨的概率，和下雨的总概率。 
+ 
+ 
+ 
+ 
+ 
+此处下雨的概率是强烈依赖于是否阴天，如果阴天，下雨的概率是比较大的，有0.5；如果晴天，下雨的概率虽然
+有(太阳雨)，但也大大减小。这就说明两个随机事件存在某种程度上的因果关系，但是这个关系不是绝对的，也要
+用概率刻画。而这种包含先置条件的概率，称之为条件概率。写法如下：事件𝐴𝐴在事件𝐵𝐵发生情况下发生的概率记
+为𝑃𝑃(𝐴𝐴|𝐵𝐵)。上例中，在晴天的情况下下雨的概率是0.1，表示出来就是𝑃𝑃�下雨�晴天� = 0.1。 
+【条件概率的定义式】在上例中，我们很容易根据阴天的概率0.4和阴天条件下下雨的概率0.5，求出阴天又下雨的
+概率是0.4 × 0.5 = 0.2。写出来就是𝑃𝑃�阴天� ⋅ 𝑃𝑃�下雨�阴天� = 𝑃𝑃(阴天 ∩ 下雨)，稍加整理得到 
+𝑃𝑃�下雨�阴天� = 𝑃𝑃(阴天 ∩ 下雨)
+𝑃𝑃�阴天
+�
+ 
+，这个根据直觉得出的关系，是因为我们已经接受了阴天和下雨之间常识性的关系。但事实上，上述公式对任何
+两个事件都广泛成立。随便两个事件𝐴𝐴和𝐵𝐵，我们依然可以【强行联系】 ，观察𝐴𝐴为在𝐵𝐵发生与否情况下概率的变
+化，并且得出 
+𝑃𝑃(𝐴𝐴|𝐵𝐵) = 𝑃𝑃(𝐴𝐴 ∩ 𝐵𝐵)
+𝑃𝑃(𝐵𝐵) . 
+这几乎就是条件概率最重要的公式，我们当然可以直接用它定义条件概率，但没有实例支撑会稍显突兀。 
+【全概率公式】上面已经计算下雨的总概率，是把阴天与否下雨的概率都加起来，所以 
+𝑃𝑃(𝐴𝐴) = 𝑃𝑃(𝐴𝐴|𝐵𝐵)𝑃𝑃(𝐵𝐵) + 𝑃𝑃(𝐴𝐴|𝐵𝐵′)𝑃𝑃(𝐵𝐵) 
+下例则是条件概率常考的题型。如果已知某天下雨了，那么这一天本来是阴天还是晴天呢？从常识上讲，因为晴
+天下雨的概率小，所以下雨前是晴天的概率也会小。 
+【eg】已知明天晴天的概率是0.6，阴天的概率是0.4；又已知如果阴天，下雨的概率是0.5，晴天下雨的概率是
+0.1。已知某天下雨了，那么是太阳雨的概率是多少？ 
+Sol.这也是个条件概率，只不过现在条件是下雨，也就是要计算𝑃𝑃(晴天|下雨)… 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【条件概率的“倒果为因” 】我们计算的过程如果用公式记录下来，其实就是：
+ 
+𝑃𝑃(𝐵𝐵|𝐴𝐴) = 𝑃𝑃(𝐵𝐵 ∩ 𝐴𝐴)
+𝑃𝑃(𝐴𝐴) = 𝑃𝑃(𝐴𝐴 ∩ 𝐵𝐵)
+𝑃𝑃(𝐴𝐴|𝐵𝐵)𝑃𝑃(𝐵𝐵) + 𝑃𝑃(𝐴𝐴|𝐵𝐵′)𝑃𝑃(𝐵𝐵) = 𝑃𝑃(𝐴𝐴|𝐵𝐵)𝑃𝑃(𝐵𝐵)
+𝑃𝑃(𝐴𝐴|𝐵𝐵)𝑃𝑃(𝐵𝐵) + 𝑃𝑃(𝐴𝐴|𝐵𝐵′)𝑃𝑃(𝐵𝐵) 
+这就是概率论当中著名的【贝叶斯 Bayers 公式】 ，它的重要性甚至堪比Newton-Leibniz 公式之于微积分，以此
+为基础开创的贝叶斯学派在概统当中占据举足轻重的地位。 
+    
+    
+    
+    
+
+=== PDF PAGE 16 ===
+Probability(2) | Lars Qiu 
+ 
+【Page108 4.9】A child is selected at random from a group of 11 boys and 9 girls, and one of the girls is 
+called Rose. Find the probability that Rose is selected, given that a girl is selected. 
+ 
+ 
+ 
+【Page109 4.10】The following table shows the numbers of students in a class who study Biology(𝐵𝐵) and 
+who study Chemistry(𝐶𝐶). 
+Represent the data in a suitable Venn diagram, and find the probability that a randomly selected student: 
+a. Studies Chemistry, given that they study Biolpgy 
+b. Does not study Biology, given that they do not study Chemistry. 
+ 
+ 
+ 
+【Page109 4.11】Two children are selected at random from a group of five boys and seven girls. Find the 
+probability that the second child selected is a boy, given that the first child selected is: 
+a. a boy            b.  a girl. 
+ 
+ 
+ 
+ 
+ 
+Independence 独立性 
+两个事件𝐴𝐴, 𝐵𝐵相互独立即𝐴𝐴的概率在𝐵𝐵发生与否的情况下并不发生改变，也就是说𝑃𝑃(𝐴𝐴) = 𝑃𝑃(𝐴𝐴|𝐵𝐵) = 𝑃𝑃(𝐴𝐴|𝐵𝐵′)。 
+【独立性的等价定义】我们是通过条件概率来定义的独立性。事实上𝑃𝑃(𝐴𝐴) = 𝑃𝑃(𝐴𝐴|𝐵𝐵) =
+𝑃𝑃(𝐴𝐴∩𝐵𝐵)
+𝑃𝑃(𝐵𝐵) ,所以 
+𝑃𝑃(𝐴𝐴 ∩ 𝐵𝐵) = 𝑃𝑃(𝐴𝐴)𝑃𝑃(𝐵𝐵), 
+也就是说𝐴𝐴, 𝐵𝐵同时发生的概率是其各自概率的乘积，这也是任意两事件是否独立的判定条件。可以发现, 
+𝑃𝑃(𝐵𝐵) = 𝑃𝑃(𝐴𝐴 ∩ 𝐵𝐵)
+𝑃𝑃(𝐴𝐴) = 𝑃𝑃(𝐵𝐵|𝐴𝐴), 
+所以一旦有𝑃𝑃(𝐴𝐴) = 𝑃𝑃(𝐴𝐴|𝐵𝐵)，就有𝑃𝑃(𝐵𝐵) = 𝑃𝑃(𝐵𝐵|𝐴𝐴)。 
+【独立与互斥】𝐴𝐴, 𝐵𝐵独立，则若𝑃𝑃(𝐴𝐴 ∩ 𝐵𝐵) = 0 ⇒ 𝑃𝑃(𝐴𝐴) = 0或𝑃𝑃(𝐵𝐵) = 0。所以如果两个独立的事件互斥那么其中必有
+一个事件为0事件。 
+【Page102 4.6】Abha passes through three independent sets of traffic lights when she drives to work. The 
+probability that she has to stop at any particular set of lights is 0.2. Find the probability that Abha: 
+a. first has to stop at the second set of lights 
+b. has to stop at exactly one set of lights 
+c. has to stop at any set of lights. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 17 ===
+Probability(2) | Lars Qiu 
+ 
+【Page105 4.8】In a group of 60 students, 27 are male (𝑀𝑀) and 20 
+study History (𝐻𝐻) . The Venn diagram shows the numbers of 
+students in these and other categories. One student is selected at 
+random from the group. Show that the events ‘a male is selected’ and 
+‘a student who studies History is selected are independent. 
+ 
+ 
+ 
+ 
+【条件概率和独立性与 Venn 图(EdxS1 P85 15)】𝐽𝐽, 𝐾𝐾 and 𝐿𝐿 are three events such that 𝑃𝑃(𝐽𝐽) = 0.25, 𝑃𝑃(𝐾𝐾) =
+0.45 and 𝑃𝑃(𝐿𝐿) = 0.15. Given that 𝐾𝐾 and 𝐿𝐿 are independent events, 𝐽𝐽 and 𝐿𝐿 are mutually exclusive and 
+𝑃𝑃(𝐽𝐽∩ 𝐾𝐾) = 0.1, 
+a. Draw a Venn diagram to illustrate this situation. 
+b. Find 𝑃𝑃(𝐽𝐽∪ 𝐾𝐾), 𝑃𝑃(𝐽𝐽
+′ ∩ 𝐿𝐿′), 𝑃𝑃(𝐽𝐽|𝐾𝐾), 𝑃𝑃(𝐾𝐾|𝐽𝐽′ ∩ 𝐿𝐿′) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【条件概率判断可靠性(EdxS1 P81 11.)】A genetic condition is known to be present in 4% of a population. A 
+test is developed to help find whether or not someone has the genetic condition. If a person has the 
+condition, the test is positive with probability 0.9. If a person does not have the condition, the test is 
+positive with probability 0.02. 
+a. Draw a tree diagram to represent this information. 
+A person is selected at random from the population and tested for this condition, 
+b. Find the probability that the test is negative. 
+A doctor randomly selects a person from the population and tests for the condition. 
+c. Given that the test is negative, find the probability that the person does have the condition.(假阴性) 
+d. Given that the test is positive, find the probability that the person does not have the condition.(假阳性) 
+e. Comment on the effectiveness of this test. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+=== PDF PAGE 18 ===
+Probability(2) | Lars Qiu 
+ 
+【EdxS1 P73 9.】A doctor completes a medical study of 100 people, 5 of whom are known to have an 
+illness and 95 of whom are known or not to. A diagnostic test (a test to identify illness) is applied. All 5 of 
+the people with the illness test positive, and 10 people without the illness also test positive. Given that 
+event 𝐴𝐴=person has the disease and event 𝐵𝐵=person tests positive, 
+a. Draw a Venn diagram to represent this situation. 
+b. Calculate 𝑃𝑃(𝐴𝐴|𝐵𝐵) 
+c. With reference to your answer to b., comment on the usefulness of the diagnostic test. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【EdxS1 P93 23.】At a college, there are 148 students studying either engineering, childcare or tourism. 
+Of these students, 89 wear glasses and the others do not. There are 30 engineering students, of whom 18 
+wear glasses. There are 68 childcare students, of whom 44 wear glasses. 
+A student is chosen at random. Find the probability that this student: 
+a. is studying tourism 
+b. does not wear glasses, given that the student is studying tourism. 
+Among the engineering students, 80% are right -handed. Corresponding percentages for childcare and 
+tourism students are 75% and 70% respectively. 
+A student is again chosen random. 
+c. Find the probability that this student is right-handed. 
+d. Given that this student is right-handed, find the probability that the student is studying engineering. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Homework】Page106 4.5.8.9.  Page110 2.4.7.10.  Page115 4.8.13.16.17.  
+
+=== PDF PAGE 19 ===
+Permutation and combination(1) | Lars Qiu 
+ 
+Permutation 排列 
+ Addition and multiplication principle 加乘原理 
+从本节开始我们将学习数学当中一个非常古老并且困难的专题：计数。当然这里的计数并不是单纯的数数，而是
+根据数学原理快速准确的对于某些数学对象计算个数。其中最重要的两个原理就是分类加法原理和分步乘法原
+理，虽然初看起来，它们都非常好理解，但是想在具体问题当中灵活运用并不容易。 
+【分类加法原理】某人要在某天从北京出发去上海，在当天飞机有3班，火车有4躺，当然也可以选择自驾。假设
+所有的安排都不会冲突，那么共有几种出行计划可供选择？答案非常简单：3 + 4 + 1 = 8种。因为每类出行方式
+都各自可供选择的选项，每个选项都可以达到目的，所以共有8种。 
+【分步乘法原理】情况有变，这个人要在去上海的路上途径天津和南京，于是他只能选择火车，已知从北京到天
+津的火车有5趟，从天津到南京的火车有4趟，从南京到上海的火车有8趟，假设所有的安排都不会发生冲突，他总
+共可以安排有多少种出行计划？相信各位凭借直觉也很容易得到答案：5 × 4 × 8 = 160种。 
+为什么这里三个数就是乘而不是加呢？这是因为我们知道第二个问题中的任何一趟火车都不能完全从出发地到达
+目的地，所以必须要“分步” ，而任何一步选定之后并不影响前后任何一步，所以不同步骤之间总共计数是相乘。 
+之后我们可能会在具体问题当中不加说明的使用加乘原理。分类加法原理的直接应用就是在分类讨论中把各个类
+的个数相加，分步乘法原理的一个直接应用就是排列数。 
+ 
+Permutation 排列 
+【eg】5个字母𝐴𝐴, 𝐵𝐵, 𝐶𝐶, 𝐷𝐷, 𝐸𝐸排成一列，共有几种方式？ 
+对于这个问题， 我们要认识到： 这其实问一个顺序问题， 也就是说5个字母排序共有几种顺序？而顺序总是1.2,3,4,5
+的进行。所以一种思路就是一个位置一个位置的安排：第一步是选一个字母排到1位置；第二步是从剩下四个字母
+选一个排到2位置，以此类推。那么一个排序问题就分成了5步，而每一步的种数实际上依赖于字母的选择范围。比
+如第一步我们需要在所有的5个字母中选取， 就有5种方式； 第二步需要在剩下4个字母中选取， 就有4种方式……以
+此类推，将这所有方式都乘起来，就是5 × 4 × 3 × 2 × 1 = 120种。 
+以上就是5个互不相同元素排列种数的计算， 应用了乘法原理， 特点是从5开始一个数挨着一个往下乘， 乘到1结束，
+等于120，这个式子记成 𝑃𝑃5⬚
+5 = 120。这也叫【5的全排列】 。 
+【eg】5个字母𝐴𝐴, 𝐵𝐵, 𝐶𝐶, 𝐷𝐷, 𝐸𝐸中的3个排成一列，共有几种方式？ 
+这个问题跟上面的区别就是现在只有3个位置，所以算到上例的第三步截止即可，答案就是5 × 4 × 3 = 60种，这个
+式子记成 𝑃𝑃3 = 60⬚
+5 。 
+【阶乘 factotial】𝑛𝑛的全排列 𝑃𝑃𝑛𝑛⬚
+𝑛𝑛 = 𝑛𝑛 ⋅(𝑛𝑛 −1) ⋅ (𝑛𝑛 −2) ⋅ … ⋅ 2 ⋅ 1经常也写成𝑛𝑛!,称为𝑛𝑛的阶乘。有两个特殊情况要记
+住：1! = 1 ，0! = 1 。 
+【排列数用阶乘表示】𝑛𝑛个元素排𝑚𝑚个位置，且𝑚𝑚 ≤ 𝑛𝑛，排列数为 
+𝑃𝑃𝑚𝑚= 𝑛𝑛(𝑛𝑛 −1) … ( 𝑛𝑛 − 𝑚𝑚+ 2)(𝑛𝑛 − 𝑚𝑚+ 1)⬚
+𝑛𝑛 . 
+【Page126 5.2】In how many ways can nine elephants and four mice be arranged in a line? 
+ 
+ 
+ 
+ 
+Permutations 𝒏𝒏 objects with repetitions 具有相同元素的𝒏𝒏个元素的排列 
+𝑛𝑛个元素当中可能有些重复，最典型的是有相同的字母，或者题目当中有类似于“identical”的字眼。处理这种问
+题经常说的一个方法就是“除以相同元素之间的顺序”，我们需要对这句话做出一些解释。 
+【eg】5个字母𝐴𝐴, 𝐴𝐴, 𝐴𝐴, 𝐵𝐵, 𝐶𝐶排成一列，共有几种方式？ 
+首先我们可以暂且把三个𝐴𝐴编号，记成𝐴𝐴1, 𝐴𝐴2, 𝐴𝐴3，于是先看成5个不同的元素排列，结果是5! = 120，但这显然多
+了，多多少呢？ 
+此时，我们应该有一个【等价类】的概念。比如，
+𝐴𝐴1𝐴𝐴2𝐴𝐴3𝐵𝐵𝐶𝐶与 𝐴𝐴1𝐴𝐴3𝐴𝐴2𝐵𝐵𝐶𝐶属于 不同的“种” ，但是属于同一个
+“类”——𝐴𝐴, 𝐵𝐵, 𝐶𝐶之间的位置是相同的，但是不同的𝐴𝐴的位置不同。所以算“同类不同种” 。而这个类共有多少种
+呢？这相当于𝐵𝐵, 𝐶𝐶的位置已经确定，排列三个𝐴𝐴，共有3! = 6种。 
+
+=== PDF PAGE 20 ===
+Permutation and combination(1) | Lars Qiu 
+ 
+再回到题干，我们是把三个𝐴𝐴等同，所以最后的目标实际上是求“类”的个数，这就不难：共有120种，按照每类
+6种分类，共有
+120
+6 = 20类。所以答案就是20种排列方式。 
+【重复排列公式】𝑛𝑛个元素，共有𝑘𝑘种。同种元素看成是完全形同的。第1种有𝑚𝑚1个，第2种有𝑚𝑚2个，……，第𝑘𝑘种
+有𝑚𝑚𝑘𝑘个，所以𝑚𝑚1 + ⋯ + 𝑚𝑚𝑘𝑘= 𝑛𝑛。那么这些元素排一列的个数是 
+ 
+𝑃𝑃𝑛𝑛⬚
+𝑛𝑛
+𝑚𝑚1! ⋅ 𝑚𝑚2! ⋅ … ⋅ 𝑚𝑚𝑘𝑘! = 𝑛𝑛!
+𝑚𝑚1! ⋅ 𝑚𝑚2! ⋅ … ⋅ 𝑚𝑚𝑘𝑘! . 
+【Page128 5.3】The capital of Burkina Faso is OUAGADOUGOU. Find the number of distinct 
+arrangements of all the letters in this word. 
+ 
+ 
+ 
+排列数并不总是适用所有题目的“arrangement”。 
+【Page128 5.】Ten coins are placed in a row on a table, each showing a head or tail. 
+a. How many different arrangements of heads and/or tail possible？ 
+b. Of the arrangements in part a., find how many have: 
+i. Five heads and five tails showing 
+ii. More heads than tails showing. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Permutations 𝒏𝒏 objects with restrictions 具有限制的𝒏𝒏个元素的排列 
+经常碰见题目对若干个元素排列，并且有各种限制条件，比如某两个元素必须一头一尾，某两个必须挨着，某两
+个必须隔开等等。方法就是把有限制的元素和没限制的元素个数分开排列，最后再根据乘法原理进行相乘。方法
+一般有三种： 【特殊元素先排法】 ， 【捆绑法】和【插空法】 。 
+【Page129 5.4】Find the number of ways of arranging six men in a line so that: 
+a. The oddest man is at far-left side. 
+b. The two youngest men are at the far-right side. 
+c. The shortest man is at neither end of line. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 21 ===
+Permutation and combination(1) | Lars Qiu 
+ 
+【eg 插空的另一种】5个男生2个女生站一列，女生不站一起，共多少种？ 
+Method1：插空，5个男生先排，这样有6个空(包括首位)，两个女生插6个空就是6 ⋅ 5 = 30所以是5! ⋅ 6 ⋅ 5 = 3600。 
+Method2：或者是所有人排列7!减去女生站在一起的情况， 此时先把两个女生看成是一个整体元素， 这样结合其5个
+男生共是6个元素，这些排列是6!，但是注意到两个女生她们互相之间还有顺序，所以 是6! ⋅ 2!。然后再7! − 6! ⋅ 2! =
+3600。 
+ 
+【eg 插空 Method2 失效】5个男生和3个女生站一列，女生不站一起，共多少种？ 
+ 
+ 
+ 
+ 
+ 
+ 
+排数字也是一类题型，注意数字当中有一些天然的隐含条件，比如，一个四位数默认千位不是0。以及最重要的：
+【如果第一步的不同选择会影响到其他步骤种类的个数的时候，要用分类，在用加法原理求和】 。 
+【Page130 5.5】How many odd four-digit numbers greater than 3000 can be made from the digits 1,2,3 and 
+4, each used once? 
+ 
+ 
+ 
+ 
+【Page130 5.6】Find haw many ways two mangoes(𝑀𝑀) and three watermelons(𝑊𝑊) can be placed in a line if 
+the five fruits are distinguishable and the mangoes: 
+a. must not be separated         b. must be separated  
+ 
+ 
+ 
+ 
+【Page133 5.9】In how many ways can 4 out of 18 girls sit on a four-seat sofa when the oldest girl must be 
+given one of the seats? 
+ 
+ 
+ 
+ 
+ 
+【Page133 5.10】In how many ways can four boys and three girls stand in a row when no two girls are allowed 
+to stand next to each other? 
+ 
+ 
+ 
+ 
+ 
+ 
+【Homework】Page128 1.-9.  Page131 1. -9.   Page 133 1. -13. 
+
+=== PDF PAGE 22 ===
+Permutation and combination(2) | Lars Qiu 
+Combination 组合 
+ Combinatoric number 组合数 
+我们在 Pure mathematic1 的二项式中已经学过组合数 
+𝐶𝐶𝑘𝑘⬚
+𝑛𝑛 = �𝑛𝑛
+𝑘𝑘� = 𝑛𝑛(𝑛𝑛 −1) … ( 𝑛𝑛 − 𝑘𝑘+ 1)
+𝑘𝑘! = 𝑛𝑛!
+𝑘𝑘! (𝑛𝑛 − 𝑘𝑘)!. 
+它所表示的含义实际上是【从𝑛𝑛个互不相同的元素中选取𝑘𝑘个元素的选法】 ，它与排列数 
+𝑃𝑃𝑘𝑘⬚
+𝑛𝑛 = 𝑛𝑛(𝑛𝑛 −1) … ( 𝑛𝑛 − 𝑘𝑘+ 1) 
+的区别是 𝐶𝐶𝑘𝑘⬚
+𝑛𝑛是𝑛𝑛个元素中选取𝑘𝑘个之后不需要考虑其排列，只是单纯考虑选取的方式，但是 𝑃𝑃𝑘𝑘⬚
+𝑛𝑛则是𝑛𝑛个元素当中
+选取𝑘𝑘个之后再排列，所以 
+𝑃𝑃𝑘𝑘⬚
+𝑛𝑛 = 𝐶𝐶𝑘𝑘⋅ 𝑛𝑛!⬚
+𝑛𝑛  
+但是为什么它们的定义式是排列数 𝑃𝑃𝑘𝑘⬚
+𝑛𝑛看起来更简单呢？原因是排列数我们是根据分步乘法原理定义的，而【分步
+的过程天然带有顺序】 ，所以分步相乘的结果自然就是带有顺序的排列数。如果不想带有顺序，则需要考虑排列元
+素相同但排列顺序不同的【等价类】 ，每类含有的个数正好是选取元素𝑘𝑘的全排列𝑘𝑘!，所以组合数 𝐶𝐶𝑘𝑘⬚
+𝑛𝑛正好是排列数
+中类的个数，即 𝐶𝐶𝑘𝑘⬚
+𝑛𝑛 =
+𝑃𝑃𝑘𝑘⬚
+𝑛𝑛
+𝑘𝑘! 。所以【组合数就是排列数除以被排列的顺序】 。 
+【eg】用组合的观点解释下列恒等式：�𝑛𝑛
+𝑘𝑘� = � 𝑛𝑛
+𝑛𝑛−𝑘𝑘�, �𝑛𝑛
+𝑘𝑘� + � 𝑛𝑛
+𝑘𝑘+1� = �𝑛𝑛+1
+𝑘𝑘+1� 
+ 
+ 
+ 
+首先要明确要从哪选。 
+【Page135 5.11】In how many ways can three fish be selected from a bowl containing seven fish and two 
+potatoes? 
+ 
+ 
+如果是从若干类元素中选取，并且每类元素选取的个数一定，此时要分步，然后用乘法原理相乘。 
+【Page135 5.12】In how many ways can five books and three magazines be selected from eight books and 
+six magazines? 
+ 
+ 
+ 
+如果是从若干类元素中选取，并且每类元素选取的个数不一定，此时要先分类，每类再分步。 
+【Page136 5.13】A team of five is to be chosen from six women and five men. Find the number of possible 
+teams in which there will be more women than men. 
+ 
+ 
+ 
+ 
+有时候一些特殊元素会决定如何分类。 
+【Page136 5.14】How many distinct three-digit numbers can be made from five cards, each with one of the 
+digits 5,5,7,8 and 9 written on it? 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 23 ===
+Permutation and combination(2) | Lars Qiu 
+ Grouping problem in combination 组合分组问题 
+组合分组问题是组合学当中的一个经典问题，类型多种多样。 
+【eg】5个元素分两组，一组2个元素，一组3个元素，共有几种分组的方式？ 
+分成两步，第一步是取3个元素放在第一组，共有�5
+3�种；第二步是把剩下的2个元素放在第二组，共有�2
+2
+�种。分步
+乘法，共有�5
+3
+��2
+2
+� = 10种。当然也可以第一步先取2个元素放在第一组，第二步取3个元素，结果都是10。 
+相当于选出两个元素取出，所以分两组其实就是选元素。也就是常见的组合数。�5
+2
+� = �5
+3
+� = 10 
+ 
+【eg】4个元素分两组，每组2个元素，共有几种分组方式？ 
+这个时候可能会照葫芦画瓢：共有�4
+2��2
+2
+� = 6种，但这是错误的。 
+不妨设这四个元素是𝐴𝐴, 𝐵𝐵, 𝐶𝐶, 𝐷𝐷，按照上述分法是：{𝐴𝐴, 𝐵𝐵}{𝐶𝐶, 𝐷𝐷}; {𝐴𝐴, 𝐶𝐶}{𝐵𝐵, 𝐷𝐷}; {𝐴𝐴, 𝐷𝐷}{𝐵𝐵, 𝐶𝐶}; {𝐵𝐵, 𝐶𝐶}{𝐴𝐴, 𝐷𝐷}; 
+{𝐵𝐵, 𝐷𝐷}{𝐴𝐴, 𝐶𝐶}; {𝐶𝐶, 𝐷𝐷}{𝐴𝐴, 𝐵𝐵}。但是各位一定发现了，后三种的分法其实跟前三种是重复的，区别只是组的顺序不一
+样！ 
+那么为什么会造成这种结果呢？原因其实已经知道了，那就是分步的乘法会天然带有顺序，但是分组我们默认是
+不考虑顺序的，所以要除以分步的顺序，也就是
+�4
+2��2
+2
+�
+2! = 3种。需要考虑顺序的分组我们称之为编号分组，比如上述
+四个字母我们需要分成 1 组 2 组，那么此时 1 组{𝐴𝐴, 𝐵𝐵}2 组{𝐶𝐶, 𝐷𝐷} 与 1 组{𝐶𝐶, 𝐷𝐷}2 组{𝐴𝐴, 𝐵𝐵}就不一样。无编号分组也
+常叫做【分堆】 。 
+ 
+可是为什么不是平均分组就可以不用除以顺序呢？前一例5个元素分成2个3个一组就不用除以顺序？这是因为【组
+内元素的个数，可以看成是组的编号】 。当然这个解释并不严格，各位同学们还需仔细体会。 
+ 
+下面有个混合分组的例子。有几组个数一样，分组后都要除以顺序。 
+【eg】17 个互不相同的元素分成 6 组：有三个组3个元素，有两个组2个元素，有一个组4个元素，共有几种分
+法？
+ 
+�17
+3 ��14
+3 ��11
+3 ��8
+2��6
+2
+��4
+4
+�
+3! 2! = 1429428000 
+ 
+下面还有【相同元素分组】 ，处理方式完全不同。 
+【eg】10个完全相同的本子分给3位同学，要求每位同学至少分一本，则有几种分法？ 
+这个问题跟前面的完全不同，因为被分的东西是完全相同的，但是这里并没有要求每位同学必须分得几本本子，
+所以不同分法的区别其实就是本子数。 
+方法是【隔板法】 ：我们实际上是把10个本子作划分，划分的位置是10个本子中间的9个空，并且一个空不能被划
+分两次，所以相当于从9个空中选3个空作为划分的界，答案是�9
+3� = 84 
+ 
+【eg】10个完全相同的本子分给3位同学，要求每位同学至少分两本，则有几种分法？ 
+每个同学至少分两本，所以先每人分一本，剩下6本每人至少分一本，所以是�5
+3� = 10种 
+ 
+【eg】10个完全相同的本子分给3位同学，并不要求每位同学都有本子，则有几种分法？ 
+也就是说有的同学可能没本子，这样的话分划可以重复。这个方法比较tricky，一开始很难想到。我们多加两个
+本子，然后在这12个本子当中随机抽取两个作标记，作为划分，当然被标记的本子可以是相邻的。然后两个有标
+记的本子就把原来的10个本子分成了三组，如果被标记的本子是相邻的，那么就有一组个数是0，如果两个标记的
+都在边缘，那么相当于有两个组的数量是0。那么分法就是�12
+2 � = 66种 
+ 
+ 
+【不定方程】上述问题相当于𝑥𝑥1 + 𝑥𝑥2 + 𝑥𝑥3 = 10，且𝑥𝑥𝑖𝑖是整数，分别计算𝑥𝑥𝑖𝑖≥ 1, 2, 0的解的个数。 
+ 
+
+=== PDF PAGE 24 ===
+Permutation and combination(2) | Lars Qiu 
+【Page143 7.】Find how many 15 children can be divided into three groups of five if: 
+a. There are no restrictions 
+b. Two of the children are brothers who must be in the same group. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【52/M/J/22】(22 夏 2 卷： “鳄鱼” 。参考答案是错的) 
+a. Find the number of different arrangements of 9 letters in the word CROCODILE. 
+b. Find the number of different arrangements of the 9letters in the word CROCODILE in which there is a 
+C at each end and the two Os are not together. 
+c. Four letters are selected from the 9 letters in the word CROCODILE. Find the number of selections in 
+which the number of Cs is not the same as the number of Os. 
+d. Find the number of ways in which the 9 letters in the word CROCODILE can be divided into three 
+groups, each containing three letters, if the two Cs must be in different groups. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Homework】Page136 1.-16. 
+
+=== PDF PAGE 25 ===
+Permutation and combination | Lars Qiu 
+Probability problems of combinatorics 组合概率问题 
+ Classical model of combinatorics 组合中的古典概型 
+本节我们会计算一些复杂的古典概型概率问题。回忆古典概型的概率计算方式是 
+𝑃𝑃(𝐴𝐴) = 𝐴𝐴当中的基本事件的个数
+事件域中基本事件的总个数
+ 
+所以首先第一步就是要搞清楚情境中涉及的事件域和其中的基本事件是什么，并且要在解题的过程中坚持下去。 
+【eg】a. 𝟏𝟏𝟏𝟏个字母 COMBINATION 排成一列，共有几种互不相同的排法？ 
+b. 如果某人从这些互不相同的排法当中随机抽取一种，抽到两个O 在一起的排法的概率是多少？ 
+c. 如果某人随机将这十一个字母再排一次，那么排到两个O 在一起的概率是多少？ 
+ 
+ 
+ 
+ 
+ 
+【Page139 5.15】There are 15 identical tins on a shelf. None of the tins are labelled but it is known that 
+eight contain soup (𝑆𝑆), four contain beans (𝐵𝐵) and three contain peas (𝑃𝑃). 
+If seven tins are randomly selected without replacement, find the probability that exactly five of them 
+contain soup. 
+ 
+ 
+ 
+ 
+ 
+【Page139 5.16】A girl has a bag containing 13 red cherries (𝑅𝑅) and seven black cherries (𝐵𝐵). She takes 
+five cherries from the bag at random. Find the probability that she take more red cherries than black 
+cherries. 
+ 
+ 
+ 
+ 
+ 
+ 
+【Page140 5.17】A minibus has seats for the driver (D) and seven passengers, as 
+shown. When seven passenger are seated in random order, find the probability 
+that two particular passengers, A and B, are sitting on: 
+a. The same side of the minibus. 
+b. Opposite sides of the minibus. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+   D 
+
+=== PDF PAGE 26 ===
+Permutation and combination | Lars Qiu 
+【Page142 14.】A netball team of seven players is to be selected at random from five men and 10 women. 
+Given that at least five women are selected from the team, find the probability that exactly two men are 
+selected. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Page144 17.】Three ordinary fair dice are rolled. Find the number of ways in which the number rolled 
+with the first die can exceed the sum of the numbers rolled with the second and third dice. Hence, find the 
+probability that this event does not occur in two successive rolls of the three dice. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Page148 17.】Seats for the guests at an awards ceremony are arranged two rows of eight and ten, 
+divided by an aisle, as shown. Seats are randomly allocated 
+to 18 guests. 
+a. Find the probability that two particular guests are 
+allocated seats: 
+i. On the same side of aisle 
+ii. In the same row  
+iii. On the same side of the aisle and in the same row. 
+b. Give a reason why the answer to part iii is not equal to the product of the answers to i and ii. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Homework】Page141 1.-15. 
+
+
+=== PDF PAGE 27 ===
+Random variable | Lars Qiu 
+Random variable 随机变量 
+ The definition of random variable 随机变量的定义 
+在概率一章中，我们定义了随机事件和它们的全体——事件域，然后将它们类比为集合以及全集。并且基本事件
+是最“小”的，不可再分割的随机事件，可类比为集合中的元素，或者是点。之后我们指明了概率是定义在随机
+事件上的函数，也就是集合山的函数。取值范围是[0,1]。 
+我们知道统计中，数据分为定性数据和定量数据两种，前者反映事物具有不同的属性，而后者是某种属性程度的
+大小。同样，在随机事件当中，我们也可以分为定性和定量两种。比如明天的天气可能是晴天或者雨天，但是对
+于雨天，我们又可以通过降水量多少来反映下雨的剧烈程度。而这种定量的随机事件我们称之为【随机变量
+(random variable)】。 
+【随机变量的数学性质】随机变量的取值如果是离散的值，称为【离散随机变量(discrete random variable)】， 如
+果是连续的值(比如一个区间的值)，则称为【连续随机变量(continuous random variable)】 
+随机变量的一个最大的特点就是它的“可计算性” 。比如，做一个掷骰子获奖的游戏，需要先付2 元获得投掷的机
+会，如果是数字是 1,2,3 朝上则没有任何收益，如果是 4 朝上则收益 1 元，5 收益 2 元，6 收益 8 元，那么我们可
+以计算一下这个游戏对玩家来说是否是有利的。自然此时我们真正关注的并不是骰子显示的数字，而是背后所代
+表的奖金，那么将上述事实列表，可以得到 
+奖金
+ 0 1 2 8 
+概率 1
+2 1
+6
+ 1
+6
+ 1
+6
+ 
+将不同的奖金结合其发生概率综合计算可以得到平均奖金为0 ×
+1
+2 + 1 ×
+1
+6
++ 2 ×
+1
+6
++ 8 ×
+1
+6
+=
+11
+6 ，减去每次下注的2
+元，所以每次的平均收益实际上是−
+1
+6
+元。所以通过计算可以得到虽然投出 6 的奖金很吸引人，但是结合其他情况
+会发现这是一个总收益为亏游戏。此时我们已经不自觉的使用了随机变量相对于其各个概率的平均数【数学期望
+expectation】。但是并不是所有参与游戏的人都不懂去算期望，事实上这个游戏显然比直接“捐掉”
+1
+6元要有趣的
+原因，是方差足够大。 
+【随机变量 random variable】如果一个变量𝑋𝑋的取什么值是一组随机事件，则称𝑋𝑋为随机变量。比如投掷骰子后
+朝上的数字就是个取值为1 − 6的随机变量，而𝑋𝑋= 6就是一个随机事件，而概率为
+1
+6，记为𝑃𝑃(𝑋𝑋= 6) =
+1
+6
+。 
+【随机变量的分布 distribution】一个随机变量𝑋𝑋的各个取值，及其取值对应的概率称为随机变量的【概率分布
+(probability distribution)】 。离散型随机变量通常用表格表示，而连续性随机变量通常用函数表示。上例扔骰子
+得奖金的游戏种所列的表格就是其分布 
+奖金𝑥𝑥 0 1 2 8 
+概率 
+𝑃𝑃(𝑋𝑋= 𝑥𝑥) 
+1
+2 1
+6
+ 1
+6
+ 1
+6
+ 
+可以看出【所有的概率之和为1】。 
+【期望 expectation】随机变量𝑋𝑋取值在其对应概率下的加权平均。 
+𝐸𝐸(𝑋𝑋) = Σ𝑥𝑥𝑖𝑖𝑃𝑃(𝑋𝑋= 𝑥𝑥𝑖𝑖) = Σ𝑥𝑥𝑖𝑖𝑝𝑝𝑖𝑖. 
+这个量在不同问题下可能会有不同的提法，但是本质都是一样的。 
+【方差 variation】描述随机变量𝑋𝑋的取值的波动性。𝑉𝑉𝑉𝑉𝑉𝑉(𝑋𝑋) = 𝐸𝐸��(𝑋𝑋− 𝐸𝐸(𝑋𝑋)� 2�= 𝐸𝐸(𝑋𝑋2) − 𝐸𝐸2(𝑋𝑋)与平均数类
+似，方差可以记为【平方的期望减期望的平方】 。 
+【标准差 standard deviation】方差的算数平方根。𝑆𝑆𝑆𝑆(𝑋𝑋) = �𝑉𝑉𝑉𝑉𝑉𝑉(𝑋𝑋)。 
+【eg】证明𝐸𝐸��(𝑋𝑋− 𝐸𝐸(𝑋𝑋)� 2�= 𝐸𝐸(𝑋𝑋2) − 𝐸𝐸2(𝑋𝑋)，并计算上例的𝐸𝐸(𝑋𝑋)和𝑉𝑉𝑉𝑉𝑉𝑉(𝑋𝑋) 
+ 
+
+=== PDF PAGE 28 ===
+Random variable | Lars Qiu 
+【Page151 6.1】A fair square spinner with sides labelled 1,2,3 and 4 is spun twice. The two scores 
+obtained are added together to give the total, 𝑋𝑋. Draw up the probability distribution table for 𝑋𝑋. 
+ 
+ 
+ 
+ 
+ 
+【Page151 6.2】The following table shows the probability distribution for the random variable 𝑉𝑉. 
+𝑉𝑉 2 3 4 5 6 
+𝑃𝑃(𝑉𝑉= 𝑣𝑣) 0.05 𝑐𝑐2 𝑐𝑐+ 0.1 2𝑐𝑐+ 0.05 0.16 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Page152 6.3(超几何分布 hypergeometric distribution)】There are spaces for three more passengers on a 
+bus, but eight youths, one man and one woman wish to board. 
+The bus driver decides to select three of these people at random and allow them to board. 
+Draw up the probability distribution table for 𝑌𝑌, the number of youths selected. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Page155 17.】Two ordinary fair dice are rolled. A score of 3 points is awardee if exactly one die shows an 
+odd number and there is also a difference of 1 between the two numbers obtained. A player who rolled two 
+even numbers is awarded a score of 2 points, otherwise a player scores 1 point. 
+a. Draw up the probability distribution table for 𝑆𝑆, the number of points awarded. 
+b. Find the probability that a player scores 3 points, given that the sum of the numbers on their two dice 
+is greater than 9. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Homework】Page153 3.5.6.11.15.17. Page159 8.11.13.14.15. 
+
+=== PDF PAGE 29 ===
+Random variable | Lars Qiu 
+ The coding and linear combination of random variable 
+我们先通过一个例子来引出随机变量线性组合的含义 
+【eg】投掷一枚骰子，记𝑋𝑋为其朝上的数字。 
+a. 记𝑌𝑌是根据数字确定的得分，分值为朝上数字的两倍，所以𝑌𝑌= 2𝑋𝑋，写出𝑌𝑌的分布列，计算𝐸𝐸(𝑌𝑌)和𝑉𝑉𝑉𝑉𝑉𝑉(𝑌𝑌). 
+b. 现在投掷两枚骰子，记𝑍𝑍为两枚骰子朝上的数字之和，写出𝑍𝑍的分布列，计算𝐸𝐸(𝑍𝑍)和𝑉𝑉𝑉𝑉𝑉𝑉(𝑍𝑍). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+上例中第一问实际上是随机变量的 coding，其一般形式是𝑌𝑌= 𝑉𝑉𝑋𝑋+ 𝑏𝑏,相应地 
+𝐸𝐸(𝑌𝑌) = 𝑉𝑉𝐸𝐸(𝑋𝑋) + 𝑏𝑏, 𝑉𝑉𝑉𝑉𝑉𝑉(𝑌𝑌) = 𝑉𝑉
+2𝑉𝑉𝑉𝑉𝑉𝑉(𝑋𝑋). 
+但是第二问则不一样， 这并不是简单的将一个随机变量的取值扩大两倍， 而是 【将两个随机变量加起来】， 有意思的
+是，对于随机变量来说，并不遵循2𝑋𝑋= 𝑋𝑋+ 𝑋𝑋的运算法则，确切的说，右边的两个随机变量相加因为其各自取值是
+随机的， 所以它们的和并不是其中一个的两倍。 所以右边加法真正的写法应该是𝑌𝑌= 𝑋𝑋1 + 𝑋𝑋2，只 不 过𝑋𝑋1和𝑋𝑋2是相互
+独立，并且服从相同的分布而已。 
+【独立同分布的随机变量(independent identical distributed random variable/i.i.d.)】独立同分布是概率统计当
+中一个非常非常重要的概念，简单说来就是同时研究若干个具有相同分布的随机变量， 并且它们之间是相互独立的。
+一个最典型的例子就是抽样： 要研究一个学校同学的身高， 从中抽取10名同学， 这样这10名同学的身高就符合相同
+的分布，以及它们之间是相互独立的，接下来一切的统计推断将以此为基础。 
+【独立同分布随机变量和的期望和方差】如果𝑋𝑋1, … 𝑋𝑋𝑛𝑛是𝑛𝑛个独立同分布的随机变量，它们各自的期望𝐸𝐸(𝑋𝑋𝑖𝑖) = 𝜇𝜇,各
+自的方差𝑉𝑉𝑉𝑉𝑉𝑉(𝑋𝑋𝑖𝑖) = 𝜎𝜎2。设𝑌𝑌= 𝑋𝑋1 + ⋯ + 𝑋𝑋𝑛𝑛，那么 
+𝐸𝐸(𝑌𝑌) = 𝑛𝑛𝜇𝜇, 𝑉𝑉𝑉𝑉𝑉𝑉(𝑌𝑌) = 𝑛𝑛𝜎𝜎2 
+
+=== PDF PAGE 30 ===
+Binomial distribution | Lars Qiu 
+Binomial distribution 二项分布 
+ The definition of binomial distribution 二项分布的概念 
+【eg】掷一枚均匀的硬币(fair coin)，正面朝上的概率是多少？掷一枚均匀的硬币10次，恰好4次正面朝上的概率
+是多少？掷10枚均匀的硬币，恰好有4枚硬币正面朝上的概率是多少？ 
+如果是一枚均匀的硬币，投掷一次正面朝上的概率当然是 1
+2 ，但如果扔10次，那么情况就比较复杂，我们需要对
+这个情境做一些解释。 
+首先，我们要明确一点，将一个均匀的硬币投掷 10次来记录正面朝上的次数，这其实是一个随机试验，而正面朝
+上的次数可以看成是一个随机变量。我们都有这种经历，虽然看起来10次当中5次正面朝上的可能性比较大，但是
+也有可能多于5次，也可能10次全都正面朝上！所以，如果将正面朝上的次数记为𝑋𝑋，则𝑋𝑋 ∈{0,1,2, … , 10}。其次，
+在10次投掷之中，每一次的结果都互不影响，也就是说，它们之间是独立的随机事件。所以10次投掷4个正面朝上
+的概率可以通过是4个正面朝上、6个反面朝上的基本事件概率的乘积来计算。硬币是均匀的，所以不论正面朝上
+还是反面朝上的概率都是 1
+2 ，那么4次正面朝上的概率就是�1
+2
+�
+4
+�1
+2
+�
+6
+= 1
+1024 吗？答案是错误的，因为这里少考虑了
+一层，那就是在10次投掷硬币过程中，即使有4次正面朝上，可是它们出现在哪4次，却有多种可能，而我们需要
+将这些可能的概率全加起来。之所以可以加，是因为不同的次数组合之间是互斥的，它们并不相容。所以问题就
+转为了10次当中共有多少种4次正面朝上？这就变成了一个组合问题，相当于问，10次当中选4次正面朝上有多少
+种选法？答案是�10
+4 � = 210。综上所述：投掷一枚均匀的硬币10次，恰好4次正面朝上的概率是�10
+4 � �1
+2�
+4
+�1
+2
+�
+6
+=
+105
+512
+。 
+那么同时扔10枚硬币，恰好4枚硬币正面朝上的概率又是多少呢？答案跟上面是一样的，因为不管是将一枚硬币扔
+10次，还是同时扔10枚相同的硬币，它们都相当于是扔1枚硬币这个随机试验的重复，并且这些重复相互之间是独
+立的。 
+【固定总次数的独立性重复检验，二项分布】每次试验成功的概率为𝑝𝑝，并预先规定重复的次数为𝑛𝑛，那么𝑛𝑛次当中
+成功的次数即为一个随机变量𝑋𝑋，其取值范围为0,1, … , 𝑛𝑛。记为𝑋𝑋 ∼ 𝐵𝐵(𝑛𝑛, 𝑝𝑝)。 
+那么𝑋𝑋= 𝑘𝑘的概率为 
+𝑃𝑃(𝑋𝑋= 𝑘𝑘) = �𝑛𝑛
+𝑘𝑘� 𝑝𝑝𝑘𝑘(1 − 𝑝𝑝)𝑛𝑛−𝑘𝑘 
+有时候也经常令𝑞𝑞= 1 − 𝑝𝑝，称为“失败”的概率。 
+【P168 7.1】A regular pentagonal spinner(转盘) is labelled A, B, C, D and E. Find the probability that 10 
+spins produce exactly three As.  
+ 
+ 
+ Expectation and variance of binomial distribution 二项分布的期望和方差 
+二项分布是一个只有“成功”和“失败”两个结果的独立性重复试验，在这个简单的实验中如果成功记为1，失败
+记为0，则得到一个随机变量。称这个随机变量服从两点分布。 
+【两点分布(two point distribution)】在两点分布中，记𝑌𝑌为成功的次数，那么只能是0或1，此时的分布列为： 
+𝑦𝑦 0 1 
+𝑃𝑃(𝑌𝑌= 𝑦𝑦) 1 − 𝑝𝑝 𝑝𝑝 
+期望𝐸𝐸(𝑌𝑌) = 𝑝𝑝，方差𝑉𝑉𝑉𝑉𝑉𝑉(𝑌𝑌) = 𝑝𝑝(1 − 𝑝𝑝)。 
+【二项分布的期望和方差】二项分布𝑋𝑋 ∼ 𝐵𝐵(𝑛𝑛, 𝑝𝑝)可以看成是𝑛𝑛个相同的两点分布的独立和。即𝑋𝑋= 𝑌𝑌1 + ⋯ + 𝑌𝑌𝑛𝑛，其
+中𝑌𝑌服从上数两点分布，那么根据独立同分布随机变量之和的期望和方差，
+ 
+𝐸𝐸(𝑋𝑋) = 𝑛𝑛𝑝𝑝, 𝑉𝑉
+𝑉𝑉𝑉𝑉(𝑋𝑋) = 𝑛𝑛𝑝𝑝(1 − 𝑝𝑝). 
+
+=== PDF PAGE 31 ===
+Binomial distribution | Lars Qiu 
+【Page 168 7.2】Given that 𝑋𝑋∼ 𝐵𝐵(8, 0.7), find 𝑃𝑃(𝑋𝑋> 6), correct to 3 s.f.. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Page169 7.3】In a particular country, 85% of the population has rhesus-positive(R+) blood. Find the 
+probability that fewer than 39 people in a random sample of 40 have rhesus-positive blood. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【eg】Say the differences of more than, less than, no more than and no less than 4 times successes. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Page173 7.5】Given that 𝑋𝑋∼ 𝐵𝐵(12, 0.3), find the mean, the variance and the standard deviation of 𝑋𝑋. 
+ 
+ 
+ 
+ 
+ 
+ 
+【Page174 7.6】The random variable 𝑋𝑋∼ 𝐵𝐵(𝑛𝑛, 𝑝𝑝). Given that 𝐸𝐸(𝑋𝑋) = 12 and 𝑉𝑉𝑉𝑉𝑉𝑉(𝑋𝑋) = 7.5, find:  
+a. The value of 𝑛𝑛 and 𝑝𝑝 
+b. 𝑃𝑃(𝑋𝑋= 11) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 32 ===
+Binomial distribution | Lars Qiu 
+【Page169 7.4】Given that 𝑋𝑋∼ 𝐵𝐵(𝑛𝑛, 0.4) and that 𝑃𝑃(𝑥𝑥= 0) < 0.1, find the least possible value of 𝑛𝑛. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Page171 19.】The number of damaged eggs, 𝐷𝐷, in cartons of six eggs have seen recorded by an inspector 
+at a packing depot. The following table shows the frequency distribution of some of the  numbers of 
+damaged eggs in 150000 boxes. 
+No. damaged 
+eggs (𝐷𝐷) 
+0 1 2 3 4 5 6 
+No. cartons(𝑓𝑓) 141393 8396 𝑉𝑉 𝑏𝑏 0 0 0 
+The distribution of 𝐷𝐷 is to be modelled by 𝐷𝐷∼ 𝐵𝐵(6, 𝑝𝑝). 
+a. Estimate a suitable value for 𝑝𝑝, correct to 4 decimal places. 
+b. Calculate estimates for the value of 𝑉𝑉 and 𝑏𝑏. 
+c. Calculate an estimate for the least number of additional cartons that would need to be inspected for 
+there to be at least 8400 cartons containing one damaged egg. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Homework】Page174 4.7.8.10.13.18.22. Page175 3.6.9.10.11. 
+
+=== PDF PAGE 33 ===
+Geometric distribution | Lars Qiu 
+Geometric distribution 几何分布 
+ The definition of geometric distribution 几何分布的概念 
+上节的二项 Binomial 分布是将一个成功概率为𝑝𝑝的随机试验【独立、重复地进行预先规定的𝑛𝑛次，再记录成功的
+次数】 。几何Geometric 分布则是将一个成功概率为𝑝𝑝的随机试验【独立、重复地进行直到成功为止】 ，但并不预先
+规定总次数。 
+【eg】投掷一个骰子，问恰好第4次取得6朝上的概率是多少？(前3次都不能成功) 
+ 
+ 
+【几何分布 geometric distribution】如果一个随机试验成功的概率为𝑝𝑝，重复若干次直至成功为止，将直至成功
+的次数记为𝑋𝑋，那么𝑋𝑋是一个随机变量，并且𝑋𝑋∈ {1,2,3, … }。记为𝑋𝑋∼ 𝐺𝐺𝐺𝐺𝐺𝐺(𝑝𝑝)，并且 
+𝑃𝑃(𝑋𝑋= 𝑘𝑘) = 𝑝𝑝
+𝑘𝑘= (1 − 𝑝𝑝)𝑘𝑘−1𝑝𝑝. 
+注意到，∑ 𝑝𝑝𝑘𝑘∞
+𝑘𝑘=1 = ∑ (1 − 𝑝𝑝)𝑘𝑘−1𝑝𝑝∞
+𝑘𝑘=1
+= 𝑝𝑝1
+1−(1−𝑝𝑝) = 𝑝𝑝
+𝑝𝑝= 1. 
+ 
+【几何分布的众数和期望】如果𝑋𝑋∼ 𝐺𝐺𝐺𝐺𝐺𝐺(𝑝𝑝)，那么𝑃𝑃(𝑋𝑋= 1)是其分布列当中概率的最大值，所以1是任何几何分布
+的众数。另外，𝐸𝐸(𝑋𝑋) =
+1
+𝑝𝑝
+。我们不打算在这里证明几何分布的期望，之后在 Further Statistics 当中借助生成函数
+(generating function)这个工具，再进行证明。 
+【Page176 7.7】Repeated independent trials are carried out in which the probability of success in each is 
+0.66. Correct to 3 significant figures, find the probability that the first success occurs. 
+a. On the third trial 
+b. On or before the second trial 
+c. After the third trial. 
+ 
+ 
+ 
+ 
+ 
+【eg】If 𝑋𝑋∼ 𝐺𝐺𝐺𝐺𝐺𝐺(𝑝𝑝), find 𝑃𝑃(𝑋𝑋> 𝑟𝑟), 𝑃𝑃(𝑋𝑋≥ 𝑟𝑟), 𝑃𝑃(𝑋𝑋< 𝑟𝑟) and 𝑃𝑃(𝑋𝑋≤ 𝑟𝑟).(Note that 𝑃𝑃(𝑋𝑋≥ 𝑟𝑟+ 1) = 𝑃𝑃(𝑋𝑋> 𝑟𝑟)) 
+ 
+ 
+ 
+ 
+ 
+ 
+【Page177 7.8】In a particular country, 18% of adults wear contact lenses. Adults are randomly selected 
+and interviewed one at a time. Find the probability that the first adult who wears contact lenses is: 
+a. One of the first 15 interviewed 
+b. Not one of the first nine interviewed. 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 34 ===
+Geometric distribution | Lars Qiu 
+几何分布的题目要注意各种各样的问法，首先是 first success occurs…这一类，即第一次成功出现在……。还有
+是 success until…，即直到……才成功，并且要注意节点的次数是否包含。 
+【Page178 7.9】A coin is biased such that the probability of obtaining heads with each toss is equal to 5
+11. 
+The coin is tossed until the first head is obtained. Find the probability that the coin is tossed: 
+a. At least six times 
+b. Fewer than eight times. 
+ 
+ 
+ 
+ 
+ 
+【Page179 6.】It is known that 80% of the customer at a DIY store own a discount card. Customers 
+queuing at a checkout are asked if they own a discount card. 
+a. Find the probability that the first customer who owns a discount card is: 
+i. the third customer asked      ii     not one of th e first four customers asked. 
+b. Given that 10% of the customers with discount cards forget to bring them to the store, find the 
+probability that the first customer who owns a discount card and remembered to bring to the stroe is 
+the second customer asked. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Homework】Page178 4.5.9.14.15.16  Page182 5. 7.8.10. 
+ 
+
+=== PDF PAGE 35 ===
+Normal distribution(1) | Lars Qiu 
+Normal distribution 正态分布(1) 
+ What is normal distribution?什么是正态分布？ 
+正态分布是概率论当中最重要的概率分布，其原因是有大量的随机现象最终都会归结为正态分布问题。以上是绝
+大多数概率论的教材介绍正态分布开篇的一句话，但是初学者可能会疑惑为什么【大量的随机现象会归结为正态
+分布】 。这要解释起来当然很复杂，如果直观浅显一点说的话正态分布其实就是【大量独立事件相互叠加的结
+果】 。这看起来又有点像二项分布，因为二项分布也是有限多个独立同分布的两点分布的叠加。这个理解是到位
+的，事实上正态分布就是二项分布在𝑛𝑛 → ∞的一个极限情况。而阐释这个极限过程的定理，就是著名的【中心极限
+定理 central limit theorem】 。 
+我们在这里当然不会去直接去介绍中心极限定理，事实上中心极限定理在很多大学课本当中也只是一笔带过，因
+为证明它需要相当多函数论的知识，在这里举一个直观的例子去说明，并且暂时从一个二项分布取极限过渡去理
+解它，可能会更好。 
+【一个学校内所有男生的身高分布】假设一个学校当中所有男生的平均身高是175cm，直观上看，大多数同学的
+身高都在175cm 附近，特别高的和特别矮的同学都占少数，并且最重要的，在175cm 以上的同学跟175cm 以下的
+同学的人数大体相当。现在把它当成是一个事实，然后尽可能去寻找出现这个现象的原因。首先，从遗传角度，
+我们可以姑且做一些假设：决定一个人身高的基因有𝑛𝑛
+1个，它们每个显式表达的概率是 1
+2。然后每个基因显式表达
+后，会造成身高长高𝑙𝑙cm。这样由基因决定的身高𝐿𝐿就会是一个随机变量，并且它是𝑛𝑛1个𝑙𝑙的独立和。所以𝐿𝐿 ∼
+𝐵𝐵 �𝑛𝑛1, 1
+2
+�。另外，决定身高的还有其他原因，可能是营养环境，是否热衷于体育锻炼，平常休息的好不好等等。这
+些因素都各自有其发生的概率，和能对身高产生的作用。所以都可以类似的写成一个二项分布。讲这些所有的二
+项分布加起来，就是一个重复量很大的二项分布𝐻𝐻 ∼ 𝐵𝐵(𝑛𝑛, 𝑝𝑝)。可以看成原因的个数𝑛𝑛是很大的，但是它们发生的概
+率可以找一个平均数𝑝𝑝来代替。那么这怎么就是正态分布了呢？因为当𝑛𝑛很大的时候，这些原因之间相互作用，造
+成的结果并不会十分明显，也不会离散，而是最终以一个连续、平滑、对称的样貌展现出来。这就是正态分布。 
+【正态分布的特点】正态分布是一个连续、光滑，且关于平均数𝜇𝜇对称的一个概率分布，所以对于正态分布来说，
+mean=mode=median，其【概率密度图像】是个钟形曲线。以及它在一个点上的概率是0。 
+ 
+以上是假设某种离散程度(𝜎𝜎= 5)的情况下， 平均身高为175cm 的身高分布图。 纵轴是概率密度或者是频率密度，此
+时要注意的是并不能说身高为某一个值的同学所占的比例，而是身高在某一个段的同学所占的比例，比如我们不能
+说身高为175cm 的同学占比例是多少，因为严格来讲，这个概率是0。但可以说身高170 − 175cm 的比例，它就是
+图上170与175与曲线所围成的曲边梯形的面积， 它大约是0.3413。 又因为正态分布是对称的， 所以175 − 180cm 所
+占的比例也是0.3413，以及身高小于180的同学所占整个比例为0.8413，即𝑃𝑃(𝐻𝐻< 180) = 0.8413。而整条曲线所围
+成的面积表示所有的概率，所以它是1。 
+各位一定会好奇这个曲线到底有没有严格的定义或者表达式，毕竟我们现在一直在定性分析，答案当然是有，只不
+过如果一开始就将它抛出，一定会难以接受。 
+
+
+=== PDF PAGE 36 ===
+Normal distribution(1) | Lars Qiu 
+【正态分布的定义】如果连续随机变量𝑋𝑋满足 
+𝑃𝑃(𝑋𝑋 ≤ 𝑥𝑥) = � 1
+√2𝜋𝜋𝜎𝜎
+𝑒𝑒−(𝑥𝑥−𝜇𝜇)2
+2𝜎𝜎2
+𝑥𝑥
+−∞
+𝑑𝑑𝑥𝑥 
+则称𝑋𝑋服从于平均数为𝜇𝜇，方差为𝜎𝜎2的正态分布，记为𝑋𝑋 ∼ 𝑁𝑁(𝜇𝜇, 𝜎𝜎2)。 
+首先， 这是用一个函数的变上限积分来定义的分布， 而这个函数作为概率密度函数， 是关于𝑥𝑥= 𝜇𝜇对称的， 所以两边
+的面积是相等的。另外的一个事实是∫
+1
+√2𝜋𝜋𝜎𝜎𝑒𝑒−
+(𝑥𝑥−𝜇𝜇)2
+2𝜎𝜎2+∞
+−∞ 𝑑𝑑𝑥𝑥= 1，这也符合概率分布的特征。 
+【𝜇𝜇和𝜎𝜎2对正态分布的影响】我们可以通过观察被积函数𝑓𝑓𝜇𝜇,𝜎𝜎(𝑥𝑥) =
+1
+√2𝜋𝜋𝜎𝜎𝑒𝑒−
+(𝑥𝑥−𝜇𝜇)2
+2𝜎𝜎2 ，来判断𝜇𝜇和𝜎𝜎2对正态分布的影响。
+首先，𝜇𝜇的变化只影响𝑓𝑓𝜇𝜇,𝜎𝜎(𝑥𝑥)的左右平移，并不改变其形状。这说明平均数对正态分布的影响只是【数据分布的位
+置】 ， 而不是 【数据分布的集中离散度】 。 但是方差𝜎𝜎2， 则是一个乘积因子， 影响的是图像的 【高矮胖瘦】 。 并且方差
+𝜎𝜎2越大，图像就越矮胖，方差𝜎𝜎2越小，图像就越高瘦。为什么越矮就越胖，越高就越瘦，是因为面积的值1是固定
+的。更重要的是，通过被积函数𝑓𝑓𝜇𝜇,𝜎𝜎(𝑥𝑥)得知， 【𝜇𝜇和𝜎𝜎会完全决定一个正态分布】 。 
+【eg】已知∫
+1
+√2𝜋𝜋 𝑒𝑒−𝑥𝑥2
+2 𝑑𝑑𝑥𝑥
++∞
+−∞ = 1，证明：∀𝜎𝜎> 0, ∫
+1
+√2𝜋𝜋𝜎𝜎𝑒𝑒−
+(𝑥𝑥−𝜇𝜇)2
+2𝜎𝜎2+∞
+−∞ 𝑑𝑑𝑥𝑥= 1. 
+Proof. Let 𝑧𝑧= 𝑥𝑥−𝜇𝜇
+𝜎𝜎，𝑑𝑑𝑧𝑧= 1
+𝜎𝜎𝑑𝑑𝑥𝑥,  then ∫
+1
+√2𝜋𝜋𝜎𝜎𝑒𝑒−
+(𝑥𝑥−𝜇𝜇)2
+2𝜎𝜎2+∞
+−∞ 𝑑𝑑𝑥𝑥= ∫
+1
+√2𝜋𝜋 𝑒𝑒−𝑧𝑧2
+2 𝑑𝑑𝑧𝑧
++∞
+−∞ = 1。 
+对于上面身高的例子来说， 我们提到过平均数𝜇𝜇= 175， 离散程度标准差𝜎𝜎= 5，即𝐻𝐻 ∼ 𝑁𝑁(175,52)。所 以𝑃𝑃(𝐻𝐻< 180) =
+0.8413。但显然，我们不可能去计算这个积分，事实上0.8413这个数值是通过另外的方法计算的，而这个方法需要
+借助于标准正态分布。 
+ Standard normal distribution 标准正态分布 
+【标准正态分布 standard normal distribution】𝜇𝜇= 0, 𝜎𝜎= 1的正态分布成为标准正态分布，服从标准正态分布的
+随机变量一般用𝑍𝑍表示，即𝑍𝑍 ∼ 𝑁𝑁(0, 1)。标准正态分布之所以如此重要，是因为任何一个正态分布的任何临界值的
+概率， 都可以转化为标准正态分布的某个临界值的概率值去计算。 这个值， 实际上也对应一个积分值， 也非常难算，
+怎么办？查表。好在所有的其他正态分布都可以转化为标准正态分布，所以我们可以用一个非常精细的标准正态分
+布表去找寻所需要的概率值就可以了。 
+【表格上有什么】下图是标准正态分布的表格，对于任意精确到三位小数的𝑧𝑧 ∈[0,3]，它给出了𝑃𝑃(𝑍𝑍< 𝑧𝑧)的值。表
+头的
+Φ(𝑧𝑧) = ∫
+1
+√2𝜋𝜋 𝑒𝑒−𝑡𝑡2
+2 𝑑𝑑𝑑𝑑
+𝑧𝑧
+−∞ ，在信息技术不发达的过去，数学工作者通过一些特殊的计算方法制作了标准正态分布
+的表格。 
+比如，我们现在需要𝑃𝑃(𝑧𝑧< 0.123)的值，那么先观察左栏，定位到0.12的格子是第二行第三列的0.5478，但是千分
+位上的3，需要另外加上右栏当中同行的“3”列的“12” ，只不过这里的“12”是0.0012，所以𝑃𝑃(𝑍𝑍< 0.123) =
+0.5478 + 0.0012 = 0.549 
+ 
+
+
+=== PDF PAGE 37 ===
+Normal distribution(1) | Lars Qiu 
+【eg】查表计算𝑃𝑃(𝑍𝑍< 2.341), 𝑃𝑃(𝑍𝑍< 1.530)。 
+【标准正态分布的对称性】首先我们在连续随机变量当中并不区分>与≥、<与≤，所以这样在标准正态分布的情
+况下，取定一个临界值𝑎𝑎，就会有四种情况： 
+a. 𝑎𝑎> 0,计算𝑃𝑃(𝑍𝑍< 𝑎𝑎)   b. 𝑎𝑎> 0,计算𝑃𝑃(𝑍𝑍> 𝑎𝑎)   c.   𝑎𝑎< 0,计算𝑃𝑃(𝑍𝑍< 𝑎𝑎)   d. 𝑎𝑎< 0,计算𝑃𝑃(𝑍𝑍> 𝑎𝑎). 
+这四种涵盖了所有 coding 成标准正态分布之后查表的情况。 
+a. 这种最简单，临界值𝑎𝑎> 0，并且求小于临界值的概率，直接查表即可。 
+b. 第二种简称“用1减”，我们发现对于连续随机变量来说，𝑃𝑃(𝑍𝑍< 𝑎𝑎) + 𝑃𝑃(𝑍𝑍> 𝑎𝑎) = 1，所以 
+𝑃𝑃(𝑍𝑍> 𝑎𝑎) = 1 − 𝑃𝑃(𝑍𝑍< 𝑎𝑎). 
+d.  我们现讲第四种，因为第三种最复杂。第四种可以直接用对称性，因为𝑎𝑎< 0，所以−𝑎𝑎> 0，而 
+𝑃𝑃(𝑍𝑍> 𝑎𝑎) = 𝑃𝑃(𝑍𝑍< −𝑎𝑎) 
+而后者可以直接查表。 
+c. 有了上面的结果，𝑃𝑃(𝑍𝑍< 𝑎𝑎) = 𝑃𝑃(𝑍𝑍> −𝑎𝑎) = 1 − 𝑃𝑃(𝑍𝑍< −𝑎𝑎)。 
+请各位对着四种情况进行画图推导。 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【标准正态分布的可加性】通过观察面积，这是一个简单的事实：对于∀𝑎𝑎< 𝑏𝑏 ∈ ℝ 
+𝑃𝑃(𝑎𝑎< 𝑍𝑍< 𝑏𝑏) = 𝑃𝑃(𝑍𝑍< 𝑏𝑏) − 𝑃𝑃(𝑍𝑍< 𝑎𝑎) 
+ 
+ 
+ 
+ 
+ 
+【
+eg】Given that 𝑍𝑍 ∼ 𝑁𝑁(0, 1), find the following probabilities correct to 3 significant figures. 
+a. 𝑃𝑃(𝑍𝑍 ≤2.468)   b. 𝑃𝑃(𝑍𝑍> −1.53)  c. 𝑃𝑃(𝑍𝑍< −1.75)  d. 𝑃𝑃(𝑍𝑍> 2.576)  e. 𝑃𝑃(−2.807 < 𝑍𝑍< −1.282) 
+f. 𝑃𝑃 �−2
+7 < 𝑍𝑍< 5
+6
+� 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 38 ===
+Normal distribution(1) | Lars Qiu 
+ Standardising a normal distribution 正态分布的标准化 
+我们现在来说任何一个𝑋𝑋 ∼ 𝑁𝑁(𝜇𝜇, 𝜎𝜎2)，怎么转化成𝑍𝑍 ∼ 𝑁𝑁(0,1)，以及对于这个任意的分布，如何计算𝑃𝑃(𝑋𝑋< 𝑎𝑎)。 
+【正态分布的 coding】Given that 𝑋𝑋 ∼ 𝑁𝑁(𝜇𝜇, 𝜎𝜎2), show that if 𝑍𝑍= 𝑋𝑋−𝜇𝜇
+𝜎𝜎, then 𝑍𝑍 ∼ 𝑁𝑁(0,1), and  
+𝑃𝑃(𝑋𝑋< 𝑎𝑎) = 𝑃𝑃 �𝑍𝑍< 𝑎𝑎 − 𝜇𝜇
+𝜎𝜎� 
+Proof.  First we n ote that 𝐸𝐸(𝑍𝑍) = 𝐸𝐸 �𝑋𝑋−𝜇𝜇
+𝜎𝜎� = 𝐸𝐸(𝑋𝑋)−𝜇𝜇
+𝜎𝜎 = 𝜇𝜇−𝜇𝜇
+𝜎𝜎= 0. 𝑉𝑉𝑎𝑎 𝑉𝑉(𝑍𝑍) = 𝑉𝑉𝑎𝑎 𝑉𝑉�𝑋𝑋−𝜇𝜇
+𝜎𝜎� = 1
+𝜎𝜎2 𝑉𝑉𝑎𝑎 𝑉𝑉(𝑋𝑋) = 𝜎𝜎2
+𝜎𝜎2 = 1. Since 
+a normal distribution is totally depends on its mean and variance, so 𝑍𝑍 ∼ 𝑁𝑁(0,1). 
+Then we use integration by substitution 𝑧𝑧= 𝑥𝑥−𝜇𝜇
+𝜎𝜎, 𝑑𝑑𝑧𝑧= 1
+𝜎𝜎𝑑𝑑𝑥𝑥. S ince 𝑥𝑥 ∈(−∞, 𝑎𝑎), so 𝑧𝑧 ∈ �−∞, 𝑎𝑎−𝜇𝜇
+𝜎𝜎�. Then we 
+obtain that  
+𝑃𝑃(𝑥𝑥< 𝑎𝑎) = � 1
+𝜎𝜎√2𝜋𝜋
+𝑒𝑒−(𝑥𝑥−𝜇𝜇)2
+2𝜎𝜎2 𝑑𝑑𝑥𝑥
+𝑎𝑎
+−∞
+= � 1
+√2𝜋𝜋
+𝑒𝑒−𝑧𝑧2 
+2 𝑑𝑑𝑧𝑧
+𝑎𝑎−𝜇𝜇
+𝜎𝜎
+−∞
+= 𝑃𝑃 �𝑧𝑧< 𝑎𝑎 − 𝜇𝜇
+𝜎𝜎�. 
+既然对于∀𝜇𝜇 ∈ ℝ, ∀𝜎𝜎> 0的正态分布𝑋𝑋 ∼ 𝑁𝑁(𝜇𝜇, 𝜎𝜎2)都可以转化为标准正态分布𝑍𝑍 ∼ 𝑁𝑁(0,1)来计算，那么比如，对于
+上面的身高问题𝐻𝐻 ∼ 𝑁𝑁(175, 25)，我们计算不高于180cm 的同学的比例，就可以化为 
+𝑃𝑃(𝐻𝐻< 180) = 𝑃𝑃�𝑍𝑍< 180 − 175
+5 � = 𝑃𝑃(𝑍𝑍< 1) = 0.8413. 
+【Page201 8.6-8.8】Find the following probabilities correct to 3 significant figures. 
+a. 𝑋𝑋 ∼ 𝑁𝑁(11, 25), find 𝑃𝑃(𝑋𝑋< 18). 
+b. 𝑋𝑋 ∼ 𝑁𝑁(20, 7), find 𝑃𝑃(𝑋𝑋 ≤16.6). 
+c. 𝑋𝑋 ∼ 𝑁𝑁(5, 5), find 𝑃𝑃(2 ≤ 𝑋𝑋< 9). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【eg】The height 𝐻𝐻 of male students in a high school is normally distributed with mean 175cm and 
+standard deviation 5cm, find the proportion of the students with height 
+a. Lower than 180cm 
+b. Higher than 177cm 
+c. Lower than 172cm 
+d. Between 173cm and 178.4cm 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Homework】Page199 1.f-j 2.f-j    Page 204 2.f-j   Page206 1.2.5.16.17. 
+
+=== PDF PAGE 39 ===
+Normal distribution(2) | Lars Qiu 
+Normal distribution 正态分布(2) 
+ Given probabilities problems 给定概率值的正态分布问题 
+上节已经学过给定正态分布𝑋𝑋 ∼ 𝑁𝑁(𝜇𝜇, 𝜎𝜎2)和某个临界点𝑥𝑥，求随机变量𝑋𝑋取值高于或者低于𝑥𝑥的概率：𝑃𝑃(𝑋𝑋< 𝑥𝑥)和
+𝑃𝑃(𝑋𝑋> 𝑥𝑥)。本节将讨论其两类反问题：其一是服从正态分布的某个随机变量，如果已知在某个临界点的概率值，
+反而求临界点的问题；其二是服从某个正态分布的随机变量，但是未知𝜇𝜇和𝜎𝜎中的一个或两个，但是已知这个随机
+变量𝑋𝑋在一个或多个临界点的概率值，去求𝜇𝜇和𝜎𝜎的问题。这两类问题无论哪种，都需要【反查表】 。 
+【Page198 8.4-8.5】 
+a.  Given that 𝑍𝑍 ∼ 𝑁𝑁(0, 1), find the value of 𝑎𝑎 such that 𝑃𝑃(𝑍𝑍< 𝑎𝑎) = 0.9072. 
+b.  Given that 𝑍𝑍 ∼ 𝑁𝑁(0, 1), find the value of 𝑏𝑏 such that 𝑃𝑃(𝐴𝐴 ≥ 𝑏𝑏) = 0.7713. 
+ 
+ 
+ 
+【Page202 8.9】Given that 𝑌𝑌 ∼ 𝑁𝑁(𝜇𝜇, 𝜎𝜎
+2), 𝑃𝑃(𝑌𝑌< 10) = 0.75 and 𝑃𝑃(𝑌𝑌 ≥12) = 0.1, find the values of 𝜇𝜇 and 
+𝜎𝜎. 
+ 
+ 
+ 
+ 
+ 
+【反查表优先查小表】在反查表问题当中，有时候给定的概率值收录在小表之中，比如，如果最后的问题归结为
+寻找𝑃𝑃(𝑍𝑍< 𝑎𝑎) = 0.95，那么𝑎𝑎= 1.645。当然这些概率是从0.75开始逐渐接近于1的，并不十分全面，其真正的应
+用场景是 Statistics 2 和 Further Statistics 的假设检验(hypothesis testing)。 
+ 
+【正态分布的 quartile】有时候会求一个服从正态分布的𝑋𝑋的四分位点，实际上就是给定𝑃𝑃(𝑋𝑋< 𝑎𝑎) = 0.75, 求𝑎𝑎. 
+ 
+The normal approximation to binomial distribution 二项分布的正态逼近 
+我们在计算一些数值比较大的二项分布的时候，比如𝑋𝑋 ∼ 𝐵𝐵�50,
+1
+3�，然后计算𝑃𝑃(𝑋𝑋 ≤18)，那么我们需要计算18个
+概率值�50
+𝑘𝑘� �
+1
+3
+�
+𝑘𝑘
+�
+2
+3
+�
+𝑛𝑛−𝑘𝑘
+，显然这非常复杂。但是我们已经知道正态分布是二项分布的一个极限情况，所以自然也可
+以用正态分布计算比较复杂的二项分布概率，这个方法角二项分布的正态逼近。 
+【二项逼近】𝑋𝑋 ∼ 𝐵𝐵(𝑛𝑛, 𝑝𝑝)，那么这个分布可以近似看成是一个均值为𝑛𝑛𝑝𝑝，方
+差为𝑛𝑛𝑝𝑝𝑛𝑛的正
+态分布，也就是近似地 
+𝑋𝑋 ∼ 𝑁𝑁�𝑛𝑛𝑝𝑝, 𝑛𝑛𝑝𝑝(1 − 𝑝𝑝)� 
+只有当𝑛𝑛𝑝𝑝, 𝑛𝑛
+𝑛𝑛> 5的
+时候才可以，其中𝑛𝑛= 1 − 𝑝𝑝. 
+上面这
+个𝑋𝑋 ∼ 𝐵𝐵�50,
+1
+3
+�，我们经过验证𝑛𝑛𝑝𝑝=
+50
+3 > 5，𝑛𝑛𝑛𝑛=
+100
+3 > 5，所以可以转而去考虑𝑋𝑋 ∼ 𝑁𝑁�
+50
+3 ,
+100
+9 �，但是还有
+一个问题，那就是正态分布是一个连续分布，而二项分布是一个离散分布，为了更准确的逼近，我们需要做连续
+性修正。 
+
+
+=== PDF PAGE 40 ===
+Normal distribution(2) | Lars Qiu 
+【连续性修正 continuity correction】如果𝑋𝑋 ∼ 𝐵𝐵(𝑛𝑛, 𝑝𝑝)可以用𝑌𝑌 ∼ 𝑁𝑁�𝑛𝑛𝑝𝑝, 𝑛𝑛𝑝𝑝(1 − 𝑝𝑝)�逼近 ，那么认为 
+𝑃𝑃(𝑋𝑋< 𝑘𝑘) = 𝑃𝑃(𝑌𝑌< 𝑘𝑘 −0.5) 
+𝑃𝑃(𝑋𝑋 ≤ 𝑘𝑘) = 𝑃𝑃(𝑌𝑌< 𝑘𝑘+ 0.5) 
+𝑃𝑃(𝑋𝑋> 𝑘𝑘) = 𝑃𝑃(𝑌𝑌> 𝑘𝑘+ 0.5) 
+𝑃𝑃(𝑋𝑋 ≥ 𝑘𝑘) = 𝑃𝑃(𝑌𝑌> 𝑘𝑘 −0.5). 
+回到上面的例子，𝑋𝑋 ∼ 𝐵𝐵�50,
+1
+3�，然后计算𝑃𝑃(𝑋𝑋 ≤18)，我们考虑正态分布𝑋𝑋 ∼ 𝑁𝑁�
+50
+3 ,
+100
+9 �，这样 
+𝑃𝑃(𝑋𝑋 ≤18) = 𝑃𝑃(𝑌𝑌< 18.5) = 𝑃𝑃
+⎝
+⎛𝑍𝑍<
+18.5 − 50
+3
+� 100
+9 ⎠
+⎞ = 𝑃𝑃(𝑍𝑍< 0.55) = 0.7088 
+【Page210 8.13】Boxes are packed with 8000 randomly selected items. It is known that 0.2% of the items 
+are yellow. Find, using a suitable approximation, the probability that: 
+a.  a box contains fewer than 20 yellow items 
+b.  exactly 2 out of 3 randomly selected boxes contain fewer than 20 yellow items. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Page211 8.4】A fair coin is tossed 888 times. Find, by use of a suitable approximation, the probability 
+that the coin lands heads-up at most 450 times. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Complicated normal distribution problems 复杂的正态分布问题 
+正态分布问题常常结合条件概率， 独立性检验等等一起命题， 在条件概率当中， 注意事件的转化。 比如给定𝑎𝑎< 𝑏𝑏： 
+𝑃𝑃(𝑋𝑋> 𝑎𝑎|𝑋𝑋< 𝑏𝑏) = 𝑃𝑃({𝑋𝑋> 𝑎𝑎} ∩ {𝑋𝑋< 𝑏𝑏})
+𝑃𝑃(𝑋𝑋< 𝑏𝑏) = 𝑃𝑃(𝑎𝑎< 𝑋𝑋< 𝑏𝑏)
+𝑃𝑃(𝑋𝑋< 𝑏𝑏)  
+【Page214 15】Randomly selected members of the public were asked whether they approved of plans to 
+build a new sports center and 57% approved. Find approximately the probability that more than 75 out of 
+120 people said they approved, given that at least 60 said they approved. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PDF PAGE 41 ===
+Normal distribution(2) | Lars Qiu 
+【Edx2022 May】A manufacturer fills bottles with oil. The volume of oil in a bottle, 𝑉𝑉ml, is normally 
+distributed with 𝑉𝑉 ~ 𝑁𝑁(100, 2.52)  
+a.  Find 𝑃𝑃(𝑉𝑉 >  104.9)  
+b.  In a pack of 150 bottles, find the expected number of bottles containing more than 104.9ml  
+c.  Find the value of 𝑣𝑣, to 2 decimal places, such that 𝑃𝑃(𝑉𝑉 >  𝑣𝑣|𝑉𝑉 <  104.9) =  0.2801.    (𝑣𝑣= 101.325) 
+ 
+ 
+ 
+ 
+【Edx2021 Jan】The weights of packages that arrive at a factory are normally distributed with a mean of 
+18kg and a standard deviation of 5.4kg. 
+a.  Find the probability that a randomly selected package weighs less than 10kg. 
+The heaviest 15% of packages are moved around the factory by Jemima using a forklift truck.  
+b.  Find the weight, in kg, of the lightest of these packages that Jemima will move.  
+One of the packages not moved by Jemima is selected at random.  
+c.  Find the probability that it weighs more than 18kg.  
+A delivery of 4 packages is made to the factory. The weights of the packages are independent.  
+d.  Find the probability that exactly 2 of them will be moved by Jemima. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+【Homework】 Page199 3.f-j 4.f-j   Page204 3.4.9.10. 15. 
+  Page206 10. -15.   Page 212 6.7.9.15.16.17. 

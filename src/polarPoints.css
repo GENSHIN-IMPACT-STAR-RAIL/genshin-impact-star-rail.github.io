@@ -1,0 +1,254 @@
+@media (min-width: 641px) {
+  .points-active .workspace {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: calc(100dvh - 84px);
+    min-height: 560px;
+  }
+}
+.point-table-panel {
+  position: absolute;
+  right: 14px;
+  bottom: 42px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  max-width: calc(100% - 28px);
+  max-height: calc(100% - 64px);
+  background: #fffffff5;
+  border: 1px solid #dfe5f0;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px #28385d12;
+  overflow: hidden;
+}
+.point-table-panel:not(.expanded) {
+  width: 150px;
+}
+.point-table-header {
+  flex-shrink: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 12px;
+  color: #64728e;
+  font-size: 12px;
+}
+.point-table-header > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.point-table-header i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--point-color);
+}
+.point-table-header small {
+  color: #9aa5b9;
+  font-size: 10px;
+  font-weight: 400;
+}
+/* One scroll area for the complete panel; no nested menus or scrollbars. */
+.point-table-content {
+  overflow: auto;
+  min-height: 0;
+  overscroll-behavior: contain;
+}
+.point-settings {
+  padding: 10px 12px;
+  border-top: 1px solid #e8edf6;
+  border-bottom: 1px solid #e5eaf4;
+  background: #f8faff;
+}
+.point-top-row,
+.point-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.point-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #657391;
+  line-height: 1.7;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.point-toggle input {
+  width: 15px;
+  height: 15px;
+  accent-color: #5968db;
+  flex-shrink: 0;
+  margin: 0;
+}
+.point-top-row > .point-toggle {
+  font-weight: 600;
+  color: #4c5e80;
+}
+.point-field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #8a95aa;
+}
+.point-field input,
+.point-field select {
+  width: 53px;
+  min-width: 0;
+  padding: 4px 6px;
+  border: 1px solid #dce3f4;
+  border-radius: 5px;
+  background: #fff;
+  color: #5868a2;
+}
+.point-field input:disabled {
+  opacity: 0.5;
+}
+.point-field select {
+  width: auto;
+  flex: 1;
+}
+.point-curve {
+  margin-top: 8px;
+}
+.point-options {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.point-options:disabled {
+  opacity: 0.5;
+}
+.point-presets {
+  display: flex;
+  gap: 5px;
+  margin: 9px 0;
+}
+.point-presets button {
+  flex: 1;
+  padding: 5px 0;
+  background: #fff;
+  border: 1px solid #e1e6f3;
+  border-radius: 5px;
+  color: #8a94aa;
+  font-size: 10px;
+}
+.point-presets button[aria-pressed="true"] {
+  background: #eaf0ff;
+  color: #5768c6;
+  border-color: #d1daf7;
+}
+.point-fit {
+  padding: 5px 7px;
+  white-space: nowrap;
+  font-size: 10px;
+  color: #6273c5;
+  background: #edf1ff;
+  border: 1px solid #dfe5fa;
+  border-radius: 5px;
+}
+.point-table-scroll {
+  overflow: visible;
+}
+.point-table-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.point-table-scroll caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.point-table-scroll thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #f0f4fb;
+  color: #8994aa;
+}
+.point-table-scroll th,
+.point-table-scroll td {
+  padding: 7px 9px;
+  border-bottom: 1px solid #edf0f7;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.point-table-scroll tbody {
+  color: #65748e;
+}
+.point-table-scroll th:first-child {
+  text-align: left;
+}
+.point-table-scroll tbody button {
+  color: var(--point-color);
+  padding: 0;
+  font: italic 12px Georgia;
+  min-width: 22px;
+}
+.point-table-scroll tbody tr {
+  cursor: pointer;
+}
+.point-table-scroll tbody tr:hover,
+.point-table-scroll tbody tr.selected {
+  background: #edf1ff;
+}
+.point-table-scroll td small {
+  font-size: 10px;
+  color: #9c89a6;
+  display: block;
+}
+.point-table-note,
+.point-table-error {
+  font-size: 10px;
+  line-height: 1.5;
+  padding: 8px 12px;
+  margin: 0;
+  color: #99a3b8;
+}
+.point-table-error {
+  color: #b96b76;
+}
+@media (max-width: 640px) {
+  .point-field input {
+    font-size: 16px;
+  }
+  .point-table-panel {
+    bottom: 33px;
+    right: 8px;
+    max-width: calc(100% - 16px);
+    width: 300px;
+  }
+  .point-table-header {
+    padding: 7px 10px;
+  }
+  .point-settings {
+    padding: 7px 9px;
+  }
+  .point-toggle {
+    font-size: 10px;
+    gap: 5px;
+  }
+  .point-actions-row {
+    gap: 5px;
+  }
+  .point-fit {
+    font-size: 10px;
+    padding: 5px;
+  }
+  .point-table-scroll th,
+  .point-table-scroll td {
+    padding: 5px 8px;
+  }
+}

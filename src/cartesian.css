@@ -1,0 +1,105 @@
+.workspace-mode-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  pointer-events: auto;
+  background: var(--plot-label);
+}
+.expression-type-select {
+  max-width: 95px;
+  min-width: 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  padding: 3px;
+  color: var(--secondary-ink);
+  font-size: 10px;
+  cursor: pointer;
+}
+.expression-type-select option {
+  background: var(--paper);
+  color: var(--ink);
+}
+.expression-t-range {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 3px 0;
+  color: var(--muted-ink);
+  font-size: 11px;
+}
+.expression-t-range input {
+  width: 0;
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  border-bottom: 1px solid var(--field-line);
+  background: transparent;
+  color: var(--secondary-ink);
+  padding: 3px 5px;
+  font-size: 11px;
+}
+fieldset.example-buttons {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+fieldset.example-buttons:disabled {
+  opacity: 0.45;
+}
+@media (max-width: 640px) {
+  .expression-t-range input {
+    font-size: 16px;
+  }
+}
+.cartesian-mode-select {
+  max-width: 106px;
+  min-width: 0;
+  border: 0;
+  border-left: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  padding: 5px 4px 5px 10px;
+  color: var(--secondary-ink);
+  font-size: 11px;
+  cursor: pointer;
+}
+.cartesian-mode-select option {
+  background: var(--paper);
+  color: var(--ink);
+}
+.parametric-formula + .formula-row {
+  margin-top: 2px;
+}
+.parametric-formula > span {
+  font-size: 15px;
+  white-space: nowrap;
+}
+.parametric-formula + .formula-row > span {
+  font-size: 15px;
+  white-space: nowrap;
+}
+.parametric-formula math-field,
+.parametric-formula + .formula-row math-field {
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .workspace-mode-controls {
+    gap: 4px;
+  }
+  .cartesian-mode-select {
+    padding-left: 5px;
+    max-width: 92px;
+    font-size: 10px;
+  }
+  .parametric-settings input {
+    font-size: 16px;
+  }
+}
+@media (max-width: 380px) {
+  .workspace-bar .export-button span {
+    display: none;
+  }
+}

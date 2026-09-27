@@ -1,0 +1,312 @@
+{
+  "date": "2026-09-25",
+  "status": "CORE_TOOLS_FIRST_RELEASE",
+  "core_tools": 15,
+  "classroom_activities": 12,
+  "historical_extension_tools": 1,
+  "registered_entries": 17,
+  "agents": [
+    "data_probability",
+    "distributions",
+    "inference"
+  ],
+  "tests": {
+    "existing": 84,
+    "statistics": 73,
+    "total_passed": 157
+  },
+  "build": "PASS",
+  "browser": {
+    "desktop_all_entries": 17,
+    "mobile_all_entries": 17,
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "horizontal_overflow": false,
+    "console_errors_at_checks": 0,
+    "checks": [
+      "raw sample 1..5 -> t interval [1.0368,4.9632]",
+      "500 independent repeated samples in Worker",
+      "normal marker keyboard increments 8 to 8.02",
+      "all 17 default tools render",
+      "JSON import restores hidden results",
+      "named workspace snapshot",
+      "downloaded JSON parses with 17 states",
+      "downloaded chi-square SVG parses",
+      "chi-square raw fit estimates lambda 3.25 from 40 observations and blocks conclusion when expected tail count is below 5"
+    ],
+    "real_touch_devices": "NOT_TESTED"
+  },
+  "scope_note": "Core tools use bounded templates; no complete per-question re-audit, no cloud deployment; see 统计板块实现与验收.md",
+  "files": [
+    {
+      "path": "src\\statistics\\ActivitiesTool.tsx",
+      "sha256": "a0d350da5251d7f403ece95bd3574b2fcf4971373398bef9703e5de3d92c0b71"
+    },
+    {
+      "path": "src\\statistics\\data\\CountingTool.tsx",
+      "sha256": "567c762d8dca4aa31c283bff58a841ebe9def15aea2c6e3228603246f3ab6f01"
+    },
+    {
+      "path": "src\\statistics\\data\\data.css",
+      "sha256": "d5dd1dd431bd5451d20b89bee09d9133b2d958253e37611b2695b1120e2eb136"
+    },
+    {
+      "path": "src\\statistics\\data\\DataTool.tsx",
+      "sha256": "f04738a90e8270f4c4cc8b02db2d31a1e6fd171f862d0c4418e037e680fcc1a6"
+    },
+    {
+      "path": "src\\statistics\\data\\index.ts",
+      "sha256": "6b1fa1504a9239aa1c604a7121100508de9c42c075a64e11e69e1803e9950667"
+    },
+    {
+      "path": "src\\statistics\\data\\model.test.ts",
+      "sha256": "276bb1045c13ecb8ef6395b08eb76e1f951e8c6729ff9972bb03048a2802e667"
+    },
+    {
+      "path": "src\\statistics\\data\\model.ts",
+      "sha256": "dbbbcf4a58958375d57483494f3b3c0afe5163f9c5605d3959500e84613f38e0"
+    },
+    {
+      "path": "src\\statistics\\data\\ProbabilityTool.tsx",
+      "sha256": "5b8c85cc965fe31011acd7ab38caceae9fb3120742bae4fd35ca7f3b5192e2b7"
+    },
+    {
+      "path": "src\\statistics\\data\\state.ts",
+      "sha256": "1b6b6e2589f46eaaeac9407015b91c185f86d38d14fb4c8869fc9f93976b3927"
+    },
+    {
+      "path": "src\\statistics\\data\\tools.tsx",
+      "sha256": "e926552009e9852902e5d3836ebb4d34f0e288628c2bcb02bb47a82d3067073f"
+    },
+    {
+      "path": "src\\statistics\\data\\ui.tsx",
+      "sha256": "b7e8eaf65f654e9a5123180b916d51d6415a91dc005f506455a3c7416edb02a3"
+    },
+    {
+      "path": "src\\statistics\\DistributionChart.tsx",
+      "sha256": "dc9c1028bdbc1b387028bfe0945179d5cb2834000d6248ac1794d6e39a08970d"
+    },
+    {
+      "path": "src\\statistics\\distributions\\combinations.tsx",
+      "sha256": "536971a6195f27e0708e6669028cffc0078c46a48091a20326571c573e4ab774"
+    },
+    {
+      "path": "src\\statistics\\distributions\\continuous.tsx",
+      "sha256": "2110b8bc5da7becbb8cf9dcccb1fcff02529728774342987da00fc4e7ae33531"
+    },
+    {
+      "path": "src\\statistics\\distributions\\discrete.tsx",
+      "sha256": "eb920b7558c8a3e7977568ec4dd43836e4173e1775dd68b2b3378c83df4a7d40"
+    },
+    {
+      "path": "src\\statistics\\distributions\\exact.ts",
+      "sha256": "146b98353db5ca6236a8f998bfa773335dc712a505951deeb00526cb6e079af4"
+    },
+    {
+      "path": "src\\statistics\\distributions\\index.ts",
+      "sha256": "f8f57366fc3610478b576d3e1e20095ba260be2a573c7b56c44e69b267d26859"
+    },
+    {
+      "path": "src\\statistics\\distributions\\interaction.css",
+      "sha256": "db5d3e28ec4bf5bd8623eec40a75869c6680c308155f9d81f3f29788b7b590fa"
+    },
+    {
+      "path": "src\\statistics\\distributions\\interaction.tsx",
+      "sha256": "edc46753de140e45d3be654889fe115b204ef210c4f0e2cbfd94ae1e55b21616"
+    },
+    {
+      "path": "src\\statistics\\distributions\\model.test.ts",
+      "sha256": "da488e75cf2368d40444cadcbc3ab967de65ea05e95bca0aecd3b1d82f98b17d"
+    },
+    {
+      "path": "src\\statistics\\distributions\\model.ts",
+      "sha256": "d9ccb07bc53cf2d142c6a06e279ffa9754f161645ec6ef9d7802cf6538c18cd7"
+    },
+    {
+      "path": "src\\statistics\\distributions\\normal.tsx",
+      "sha256": "04b445a569c1cbe096a0dc43a09c216f37e1232f42f1f4752ac727a84a8f81ad"
+    },
+    {
+      "path": "src\\statistics\\distributions\\pgf.tsx",
+      "sha256": "e9d2e65368ead2a53d8e7ff72a16b36dea6a35d81a5391271f24f7882b9e70de"
+    },
+    {
+      "path": "src\\statistics\\distributions\\poisson.tsx",
+      "sha256": "5ceeec7d7ff4178d0eda361e81b7b5ba01d94dbbed8a0841ef0468ad5530270e"
+    },
+    {
+      "path": "src\\statistics\\distributions\\state.ts",
+      "sha256": "d68122350a79f295081c2d6e1b7391a2d9ac5bc930e89ec5f85ea58172581c8d"
+    },
+    {
+      "path": "src\\statistics\\distributions\\tasks.ts",
+      "sha256": "63ea738c5b226af05eb26368fcba24fdb91f76b59fa869f324bc7cea2cca7da5"
+    },
+    {
+      "path": "src\\statistics\\distributions\\tools.tsx",
+      "sha256": "bbe0d48b41b7e5c126e9dcae3e6ded64e5b44edbd9a339adf2f0debcb3facbe6"
+    },
+    {
+      "path": "src\\statistics\\distributions\\ui.tsx",
+      "sha256": "30929f3dc66e202727e2c4f830b50160976a7f1a2174c35603fbf4cdfb8fef38"
+    },
+    {
+      "path": "src\\statistics\\inference\\chi-square.ts",
+      "sha256": "1508b309545a0f1cee2787a4af365cca2c2cad45752ef4e27e9b328d67dc4e71"
+    },
+    {
+      "path": "src\\statistics\\inference\\chi-ui.tsx",
+      "sha256": "a9f89c629f8b2450ad26a8e8fa52c226cf6b31dc91be03527c0c4201c1e2b33c"
+    },
+    {
+      "path": "src\\statistics\\inference\\common.ts",
+      "sha256": "2aee6029cbaac19b2c57dcb185744b7a65d3245aa9a04b3470295eea784a4816"
+    },
+    {
+      "path": "src\\statistics\\inference\\hypothesis.ts",
+      "sha256": "9031aefa10b3ed6c26b4f358bf6e710936d770112c302d83f24c8ce9a990b486"
+    },
+    {
+      "path": "src\\statistics\\inference\\index.ts",
+      "sha256": "6a8c3123de9652428c839b6e36a6db7634027184715dea4646d2ce76fdcb9db0"
+    },
+    {
+      "path": "src\\statistics\\inference\\inference.css",
+      "sha256": "6bdfd8c57a34a34884b91faa1d7f41af7b0b9acd36ce3b3293daa7179e54f76e"
+    },
+    {
+      "path": "src\\statistics\\inference\\inference.test.ts",
+      "sha256": "061aa64f61f2b61c71bf162830f6d400910db84f2c07a008d10349ea4597b094"
+    },
+    {
+      "path": "src\\statistics\\inference\\intervals-ui.tsx",
+      "sha256": "59230cf17bb30d7dce098093ca39016209fd7ace8e3bf8dc53cab1f9bf37d9cc"
+    },
+    {
+      "path": "src\\statistics\\inference\\intervals.ts",
+      "sha256": "d33b6d04c283d4cd7363ee7f8c4adae543a07dcbf369e0cadf185cb34df63b35"
+    },
+    {
+      "path": "src\\statistics\\inference\\means-ui.tsx",
+      "sha256": "d8c6450f094370aa20320e0817f631bf51162908e017ff8d2fd6904598e2028f"
+    },
+    {
+      "path": "src\\statistics\\inference\\means.ts",
+      "sha256": "24853a44dfb41c4bed0e393bacc9269e5f9cc80cf4269089b96c8575f3c9984a"
+    },
+    {
+      "path": "src\\statistics\\inference\\ranks-ui.tsx",
+      "sha256": "659f5e47da25ed0c5c7c2d7eafe3a3e9211f916f94ae04ee9c0d8224074ab3f0"
+    },
+    {
+      "path": "src\\statistics\\inference\\ranks.ts",
+      "sha256": "1494f71df663c5468bcb6f203a7b6f65cb3cecf6dde542f68e413b158414b8db"
+    },
+    {
+      "path": "src\\statistics\\inference\\state.ts",
+      "sha256": "2196ea2c54b6051e3468a6e2fc52e08d89673371617d4f3be8d6d42912237fd7"
+    },
+    {
+      "path": "src\\statistics\\inference\\tests-ui.tsx",
+      "sha256": "3482dccaf20321666b0536eca7279d8018eb27a8e2cfce94f1dadae4fd123f64"
+    },
+    {
+      "path": "src\\statistics\\inference\\tools.tsx",
+      "sha256": "fde4a8b151ab6198fcb91242ff97e754d419ec3a03cee975d988cbc2b3229ace"
+    },
+    {
+      "path": "src\\statistics\\inference\\ui.tsx",
+      "sha256": "cea4ea4dc02a59dec390d61785ee03db2468f60cdadfc1a0b4293b3a26e83515"
+    },
+    {
+      "path": "src\\statistics\\legacy-model.test.ts",
+      "sha256": "b50dd62ecbb1525662f0441f23eb1472429899512879e1011e17c3a4f8a5ae66"
+    },
+    {
+      "path": "src\\statistics\\legacy-model.ts",
+      "sha256": "ffe1a95e025999ecd8e021ef6eac059cff36461015f50214b36530132c8732e3"
+    },
+    {
+      "path": "src\\statistics\\LegacyTool.tsx",
+      "sha256": "f60287041ccbf087b430e840d5ef39f194e86e0c44c8e0288f68db6a99108bc6"
+    },
+    {
+      "path": "src\\statistics\\math.test.ts",
+      "sha256": "f8a760896ea522b1262f6b67c5d0a1059959b504f0ab32c2376fd4b1378b2058"
+    },
+    {
+      "path": "src\\statistics\\math.ts",
+      "sha256": "a64249db7384472eedb5eeef199d39bcbe96d54e18582929aa2ba9c6ef9b4245"
+    },
+    {
+      "path": "src\\statistics\\model.test.ts",
+      "sha256": "08f825535dca0bd4428646ec3d2803bad054441a6d2a87586c0c74bd0a98e26c"
+    },
+    {
+      "path": "src\\statistics\\model.ts",
+      "sha256": "b4b242027c102ff816577cd68961a3974a404b3b97249142bf1f7a8b6d01d994"
+    },
+    {
+      "path": "src\\statistics\\sampling-model.test.ts",
+      "sha256": "113c4ea3c0d9d7783a0660f74598fc153d961315f1b56a8b08832a962a4d45be"
+    },
+    {
+      "path": "src\\statistics\\sampling-model.ts",
+      "sha256": "217bb7ff7f622ee6d65fdbf8311dc3a417933b19f5915b02e24f61128da2dec0"
+    },
+    {
+      "path": "src\\statistics\\SamplingDesign.tsx",
+      "sha256": "1e514fe6ae8c762cc9784dcf1018949dbd115fb8fe20d399fd7e5ecd438fc15e"
+    },
+    {
+      "path": "src\\statistics\\SamplingTool.tsx",
+      "sha256": "b0df0d2aa0fe17448cff0e33a4039d4e9149a832dc71725921e75e0139314216"
+    },
+    {
+      "path": "src\\statistics\\shared.tsx",
+      "sha256": "ed922920fe5752302f71928da581629abada9c0822a8e637f7e0267f080b25c1"
+    },
+    {
+      "path": "src\\statistics\\simulation.worker.ts",
+      "sha256": "2c9b397d27307858714c4d3ab058f3a79723a304c9ad4f52f953e29283b0f5cd"
+    },
+    {
+      "path": "src\\statistics\\statistics.css",
+      "sha256": "01601a94568db59e48a19da5e4b0236331d787c35cee64d256d7404ae3075bd2"
+    },
+    {
+      "path": "src\\statistics\\StatisticsApp.tsx",
+      "sha256": "0cfc442a31af72b185014ebe07171ff0bc3485f6fc3f3caa6c3e9098d74ba109"
+    },
+    {
+      "path": "src\\statistics\\StatisticsSuite.tsx",
+      "sha256": "af228f8cd55811d31f26611e6740cffb6b47f274700c77272f10edd0f01a8b23"
+    },
+    {
+      "path": "src\\statistics\\suite.css",
+      "sha256": "3a1c627fb1ddfe054136388610c77659bec53a0d8651b5dc528281333526f37b"
+    },
+    {
+      "path": "src\\statistics\\workspace-model.test.ts",
+      "sha256": "ff7fa5391d4b3435d0d6e74a622c43354850c9225be8fa0fd3a31153a8a43708"
+    },
+    {
+      "path": "src\\statistics\\workspace-model.ts",
+      "sha256": "f69dda8e21933290d55aee7eace30143f125fc56f09144aa9fab95e859905ed9"
+    },
+    {
+      "path": "src\\statistics\\workspace-storage.ts",
+      "sha256": "dcbbf22ac25d18f944d457aa880bdeedb9b8fbb6221b42ec4d57bb034f2da95c"
+    },
+    {
+      "path": "src\\statistics\\workspace-types.ts",
+      "sha256": "e0b7c9b369299247db6565d561135e3a8b95ba9dd22ba3cf3a702bc65673070b"
+    },
+    {
+      "path": "src\\statistics\\workspace.tsx",
+      "sha256": "6a9fb5b07ac3e19bbc2c75d052dab6f84d17c6790d4bcb45819e3995a346ab32"
+    }
+  ]
+}
