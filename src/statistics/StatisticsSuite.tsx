@@ -264,7 +264,7 @@ function WorkspaceShell() {
               </section>
             ) : null;
           })}
-          <a className="stats-demo-link" href="/statistics-demo.html">
+          <a className="stats-demo-link" href="statistics-demo.html">
             二项近似 · 原样板 <ArrowRight size={14} />
           </a>
           <div className="stats-nav-footer">

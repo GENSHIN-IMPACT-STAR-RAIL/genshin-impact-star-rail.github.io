@@ -484,8 +484,8 @@ export default function WorkbenchApp() {
       <header className="wb-header">
         <WorkspaceBrand label="力学实验" />
         <div className="wb-header-links">
-          <a href="/mechanics-objects.html">物体图鉴</a>
-          <a href="/mechanics-demo.html">演化示例</a>
+          <a href="mechanics-objects.html">物体图鉴</a>
+          <a href="mechanics-demo.html">演化示例</a>
         </div>
         <button
           className="theme-toggle"

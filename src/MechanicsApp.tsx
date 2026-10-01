@@ -229,7 +229,7 @@ export default function MechanicsApp() {
   return (
     <div className="mechanics-app">
       <header className="mech-header">
-        <a href="/mechanics.html" aria-label="返回装置搭建">
+        <a href="mechanics.html" aria-label="返回装置搭建">
           <ArrowLeft size={18} />
         </a>
         <FlaskConical size={24} />
@@ -238,7 +238,7 @@ export default function MechanicsApp() {
           <span>MATHROOM / MECHANICS LAB</span>
         </div>
         <span className="mech-badge">接触 · 飞行 · 碰撞</span>
-        <a className="mech-library-link" href="/mechanics-objects.html">
+        <a className="mech-library-link" href="mechanics-objects.html">
           物体图鉴
         </a>
         <button

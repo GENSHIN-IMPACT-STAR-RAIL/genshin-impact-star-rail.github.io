@@ -125,7 +125,7 @@ function Gallery() {
     <div className="object-page">
       <style>{glyphCSS}</style>
       <header className="object-header">
-        <a href="/mechanics.html" className="object-back">
+        <a href="mechanics.html" className="object-back">
           <ArrowLeft size={17} />
           力学实验台
         </a>
@@ -317,7 +317,7 @@ function Gallery() {
               <span>在力学中</span>
               <p>{active.note}</p>
             </div>
-            <a className="object-lab-link" href="/mechanics.html">
+            <a className="object-lab-link" href="mechanics.html">
               返回实验台
               <ArrowUpRight size={16} />
             </a>
